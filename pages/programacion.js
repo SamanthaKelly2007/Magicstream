@@ -423,11 +423,11 @@ export default function Home() {
         </table>
         <div className={Prog_Styles.schedule_Buttons}>
             <button className={ !tableAMPM? Prog_Styles.selectedButton : ''} onClick={() => changeSchedule(false)}>
-                Horario 00:00-11:30hs
+                00:00-11:30Hs
             </button>
 
             <button className={ tableAMPM? Prog_Styles.selectedButton : ''} onClick={() => changeSchedule(true)}>
-                Horario 12:00-23:30hs
+                12:00-23:30Hs
             </button>
         </div>
       </div>

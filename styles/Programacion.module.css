@@ -4,18 +4,21 @@
     place-items: center;
     width: fit-content;
     margin: 0 auto;
+    background-color: white;
+    border-radius: 0.5rem;
 }
 
 .tableData{
-    background-color: white;
     margin: 0 auto;
-    padding: 1rem 0 0 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tableData tr:nth-of-type(1){
+    padding-bottom: 1rem;
 }
 
 .tableData td{
     text-align: center;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.3rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 0.3rem;
 }
@@ -26,7 +29,7 @@
 .titlesRow td:nth-child(3),
 .titlesRow td:nth-child(4){
     border: none !important;
-    padding: 0.3rem !important;
+    padding: 0.1rem !important;
 }
 
 .titlesRow td:nth-child(1),
@@ -38,9 +41,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    padding: 1rem 0;
-    background-color: white;
-    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem 0 0;
     width: 100%;
 }
 
@@ -52,12 +53,33 @@
     color: white;
     font-size: 1rem;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .selectedButton{
     background-color: #6043d6 !important;
+    border: 2px solid rgba(0, 0, 0, 0.3) !important;
 }
 
 .schedule_Buttons button:hover{
     background-color: #6043d6;
+}
+
+/* Mobile Medium - iPhone 6 4' */
+@media (min-width: 375px) {
+    .tableBox{
+        width: 90%;
+    }
+}
+
+/* Mobile Long - iPhone X 5.8' */
+@media (min-width: 425px) {
+
+}
+
+/* Tablet 7' or Higher */
+@media (min-width: 768px) {
+    .tableBox{
+        width: fit-content;
+    }
 }
