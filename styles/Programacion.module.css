@@ -1,0 +1,63 @@
+.tableBox{
+    padding: 1rem 0;
+    display: grid;
+    place-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.tableData{
+    background-color: white;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tableData td{
+    text-align: center;
+    padding: 0.3rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+}
+
+.tableRow td:nth-child(2),
+.tableRow td:nth-child(4),
+.titlesRow td:nth-child(2),
+.titlesRow td:nth-child(3),
+.titlesRow td:nth-child(4){
+    border: none !important;
+    padding: 0.3rem !important;
+}
+
+.titlesRow td:nth-child(1),
+.titlesRow td:nth-child(5){
+    border: none !important;
+}
+
+.schedule_Buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: white;
+    border-radius: 0 0 0.5rem 0.5rem;
+    width: 100%;
+}
+
+.schedule_Buttons button{
+    border-style: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #7b5df4;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.selectedButton{
+    background-color: #6043d6 !important;
+}
+
+.schedule_Buttons button:hover{
+    background-color: #6043d6;
+}

@@ -1,0 +1,140 @@
+:root{
+    --stars: rgba(255, 255, 255, 0.4);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html{
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #3A1DB3;
+    transition: background-color .5s;
+    overflow-x: hidden;
+}
+
+main{
+    flex: 1;
+    margin-top: 70px;
+    background: transparent url("../public/img/starsbg.png");
+    background-position: center center;
+    background-size: 25rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.noBtn{
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.noBd{
+    border: none !important;
+}
+
+.material-symbols-rounded{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#__next{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.center_msg{
+    display: grid;
+    align-content: center;
+}
+
+.mk_video{
+    text-align: center;
+    margin: 2rem auto 0 auto;
+}
+
+.mk_video{
+    width: 300px !important;
+    height: 200px !important;
+}
+
+.vjs-poster{
+    background-size: cover !important;
+    transition: background-size .5s;
+}
+
+.video-js .vjs-big-play-button{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.mk_project{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+/*****************************************/
+/* Media Queries */
+/*****************************************/
+
+/* Mobile Short - iPhone 4 3.5' */
+@media (min-width: 320px) {}
+
+/* Mobile Medium - iPhone 6 4' */
+@media (min-width: 375px) {
+    .mk_video{
+        width: 350px !important;
+        height: 250px !important;
+    }
+}
+
+/* Mobile Long - iPhone X 5.8' */
+@media (min-width: 425px) {
+    .mk_video{
+        width: 400px !important;
+        height: 300px !important;
+    }
+}
+
+/* Tablet 7' or Higher */
+@media (min-width: 768px) {
+    .mk_video{
+        width: 600px !important;
+        height: 400px !important;
+    }
+
+    .material-symbols-rounded{
+        display: none;
+    }
+}
+
+/* Notebook/Desktop */
+@media (min-width: 1024px) {
+}
+
+/* Notebook/Desktop Long */
+@media (min-width: 1440px) {}
+
+/* 4K Display */
+@media (min-width: 2560px) {}
+
+/*****************************************/
