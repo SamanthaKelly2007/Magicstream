@@ -25,6 +25,7 @@
 }
 
 .header_nav a span{
+  margin-top: auto;
   font-size: 1.4rem;
   margin-right: 0.2rem;
 }
