@@ -40,7 +40,7 @@ export default function Home() {
               <p>- Si esto te sucede al darle play es por que el servidor se encuentra apagado, puede deberse a que estoy haciendo mantenimiento, en caso de que no vean ninguna publicacion en donde avise que estoy haciendo mantenimiento, te pido que me mandes un mensaje por esos medios avisando del problema, de esa manera vere de arreglar la transmisión.</p>
             </li>
             <li>
-              <h2>Si tu problema no se encuentra respondido en las preguntas de arriba te sugiero mandarme un mensaje por las redes sociales del pie de pagina, para ayudarte con el problema.</h2>
+              <h2>Si tu problema no se encuentra en las preguntas de arriba te sugiero mandarme un mensaje por las redes sociales del pie de pagina, para ayudarte con el problema.</h2>
             </li>
           </ul>
         }
