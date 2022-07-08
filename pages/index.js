@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <div className='singleCol'>
         <Player/>
-        <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Problemas Frecuentes <i class="gg-info"></i></button>
+        <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Problemas Frecuentes <i className="gg-info"></i></button>
       </div>
       {
           showMsg&&
