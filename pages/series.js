@@ -6,7 +6,7 @@ export default function Series() {
             <Head>
                 <title>Series</title>
             </Head>
-            <div className='coming_Soon'>
+            <div className='singleCol h100'>
             <h1>Proximamente</h1>
             </div>
         </>
