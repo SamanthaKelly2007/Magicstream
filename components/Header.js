@@ -12,11 +12,9 @@ export default function Header() {
             </Link>
             
             <div className={Header_Styles.mk_header_opt}>
-                <Link href="programacion">Programacion</Link>
-                {/*             
-                <Link href="series">Series</Link>
-                <Link href="proyecto">Peliculas</Link> 
-                */}
+                <Link href="programacion"><a><span className="material-symbols-rounded">dvr</span> Programacion</a></Link>
+                <Link href="series"><a><span className="material-symbols-rounded">tv</span> Series</a></Link>
+                <Link href="peliculas"><a><span className="material-symbols-rounded">movie</span> Peliculas</a></Link> 
             </div>
 
             {/*             
@@ -25,7 +23,7 @@ export default function Header() {
             </Link>
             */}
             <Link href="programacion">
-            <span className="material-symbols-rounded">
+            <span className={`${Header_Styles.homebtn} material-symbols-rounded`}>
                 dvr
             </span>
             </Link>

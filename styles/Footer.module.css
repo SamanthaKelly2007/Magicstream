@@ -1,9 +1,28 @@
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: black;
-    padding: 2rem;
+    padding: 1rem;
     font-size: 1.2rem;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.icons a:nth-child(3){
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.icons a{
+    color: white;
 }

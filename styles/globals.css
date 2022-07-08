@@ -1,3 +1,6 @@
+@import url(https://css.gg/css);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+
 :root{
     --stars: rgba(255, 255, 255, 0.4);
 }
@@ -92,6 +95,14 @@ a{
     text-align: center;
 }
 
+.coming_Soon{
+    display: grid;
+    place-items: center;
+    margin: auto;
+    height: 100%;
+    color: white;
+}
+
 /*****************************************/
 /* Media Queries */
 /*****************************************/
@@ -120,10 +131,6 @@ a{
     .mk_video{
         width: 600px !important;
         height: 400px !important;
-    }
-
-    .material-symbols-rounded{
-        display: none !important;
     }
 }
 

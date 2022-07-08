@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Prog_Styles from '../styles/Programacion.module.css'
 
 export default function Home() {
@@ -9,6 +9,13 @@ export default function Home() {
     const changeSchedule = (prop) => {
         setTableAMPM(prop)
     }
+
+    useEffect(() => {
+        const today = new Date(),
+        time = today.getHours()
+
+        return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
+    }, [])
 
   return (
     <>

@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-export default function Series() {
+export default function Peliculas() {
     return(
         <>
             <Head>
-                <title>Series</title>
+                <title>Peliculas</title>
             </Head>
             <div className='coming_Soon'>
             <h1>Proximamente</h1>

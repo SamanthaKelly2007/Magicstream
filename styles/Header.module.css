@@ -19,14 +19,18 @@
 }
 
 .header_nav a{
+  display: flex;
   color: white;
+}
+
+.header_nav a span{
+  font-size: 1.4rem;
+  margin-right: 0.2rem;
 }
 
 .mk_header_opt{
   display: none;
   font-size: 1.2rem;
-  gap: 2%;
-  width: 100%;
 }
 
 .contactBtn{
@@ -54,6 +58,11 @@
 @media (min-width: 768px) {
   .mk_header_opt{
       display: flex;
+      gap: 1rem;
+  }
+
+  .homebtn{
+    display: none !important;
   }
 }
 

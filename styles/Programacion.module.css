@@ -3,7 +3,7 @@
     display: grid;
     place-items: center;
     width: fit-content;
-    margin: 0 auto;
+    margin: 1rem auto;
     background-color: white;
     border-radius: 0.5rem;
 }
