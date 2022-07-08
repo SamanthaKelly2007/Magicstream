@@ -14,6 +14,7 @@ export default function Home() {
         const today = new Date(),
         time = today.getHours()
 
+        
         return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
     }, [])
 
