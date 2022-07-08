@@ -24,7 +24,7 @@ html{
 main{
     flex: 1;
     margin-top: 70px;
-    background: transparent url("../public/img/starsbg.png");
+    background: transparent url("/img/starsbg.png");
     background-position: center center;
     background-size: 25rem;
 }
