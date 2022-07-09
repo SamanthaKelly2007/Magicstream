@@ -21,5 +21,5 @@ export default function Player() {
       }
     });
 
-    return <video controls ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png" title='Ver Stream de Magic Kids'/>
+    return <video controls ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
 }
