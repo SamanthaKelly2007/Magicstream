@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import androidTvLogo from '../public/img/Android-TV-Logo.png'
 
 export default function Iptv() {
     return(
@@ -9,8 +11,7 @@ export default function Iptv() {
             <div className='singleCol h100'>
                 <div className='iptvMsg'>
                     <h1>Ahora podes mirar Magic Kids! desde tu TV usando IPTV!</h1>
-                    /* eslint-disable @next/next/no-img-element */
-                    <img src="/img/Android-TV-Logo.png" alt='Android TV'/>
+                    <Image src={androidTvLogo} alt='Android TV'/>
                     <div>
                         <h2>Instrucciones: </h2>
                         <h3>Bajen la App OTT Navigator de PlayStore</h3>
