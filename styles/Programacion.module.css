@@ -32,8 +32,9 @@
 }
 
 .titlesRow td:nth-child(2) img{
-    transform: translateX(3px);
-    width: 3rem;
+    display: flex;
+    transform: translateX(9px);
+    width: 2.5rem;
 }
 
 .titlesRow td:nth-child(1),
