@@ -7,6 +7,12 @@ export default function Player() {
     const videoRef = useRef(null)
     let streamUrl = "https://magicstream.ddns.net:443/magicstream/stream.m3u8"
     const streamType = "application/x-mpegURL"
+    
+    useEffect(() => {
+      let blob = new Blob([streamUrl], {type: 'text/plain'});
+
+      streamUrl = URL.createObjectURL(blob);
+    }, [])
 
     useEffect(() => {
       if (videoRef.current) {
