@@ -148,6 +148,10 @@ a{
     border-radius: 0.5rem;
 }
 
+.vjs-tech{
+    object-fit: fill;
+}
+
 .video-js .vjs-big-play-button{
     right: 0;
     left: 0;
