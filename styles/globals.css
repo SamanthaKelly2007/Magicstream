@@ -187,7 +187,7 @@ a{
     padding: 1rem;
     width: 90%;
     border-radius: 0.5rem;
-    margin: 1rem auto;
+    margin: 0 auto 1rem auto;
     text-align: left;
     border: 1px solid rgba(0, 0, 0, 0.2);
     color: rgb(26, 26, 26);
