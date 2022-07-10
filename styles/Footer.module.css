@@ -19,15 +19,21 @@
     gap: 1rem;
 }
 
-.icons a:nth-child(2){
-    transform: translateX(3px);
-}
-
 .icons a:nth-child(3){
     font-weight: bold;
     font-size: x-large;
 }
 
+.icons a:nth-child(4){
+    display: flex;
+}
+
 .icons a{
     color: white;
+    transition: transform .3s;
+}
+
+.icons a:hover,
+.icons a:hover svg{
+    transform: scale(1.05);
 }
