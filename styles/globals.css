@@ -118,11 +118,11 @@ a{
     display: grid;
     margin: 1rem auto;
     background-color: #ffffffed;
-    width: 95%;
+    width: 100%;
     color: rgb(26, 26, 26);
-    padding: 1rem;
     border-radius: 1rem;
     gap: 1rem;
+    padding: 0.5rem;
 }
 
 .iptvMsg h1{
@@ -264,7 +264,15 @@ a{
 }
 
 .noScroll{
-    overflow: hidden;
+    overflow: hidden !important;
+}
+
+.headerOpen{
+    background-color: var(--bg_violet_mk) !important;
+}
+
+.headerOpen a:nth-of-type(4){
+    margin-bottom: 6rem;
 }
 
 /*****************************************/
@@ -276,6 +284,11 @@ a{
 
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
+    .iptvMsg{
+        width: 95%;
+        padding: 1rem;
+    }
+
     .iptvMsg div{
         padding: 1rem;
     }

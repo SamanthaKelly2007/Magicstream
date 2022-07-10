@@ -37,16 +37,19 @@
 }
 
 .openMenu{
+  display: block;
   animation: mobileFade 0.5s;
   background-color: var(--bg_violet_mk);
   position: absolute;
+  box-sizing: content-box;
+  overscroll-behavior: contain;
+  overflow-y: scroll;
   width: 100%;
   height: 100vh;
   left: 0;
   top: 70px;
   right: 0;
   bottom: 0;
-  overflow-y: scroll;
   padding: 1rem;
 }
 

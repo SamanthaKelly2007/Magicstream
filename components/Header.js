@@ -27,16 +27,20 @@ export default function Header() {
 
     useEffect(() => {
         if (menu) {
+            document.querySelector("#header").classList.add("headerOpen");
             document.body.classList.add("noScroll");
+            document.getElementsByTagName( 'html' )[0].classList.add("noScroll");
         }
         else
         {
+            document.getElementsByTagName( 'html' )[0].classList.remove("noScroll");
             document.body.classList.remove("noScroll");
+            document.querySelector("#header").classList.remove("headerOpen");
         }
     }, [menu])
 
     return (
-        <header className={Header_Styles.header_nav}>
+        <header id='header' className={Header_Styles.header_nav}>
             <Link href="/">
             <img
                 onClick={() => setMenu(false)}
@@ -53,7 +57,7 @@ export default function Header() {
                 <Link href="programacion"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">dvr</span> Programacion</a></Link>
                 <Link href="series"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">tv</span> Series</a></Link>
                 <Link href="peliculas"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">movie</span> Peliculas</a></Link> 
-                <Link href="iptv"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">smart_display</span> IPTV</a></Link> 
+                <Link href="iptv"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">smart_display</span> IPTV</a></Link>
             </div>
         </header>
     )
