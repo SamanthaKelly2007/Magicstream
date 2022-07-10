@@ -10,6 +10,7 @@
   width: 100%;
   height: 70px;
   background-color: #3b1db3ad;
+  backdrop-filter: blur(5px);
 }
 
 .header_nav img{
