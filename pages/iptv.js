@@ -1,6 +1,6 @@
 import Head from 'next/head'
+
 export default function Iptv() {
-    /* eslint-disable @next/next/no-img-element */
     return(
         <>
             <Head>
