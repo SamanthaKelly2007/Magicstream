@@ -10,8 +10,11 @@ export default function Home() {
     const [tableAMPM, setTableAMPM] = useState(false)
     let hours = new Date().getHours()
     let minutes = new Date().getMinutes()
-    minutes = minutes > 0 && minutes < 30? "00" : "30"
+    hours = hours >= 0 && hours <= 9? "0"+hours : hours
+    minutes = minutes >= 0 && minutes < 30? "00" : "30"
     let rightNow = hours+":"+minutes
+
+    console.log(rightNow);
 
     const changeSchedule = (prop) => {
         setTableAMPM(prop)
