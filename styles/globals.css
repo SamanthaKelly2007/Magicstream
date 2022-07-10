@@ -90,6 +90,15 @@ a{
     text-transform: uppercase;
 }
 
+@keyframes magicEffect {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
 .whitebtn{
     color: white;
     font-size: 2rem;
@@ -194,6 +203,7 @@ a{
     transition: all .5s;
     list-style-type: none;
     font-weight: bold;
+    animation: magicEffect .5s;
 }
 
 .msgBox h1{
