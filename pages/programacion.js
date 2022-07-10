@@ -14,8 +14,6 @@ export default function Home() {
     minutes = minutes >= 0 && minutes < 30? "00" : "30"
     let rightNow = hours+":"+minutes
 
-    console.log(rightNow);
-
     const changeSchedule = (prop) => {
         setTableAMPM(prop)
     }
