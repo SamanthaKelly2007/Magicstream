@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import androidTvLogo from '../public/img/Android-TV-Logo.png'
 
 export default function Iptv() {
     return(
@@ -11,16 +9,16 @@ export default function Iptv() {
             <div className='singleCol h100'>
                 <div className='iptvMsg'>
                     <h1>Ahora podes mirar Magic Kids! desde tu TV usando IPTV!</h1>
-                    <Image src={androidTvLogo} alt='Android TV'/>
+                    <img src="/img/Android-TV-Logo.png" alt='Android TV'/>
                     <div>
                         <h2>Instrucciones: </h2>
                         <h3>Bajen la App OTT Navigator de PlayStore</h3>
                         <h3>Una vez instalada hacen click en Cargar Proveedor</h3>
                         <h3>Seleccionan la primera opcion que dice Lista de reproduccion</h3>
-                        <h3>Le Agregan el Titulo que quieran por ejemplo "Magic Kids"</h3>
+                        <h3>Le Agregan el Titulo que quieran por ejemplo <strong>Magic Kids</strong></h3>
                         <h3>En URL deben ingresar la direccion de abajo: </h3>
                         <h3><a href='https://pastebin.com/raw/RvjVtGmT' target="_blank" rel="noreferrer noopener">pastebin.com/raw/RvjVtGmT</a></h3>
-                        <h3>Le dan a aplicar y listo ya tendran el canal agregado, luego le dan click en ver "television en vivo" seleccionan Magic Kids y podran ver el stream desde su TV</h3>
+                        <h3>Le dan a aplicar y listo ya tendran el canal agregado, luego le dan click en <strong>ver television</strong> en vivo seleccionan Magic Kids y podran ver el stream desde su TV</h3>
                         <h3>Funciona en otros reproductores de IPTV tambien pero la app de arriba es la que mas recomiendo.</h3>
                     </div>
                     
