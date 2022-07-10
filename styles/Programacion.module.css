@@ -33,7 +33,7 @@
 
 .titlesRow td:nth-child(2) img{
     display: flex;
-    transform: translateX(9px);
+    margin: auto;
     width: 2.5rem;
 }
 
