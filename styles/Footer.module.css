@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--text_light);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem;
     font-size: 1.2rem;
     text-align: center;
     font-weight: bold;
@@ -29,7 +29,7 @@
 }
 
 .icons a{
-    color: white;
+    color: var(--text_light);
     transition: transform .3s;
 }
 

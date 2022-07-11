@@ -22,7 +22,7 @@
 .header_nav a{
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--text_light);
 }
 
 .header_nav a span{
@@ -73,12 +73,15 @@
   }
 }
 
-.contactBtn{
-  padding: 0.5rem;
-  border-radius: 0.8rem;
-  background-color: white;
-  color: black;
-  font-size: 1rem;
+@-webkit-keyframes mobileFade {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
 
 /*****************************************/

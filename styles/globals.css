@@ -9,6 +9,12 @@
 }
 
 :root{
+    --white: #fff;
+    --dark: #000000;
+    --bg_schedule_light: #fff;
+    --bg_schedule_dark: #000000;
+    --text_light: #fff;
+    --text_dark: #000000;
     --bg_violet_mk: #3A1DB3;
     --font-custom: 'Kanit', sans-serif;
     --font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -38,28 +44,40 @@ main{
     background-size: 25rem;
 }
 
-.closebtn{
-    animation: mobileFadeOut .5s !important;
-}
-  
-@keyframes mobileFadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to{
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
 
 a{
     text-decoration: none;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--white) var(--bg_violet_mk);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    backdrop-filter: blur(5px);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffffb3;
+    border-radius: 10px;
+    border: 4px solid var(--bg_violet_mk);
+}
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: var(--white);
+}
+
 .liveNow{
     background-color: #623bff !important;
-    color: white;
+    color: var(--text_light);
 }
 
 .noBtn{
@@ -76,7 +94,7 @@ a{
 .button1{
     background-color: #623bff;
     padding: 0.8rem;
-    color: white;
+    color: var(--text_light);
     border-radius: 0.5rem;
     width: fit-content;
 }
@@ -90,17 +108,8 @@ a{
     text-transform: uppercase;
 }
 
-@keyframes magicEffect {
-    from {
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-
 .whitebtn{
-    color: white;
+    color: var(--text_light);
     font-size: 2rem;
     cursor: pointer;
 }
@@ -116,7 +125,7 @@ a{
     align-content: center;
     width: fit-content;
     margin: auto;
-    color: white;
+    color: var(--text_light);
 }
 
 .h100{
@@ -145,7 +154,7 @@ a{
 }
 
 .iptvMsg h1 span{
-    color: black;
+    color: var(--text_dark);
 }
 
 .iptvMsg div{
@@ -189,6 +198,10 @@ a{
 .iptvMsg h3{
     padding: 0 0.5rem;
     margin-bottom: 1rem;
+}
+
+.closebtn{
+    animation: mobileFadeOut .5s !important;
 }
 
 .msgBox{
@@ -259,7 +272,7 @@ a{
     padding: 2rem 1rem;
     border-radius: 1rem;
     font-size: 1.2rem;
-    color: white;
+    color: var(--text_light);
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
     text-align: center;
@@ -270,7 +283,7 @@ a{
     place-items: center;
     margin: auto;
     height: 100%;
-    color: white;
+    color: var(--text_light);
 }
 
 .noScroll{
@@ -283,6 +296,54 @@ a{
 
 .headerOpen a:nth-of-type(4){
     margin-bottom: 6rem;
+}
+
+/*****************************************/
+/* Animations */
+/*****************************************/
+
+/*****************************************/
+/* Animations Keyframes */
+/*****************************************/
+
+@keyframes mobileFadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes mobileFadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes magicEffect {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes magicEffect {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 /*****************************************/
@@ -355,12 +416,22 @@ a{
 
 /* Notebook/Desktop */
 @media (min-width: 1024px) {
+    .mk_video{
+        width: 800px !important;
+        height: 450px !important;
+    }
 }
 
 /* Notebook/Desktop Long */
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+}
 
 /* 4K Display */
-@media (min-width: 2560px) {}
+@media (min-width: 2560px) {
+    .mk_video{
+        width: 1100px !important;
+        height: 800px !important;
+    }
+}
 
 /*****************************************/
