@@ -20,8 +20,10 @@ export default function Iptv() {
                         <h3><a href='https://pastebin.com/raw/RvjVtGmT' target="_blank" rel="noreferrer noopener">pastebin.com/raw/RvjVtGmT</a></h3>
                         <h3>Le dan a aplicar y listo ya tendran el canal agregado, luego le dan click en <strong>ver television</strong> en vivo seleccionan Magic Kids y podran ver el stream desde su TV</h3>
                         <h3>Funciona en otros reproductores de IPTV tambien pero la app de arriba es la que mas recomiendo.</h3>
-                        <h3>Si Usan otro Reproductor puede que necesiten usar un Archivo M3U en ese caso se pueden bajar el archivo de abajo</h3>
-                        <h3>Descargar: <a href='/downloads/Magic_Kids.m3u' download>Magic_Kids.m3u</a></h3>
+                        <h3>Si usan otro Reproductor puede que necesiten usar un Archivo M3U en ese caso se pueden bajar el archivo de abajo</h3>
+                        <h3>Descargar M3U: <a href='/downloads/Magic_Kids.m3u' download>Magic_Kids.m3u</a></h3>
+                        <h3>Si usan la App TDT Channels van a necesitar copial la URL de Abajo</h3>
+                        <h3>Descargar JSON: <a href='/downloads/Magic_Kids_TDT.json'>Magic_Kids_TDT.JSON</a></h3>
                     </div>
                     
                     <div>
