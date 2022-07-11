@@ -16,7 +16,7 @@ export default function Home() {
         <title>Magic Stream</title>
       </Head>
       <div className='singleCol'>
-        <Player/>
+        <Player />
         <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Problemas Frecuentes <i className="gg-info"></i></button>
       </div>
       {

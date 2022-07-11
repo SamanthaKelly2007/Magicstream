@@ -13,6 +13,9 @@ export default function Home() {
     hours = hours >= 0 && hours <= 9? "0"+hours : hours
     minutes = minutes >= 0 && minutes < 30? "00" : "30"
     let rightNow = hours+":"+minutes
+    
+    let weekend = new Date().getDay()
+    weekend = weekend === 0 || weekend === 6? true : false
 
     const changeSchedule = (prop) => {
         setTableAMPM(prop)
@@ -87,11 +90,11 @@ export default function Home() {
                 {
                     ListPM.map(serie => (
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
-                        <td>{serie.nombre}</td>
+                        <td className={`${weekend === true && Prog_Styles.notToday}`} >{serie.nombre}</td>
                         
                         <td>{serie.tiempo}</td>
                         
-                        <td>{serie.nombre_weekend}</td>
+                        <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>
                     ))
                 }

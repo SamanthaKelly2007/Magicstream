@@ -75,6 +75,11 @@
     background-color: #6043d6;
 }
 
+.notToday{
+    background-color: white !important;
+    color: black !important;
+}
+
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
     .tableBox{
