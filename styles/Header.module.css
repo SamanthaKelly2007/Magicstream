@@ -99,9 +99,15 @@
 
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
+
+  .header_nav img{
+    margin-left: 2rem;
+  }
+
   .mk_header_opt{
       display: flex;
       gap: 1rem;
+      margin-right: 2rem;
   }
 
   .homebtn{
