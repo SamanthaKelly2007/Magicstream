@@ -9,6 +9,7 @@ export default function Player() {
     const streamType = "application/x-mpegURL"
 
     useEffect(() => {
+
       if (videoRef.current) {
         videojs(videoRef.current, {
           sources: [
@@ -18,6 +19,7 @@ export default function Player() {
             }
           ]
         });
+        document.querySelector(".vjs-live-display").innerHTML = 'En Vivo'
       }
     });
 
