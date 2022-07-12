@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import scrollToElement from 'scroll-to-element';
 import { getActualTime, isWeekend, getSchedule } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
@@ -22,17 +21,11 @@ export default function Home() {
     }
 
     useEffect(() => {
-        setListAM(getSchedule().slice(0,25))
-        setListPM(getSchedule().slice(25,49))
+        setListAM(getSchedule("AM"))
+        setListPM(getSchedule("PM"))
 
         return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
     }, [])
-
-    useEffect(() => {
-        scrollToElement(document.querySelector('#isLiveNow'),{
-            align: "middle"
-        })
-    }, [tableAMPM])
 
     return (
     <>
@@ -56,12 +49,7 @@ export default function Home() {
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
                         <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
-                        {
-                            serie.tiempo === rightNow?
-                            <td id="isLiveNow">{serie.tiempo}</td>
-                            :
-                            <td>{serie.tiempo}</td>
-                        }
+                        <td>{serie.tiempo}</td>
                         
                         <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>
@@ -75,12 +63,7 @@ export default function Home() {
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
                         <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
-                        {
-                            serie.tiempo === rightNow?
-                            <td id="isLiveNow">{serie.tiempo}</td>
-                            :
-                            <td>{serie.tiempo}</td>
-                        }
+                        <td>{serie.tiempo}</td>
                         
                         <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>

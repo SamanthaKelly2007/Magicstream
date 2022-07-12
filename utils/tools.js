@@ -171,7 +171,7 @@ export const isWeekend = () =>{
     return weekend = weekend === 0 || weekend === 6? true : false
 }
 
-export const getSchedule = () =>{
+export const getSchedule = (option) =>{
     let list = [];
 
     for (let i = 0; i <= 48; i++) {
@@ -194,5 +194,5 @@ export const getSchedule = () =>{
         ))
     }
 
-    return list
+    return option === "AM" ? list.slice(0,25) : option === "PM" ? list.slice(25,49) : list
 }
