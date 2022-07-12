@@ -76,11 +76,11 @@ export default function Home() {
                 {
                     ListAM.map(serie => (
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
-                        <td>{serie.nombre}</td>
+                        <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
                         <td>{serie.tiempo}</td>
                         
-                        <td>{serie.nombre_weekend}</td>
+                        <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>
                     ))
                 }
@@ -90,7 +90,7 @@ export default function Home() {
                 {
                     ListPM.map(serie => (
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
-                        <td className={`${weekend === true && Prog_Styles.notToday}`} >{serie.nombre}</td>
+                        <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
                         <td>{serie.tiempo}</td>
                         
