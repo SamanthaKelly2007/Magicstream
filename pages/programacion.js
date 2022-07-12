@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import seriesSchedule from './api/serie.json'
 import {setTheTime} from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
@@ -13,7 +13,8 @@ export default function Home() {
     hours = hours >= 0 && hours <= 9? "0"+hours : hours
     minutes = minutes >= 0 && minutes < 30? "00" : "30"
     let rightNow = hours+":"+minutes
-    
+    const isLiveNow = useRef()
+
     let weekend = new Date().getDay()
     weekend = weekend === 0 || weekend === 6? true : false
 
@@ -47,6 +48,23 @@ export default function Home() {
         return list
     }
 
+    function scrollToTop(){
+        window.scrollTo(0,0)
+    }
+
+    function letSScroll(){
+        if (isLiveNow && isLiveNow.current) {
+            var headerOffset = 230;
+            var elementPosition = isLiveNow.current.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+            window.scrollTo({
+                 top: offsetPosition,
+                 behavior: "smooth"
+            });
+        }
+    }
+
     useEffect(() => {
         setListAM(getSchedule().slice(0,25))
         setListPM(getSchedule().slice(25,49))
@@ -56,7 +74,15 @@ export default function Home() {
         return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
     }, [])
 
-  return (
+    useEffect(() => {
+        scrollToTop()
+    }, [tableAMPM])
+
+    useEffect(() => {
+        letSScroll()
+    }, [ListAM || ListPM])
+
+    return (
     <>
       <Head>
         <title>Programación</title>
@@ -78,7 +104,12 @@ export default function Home() {
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
                         <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
-                        <td>{serie.tiempo}</td>
+                        {
+                            serie.tiempo === rightNow?
+                            <td ref={isLiveNow}>{serie.tiempo}</td>
+                            :
+                            <td>{serie.tiempo}</td>
+                        }
                         
                         <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>
@@ -92,7 +123,12 @@ export default function Home() {
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? "liveNow" : ""}`}>
                         <td className={`${weekend === true && Prog_Styles.notToday}`}>{serie.nombre}</td>
                         
-                        <td>{serie.tiempo}</td>
+                        {
+                            serie.tiempo === rightNow?
+                            <td ref={isLiveNow}>{serie.tiempo}</td>
+                            :
+                            <td>{serie.tiempo}</td>
+                        }
                         
                         <td className={`${weekend === false && Prog_Styles.notToday}`}>{serie.nombre_weekend}</td>
                         </tr>
