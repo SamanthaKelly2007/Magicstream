@@ -1,86 +1,34 @@
 import Head from 'next/head'
 import { useState, useEffect, useRef } from 'react'
-import seriesSchedule from './api/serie.json'
-import {setTheTime} from '../utils/tools'
+import animateScrollTo from 'animated-scroll-to';
+import { getActualTime, isWeekend, getSchedule, scrollToBlock } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
 export default function Home() {
+    const isLiveNow = useRef()
     const [ListAM, setListAM] = useState([])
     const [ListPM, setListPM] = useState([])
     const [tableAMPM, setTableAMPM] = useState(false)
-    let hours = new Date().getHours()
-    let minutes = new Date().getMinutes()
-    hours = hours >= 0 && hours <= 9? "0"+hours : hours
-    minutes = minutes >= 0 && minutes < 30? "00" : "30"
-    let rightNow = hours+":"+minutes
-    const isLiveNow = useRef()
 
-    let weekend = new Date().getDay()
-    weekend = weekend === 0 || weekend === 6? true : false
+    const time = new Date().getHours()
+    const rightNow = getActualTime()
+    const weekend = isWeekend()
 
-    const changeSchedule = (prop) => {
+    function changeSchedule(prop){
+        animateScrollTo(0)
         setTableAMPM(prop)
-    }
-
-    const getSchedule = () =>{
-        let list = [];
-
-        for (let i = 0; i <= 48; i++) {
-            seriesSchedule.filter(serie => serie.emision_1_week === i || serie.emision_2_week === i  || serie.emision_3_week === i ).map(dato => (
-            list[i] = {
-                    id : i,
-                    nombre : dato.nombre,
-                    tiempo : setTheTime(i),
-                    nombre_weekend : "No Disponible por Ahora"
-                }
-            ))
-        }
-
-        for (let i = 0; i <= 48; i++) {
-            seriesSchedule.filter(serie => serie.emision_1_weekend === i || serie.emision_2_weekend === i || serie.emision_3_weekend === i).map(dato => (
-            list[i] = {
-                    ...list[i],
-                    nombre_weekend : dato.nombre
-                }
-            ))
-        }
-
-        return list
-    }
-
-    function scrollToTop(){
-        window.scrollTo(0,0)
-    }
-
-    function letSScroll(){
-        if (isLiveNow && isLiveNow.current) {
-            var headerOffset = 230;
-            var elementPosition = isLiveNow.current.getBoundingClientRect().top;
-            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
-            window.scrollTo({
-                 top: offsetPosition,
-                 behavior: "smooth"
-            });
-        }
     }
 
     useEffect(() => {
         setListAM(getSchedule().slice(0,25))
         setListPM(getSchedule().slice(25,49))
-        const today = new Date(),
-        time = today.getHours()
 
         return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
     }, [])
 
     useEffect(() => {
-        scrollToTop()
+        scrollToBlock(isLiveNow)
     }, [tableAMPM])
-
-    useEffect(() => {
-        letSScroll()
-    }, [ListAM || ListPM])
 
     return (
     <>

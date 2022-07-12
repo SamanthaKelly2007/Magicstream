@@ -1,3 +1,5 @@
+import seriesSchedule from '../pages/api/serie.json'
+
 export const setTheTime = (number) =>{
     const setMinutes = (hour) =>{
         //odio esta funcion pero lo mejorare luego
@@ -152,4 +154,59 @@ export const setTheTime = (number) =>{
     }
 
     return setMinutes(number)
+}
+
+export const getActualTime = () =>{
+    let hours = new Date().getHours()
+    let minutes = new Date().getMinutes()
+    hours = hours >= 0 && hours <= 9? "0"+hours : hours
+    minutes = minutes >= 0 && minutes < 30? "00" : "30"
+
+    return hours+":"+minutes
+}
+
+export const isWeekend = () =>{
+    let weekend = new Date().getDay()
+
+    return weekend = weekend === 0 || weekend === 6? true : false
+}
+
+export const getSchedule = () =>{
+    let list = [];
+
+    for (let i = 0; i <= 48; i++) {
+        seriesSchedule.filter(serie => serie.emision_1_week === i || serie.emision_2_week === i  || serie.emision_3_week === i ).map(dato => (
+        list[i] = {
+                id : i,
+                nombre : dato.nombre,
+                tiempo : setTheTime(i),
+                nombre_weekend : "No Disponible por Ahora"
+            }
+        ))
+    }
+
+    for (let i = 0; i <= 48; i++) {
+        seriesSchedule.filter(serie => serie.emision_1_weekend === i || serie.emision_2_weekend === i || serie.emision_3_weekend === i).map(dato => (
+        list[i] = {
+                ...list[i],
+                nombre_weekend : dato.nombre
+            }
+        ))
+    }
+
+    return list
+}
+
+export function scrollToBlock(blockName){
+    if (blockName && blockName.current) {
+        let headerOffset = 230;
+        let elementPosition = blockName.current.getBoundingClientRect().top;
+        let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+        window.scrollTo({
+             top: offsetPosition,
+             behavior: "smooth"
+        });
+    }
+
 }
