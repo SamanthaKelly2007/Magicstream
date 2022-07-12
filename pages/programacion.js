@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { useState, useEffect, useRef } from 'react'
-import animateScrollTo from 'animated-scroll-to';
-import { getActualTime, isWeekend, getSchedule, scrollToBlock } from '../utils/tools'
+import { useState, useEffect } from 'react'
+import scrollToElement from 'scroll-to-element';
+import { getActualTime, isWeekend, getSchedule } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
 export default function Home() {
-    const isLiveNow = useRef()
     const [ListAM, setListAM] = useState([])
     const [ListPM, setListPM] = useState([])
     const [tableAMPM, setTableAMPM] = useState(false)
@@ -15,7 +14,10 @@ export default function Home() {
     const weekend = isWeekend()
 
     function changeSchedule(prop){
-        animateScrollTo(0)
+        setTimeout(() => {
+            window.scrollTo(0,0)
+        }, 100);
+        
         setTableAMPM(prop)
     }
 
@@ -27,7 +29,9 @@ export default function Home() {
     }, [])
 
     useEffect(() => {
-        scrollToBlock(isLiveNow)
+        scrollToElement(document.querySelector('#isLiveNow'),{
+            align: "middle"
+        })
     }, [tableAMPM])
 
     return (
@@ -54,7 +58,7 @@ export default function Home() {
                         
                         {
                             serie.tiempo === rightNow?
-                            <td ref={isLiveNow}>{serie.tiempo}</td>
+                            <td id="isLiveNow">{serie.tiempo}</td>
                             :
                             <td>{serie.tiempo}</td>
                         }
@@ -73,7 +77,7 @@ export default function Home() {
                         
                         {
                             serie.tiempo === rightNow?
-                            <td ref={isLiveNow}>{serie.tiempo}</td>
+                            <td id="isLiveNow">{serie.tiempo}</td>
                             :
                             <td>{serie.tiempo}</td>
                         }

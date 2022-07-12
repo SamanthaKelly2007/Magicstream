@@ -196,17 +196,3 @@ export const getSchedule = () =>{
 
     return list
 }
-
-export function scrollToBlock(blockName){
-    if (blockName && blockName.current) {
-        let headerOffset = 230;
-        let elementPosition = blockName.current.getBoundingClientRect().top;
-        let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-        window.scrollTo({
-             top: offsetPosition,
-             behavior: "smooth"
-        });
-    }
-
-}
