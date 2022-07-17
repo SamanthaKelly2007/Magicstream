@@ -42,11 +42,19 @@ export default function Header() {
     return (
         <header id='header' className={Header_Styles.header_nav}>
             <Link href="/">
-            <img
-                onClick={() => setMenu(false)}
-                src="../img/logo_mk.png"
-                alt="Magic Kids Logo"
-            />
+            {
+                window.width < 768 ?
+                <img
+                    onClick={() => setMenu(false)}
+                    src="../img/logo_mk.png"
+                    alt="Magic Kids Logo"
+                />
+                :
+                <img
+                    src="../img/logo_mk.png"
+                    alt="Magic Kids Logo"
+                />
+            }
             </Link>
             
             {

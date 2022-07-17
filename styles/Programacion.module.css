@@ -2,7 +2,7 @@
     padding: 0 0 1rem 0;
     display: grid;
     place-items: center;
-    width: fit-content;
+    width: 95%;
     margin: 1rem auto;
     background-color: var(--bg_schedule_light);
     border-radius: 0.5rem;
