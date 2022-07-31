@@ -62,9 +62,9 @@ export default function Header() {
                 <span onClick={() => openMenu()} className="whitebtn material-symbols-outlined">menu</span>
             }
             <div id='bgbtn' className={menu? `${Header_Styles.openMenu}` : `${Header_Styles.mk_header_opt}`}>
-                <Link href="programacion" replace><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">dvr</span> Programacion</a></Link>
+                <Link href="programacion" replace><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">dvr</span> Programación</a></Link>
                 <Link href="series"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">tv</span> Series</a></Link>
-                <Link href="peliculas"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">movie</span> Peliculas</a></Link> 
+                <Link href="peliculas"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">movie</span> Películas</a></Link> 
                 <Link href="iptv"><a onClick={() => window.width < 768? openMenu() : ""}><span className="material-symbols-rounded">smart_display</span> IPTV</a></Link>
             </div>
         </header>
