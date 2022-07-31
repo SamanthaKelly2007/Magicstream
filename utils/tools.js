@@ -356,28 +356,16 @@ export const getSchedule = (option) =>{
 export const getCurrentNextShow = (hourString, weekend, nextShow) =>{
 
     const hour = setDBTime(hourString)
-    const nextHour = hour+1
+    const nextHour = hour === 48? 1 : hour+1 
     const list = seriesSchedule
     let current, next
 
     if(weekend){
         current = list.filter(show => show.emision_1_weekend === hour || show.emision_2_weekend === hour || show.emision_3_weekend === hour).map((show) => {return show})
-        if (nextHour > 48) {
-            next = list.filter(show => show.emision_1_weekend === 1 || show.emision_2_weekend === 1 || show.emision_3_weekend === 1).map((show) => {return show})
-        }
-        else
-        {
-            next = list.filter(show => show.emision_1_weekend === nextHour || show.emision_2_weekend === nextHour || show.emision_3_weekend === nextHour).map((show) => {return show})
-        }
+        next = list.filter(show => show.emision_1_weekend === nextHour || show.emision_2_weekend === nextHour || show.emision_3_weekend === nextHour).map((show) => {return show})
     }else{
         current = list.filter(show => show.emision_1_week === hour || show.emision_2_week === hour || show.emision_3_week === hour).map((show) => {return show})
-        if (nextHour > 48) {
-            next = list.filter(show => show.emision_1_week === 1 || show.emision_2_week === 1 || show.emision_3_week === 1).map((show) => {return show})    
-        }
-        else
-        {
-            next = list.filter(show => show.emision_1_week === nextHour || show.emision_2_week === nextHour || show.emision_3_week === nextHour).map((show) => {return show})
-        }
+        next = list.filter(show => show.emision_1_week === nextHour || show.emision_2_week === nextHour || show.emision_3_week === nextHour).map((show) => {return show})
     }
 
     return nextShow? next[0].nombre : current[0].nombre
