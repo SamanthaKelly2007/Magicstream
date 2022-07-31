@@ -164,7 +164,7 @@
         "emision_2_week" : 19,
         "emision_3_week" : 36,
         "emision_1_weekend" : 28,
-        "emision_2_weekend" : 47,
+        "emision_2_weekend" : null,
         "emision_3_weekend" : null
     },
     {

@@ -2,7 +2,7 @@ import seriesSchedule from '../pages/api/serie.json'
 
 export const setTheTime = (number) =>{
     const setMinutes = (hour) =>{
-        //odio esta funcion pero lo mejorare luego
+
         switch (hour) {
             case 1: 
                 return "00:00";
@@ -156,6 +156,162 @@ export const setTheTime = (number) =>{
     return setMinutes(number)
 }
 
+export const setDBTime = (number) =>{
+    const setMinutes = (hour) =>{
+
+        switch (hour) {
+            case "00:00":
+                return 1;
+                break
+            case "00:30":
+                return 2;
+                break
+            case "01:00":
+                return 3;
+                break
+            case "01:30":
+                return 4;
+                break
+            case "02:00":
+                return 5;
+                break
+            case "02:30":
+                return 6;
+                break
+            case "03:00":
+                return 7;
+                break
+            case "03:30":
+                return 8;
+                break
+            case "04:00":
+                return 9;
+                break
+            case "04:30":
+                return 10;
+                break
+            case "05:00":
+                return 11;
+                break
+            case "05:30":
+                return 12;
+                break
+            case "06:00":
+                return 13;
+                break
+            case "06:30":
+                return 14;
+                break
+            case "07:00":
+                return 15;
+                break
+            case "07:30":
+                return 16;
+                break
+            case "08:00":
+                return 17;
+                break
+            case "08:30":
+                return 18;
+                break
+            case "09:00":
+                return 19;
+                break
+            case "09:30":
+                return 20;
+                break
+            case "10:00":
+                return 21;
+                break
+            case "10:30":
+                return 22;
+                break
+            case "11:00":
+                return 23;
+                break
+            case "11:30":
+                return 24;
+                break
+            case "12:00":
+                return 25;
+                break
+            case "12:30":
+                return 26;
+                break
+            case "13:00":
+                return 27;
+                break
+            case "13:30":
+                return 28;
+                break
+            case "14:00":
+                return 29;
+                break
+            case "14:30":
+                return 30;
+                break
+            case "15:00":
+                return 31;
+                break
+            case "15:30":
+                return 32;
+                break
+            case "16:00":
+                return 33;
+                break
+            case "16:30":
+                return 34;
+                break
+            case "17:00":
+                return 35;
+                break
+            case "17:30":
+                return 36;
+                break
+            case "18:00":
+                return 37;
+                break
+            case "18:30":
+                return 38;
+                break
+            case "19:00":
+                return 39;
+                break
+            case "19:30":
+                return 40;
+                break
+            case "20:00":
+                return 41;
+                break
+            case "20:30":
+                return 42;
+                break
+            case "21:00":
+                return 43;
+                break
+            case "21:30":
+                return 44;
+                break
+            case "22:00":
+                return 45;
+                break
+            case "22:30":
+                return 46;
+                break
+            case "23:00":
+                return 47;
+                break
+            case "23:30":
+                return 48;
+                break
+            default:
+                break;
+        }
+    }
+
+    return setMinutes(number)
+}
+
 export const getActualTime = () =>{
     let hours = new Date().getHours()
     let minutes = new Date().getMinutes()
@@ -195,4 +351,34 @@ export const getSchedule = (option) =>{
     }
 
     return option === "AM" ? list.slice(0,25) : option === "PM" ? list.slice(25,49) : list
+}
+
+export const getCurrentNextShow = (hourString, weekend, nextShow) =>{
+
+    const hour = setDBTime(hourString)
+    const nextHour = hour+1
+    const list = seriesSchedule
+    let current, next
+
+    if(weekend){
+        current = list.filter(show => show.emision_1_weekend === hour || show.emision_2_weekend === hour || show.emision_3_weekend === hour).map((show) => {return show})
+        if (nextHour > 48) {
+            next = list.filter(show => show.emision_1_weekend === 1 || show.emision_2_weekend === 1 || show.emision_3_weekend === 1).map((show) => {return show})
+        }
+        else
+        {
+            next = list.filter(show => show.emision_1_weekend === nextHour || show.emision_2_weekend === nextHour || show.emision_3_weekend === nextHour).map((show) => {return show})
+        }
+    }else{
+        current = list.filter(show => show.emision_1_week === hour || show.emision_2_week === hour || show.emision_3_week === hour).map((show) => {return show})
+        if (nextHour > 48) {
+            next = list.filter(show => show.emision_1_week === 1 || show.emision_2_week === 1 || show.emision_3_week === 1).map((show) => {return show})    
+        }
+        else
+        {
+            next = list.filter(show => show.emision_1_week === nextHour || show.emision_2_week === nextHour || show.emision_3_week === nextHour).map((show) => {return show})
+        }
+    }
+
+    return nextShow? next[0].nombre : current[0].nombre
 }

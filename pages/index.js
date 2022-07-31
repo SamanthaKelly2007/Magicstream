@@ -1,10 +1,16 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import Player from '../components/Player'
+import { isWeekend, getActualTime, getCurrentNextShow} from '../utils/tools'
 
 export default function Home() {
 
+  const todayDay = isWeekend();
+  const todayHour = getActualTime();
+  const currentShow = getCurrentNextShow(todayHour, todayDay, 0);
+  const nextShow = getCurrentNextShow(todayHour, todayDay, 1);
   const [showMsg, setShowMsg] = useState(false)
+
 
   const problemsMsg = (prop) => {
     setShowMsg(prop)
@@ -17,7 +23,13 @@ export default function Home() {
       </Head>
       <div className='singleCol'>
         <Player />
-        <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Problemas Frecuentes <i className="gg-info"></i></button>
+        <div className='streamControls'>
+          <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Errores <i className="gg-info"></i></button>
+          <div>
+            <p>Estas Viendo: {currentShow}</p>
+            <p>Luego Sigue: {nextShow}</p>
+          </div>
+        </div>
       </div>
       {
           showMsg&&
