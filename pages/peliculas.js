@@ -4,7 +4,7 @@ export default function Peliculas() {
     return(
         <>
             <Head>
-                <title>Peliculas</title>
+                <title>Películas</title>
             </Head>
             <div className='singleCol h100'>
             <h1>Proximamente</h1>
