@@ -1,16 +1,25 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Player from '../components/Player'
 import { isWeekend, getActualTime, getCurrentNextShow} from '../utils/tools'
 
 export default function Home() {
-
-  const todayDay = isWeekend();
-  const todayHour = getActualTime();
-  const currentShow = getCurrentNextShow(todayHour, todayDay, 0);
-  const nextShow = getCurrentNextShow(todayHour, todayDay, 1);
+  const [minutes, setMinutes] = useState(new Date().getMinutes())
+  const [currentShow, setCurrentShow] = useState(getCurrentNextShow(getActualTime(), isWeekend(), 0))
+  const [nextShow, setNextShow] = useState(getCurrentNextShow(getActualTime(), isWeekend(), 1))
   const [showMsg, setShowMsg] = useState(false)
+  let difference = minutes <= 30? 30 - minutes : 60 - minutes
+  let ms = difference * 60000
 
+  const getShowSchedule = () => {
+    setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
+    setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+  }
+
+  setTimeout(() => {
+    getShowSchedule()
+    setMinutes(new Date().getMinutes())
+  }, ms);
 
   const problemsMsg = (prop) => {
     setShowMsg(prop)
@@ -25,7 +34,7 @@ export default function Home() {
         <Player />
         <div className='streamControls'>
           <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Errores <i className="gg-info"></i></button>
-          <div>
+          <div onClick={()=> getShowSchedule()}>
             <p>Estas Viendo: {currentShow}</p>
             <p>Luego Sigue: {nextShow}</p>
           </div>
