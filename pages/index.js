@@ -14,6 +14,7 @@ export default function Home() {
   const getShowSchedule = () => {
     setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
     setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+    setMinutes(new Date().getMinutes())
   }
 
   useEffect(() => {
@@ -24,7 +25,6 @@ export default function Home() {
 
   setTimeout(() => {
     getShowSchedule()
-    setMinutes(new Date().getMinutes())
   }, ms);
 
   const problemsMsg = (prop) => {
