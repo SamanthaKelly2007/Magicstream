@@ -30,5 +30,5 @@ export default function Player() {
       };
     }, [videoEl])
 
-    return <video controls ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
+    return <video controls playsInline ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
 }

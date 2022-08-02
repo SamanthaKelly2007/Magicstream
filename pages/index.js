@@ -23,9 +23,16 @@ export default function Home() {
     setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
   }, [])
 
-  setTimeout(() => {
-    getShowSchedule()
-  }, ms);
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      getShowSchedule()
+    }, ms)
+
+    return () => {
+      window.clearInterval(timer)
+    }
+
+  }, [minutes])
 
   const problemsMsg = (prop) => {
     setShowMsg(prop)
