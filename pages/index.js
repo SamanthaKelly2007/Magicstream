@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import Player from '../components/Player'
-import { isWeekend, getActualTime, getCurrentNextShow} from '../utils/tools'
+import { isWeekend, getActualTime, getCurrentNextShow } from '../utils/tools'
 
 export default function Home() {
   const [minutes, setMinutes] = useState(new Date().getMinutes())
