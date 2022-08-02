@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Player from '../components/Player'
 import { isWeekend, getActualTime, getCurrentNextShow } from '../utils/tools'
 
 export default function Home() {
-  const [minutes, setMinutes] = useState(new Date().getMinutes())
-  const [currentShow, setCurrentShow] = useState(getCurrentNextShow(getActualTime(), isWeekend(), 0))
-  const [nextShow, setNextShow] = useState(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+  const [minutes, setMinutes] = useState(0)
+  const [currentShow, setCurrentShow] = useState([])
+  const [nextShow, setNextShow] = useState([])
   const [showMsg, setShowMsg] = useState(false)
   let difference = minutes <= 30? 30 - minutes : 60 - minutes
   let ms = difference * 60000
@@ -15,6 +15,12 @@ export default function Home() {
     setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
     setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
   }
+
+  useEffect(() => {
+    setMinutes(new Date().getMinutes())
+    setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
+    setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+  }, [])
 
   setTimeout(() => {
     getShowSchedule()
