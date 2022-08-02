@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Player from '../components/Player'
 import { isWeekend, getActualTime, getCurrentNextShow} from '../utils/tools'
 
@@ -34,7 +34,7 @@ export default function Home() {
         <Player />
         <div className='streamControls'>
           <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Errores <i className="gg-info"></i></button>
-          <div onClick={()=> getShowSchedule()}>
+          <div>
             <p>Estas Viendo: {currentShow}</p>
             <p>Luego Sigue: {nextShow}</p>
           </div>
