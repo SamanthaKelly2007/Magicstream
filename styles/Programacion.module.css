@@ -50,7 +50,7 @@
 .schedule_Buttons{
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    grid-gap: 1rem;
     padding: 0.5rem 0 0;
     width: 100%;
 }
