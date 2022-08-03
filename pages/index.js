@@ -9,7 +9,7 @@ export default function Home() {
   const [nextShow, setNextShow] = useState([])
   const [showMsg, setShowMsg] = useState(false)
   let difference = minutes <= 30? 30 - minutes : 60 - minutes
-  let ms = difference * 55000
+  let ms = difference * 50000
 
   const getShowSchedule = () => {
     setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
