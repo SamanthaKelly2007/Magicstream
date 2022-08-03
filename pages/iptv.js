@@ -8,30 +8,33 @@ export default function Iptv() {
             </Head>
             <div className='singleCol h100'>
                 <div className='iptvMsg'>
-                    <h1>Ahora podes mirar Magic Kids! desde tu TV usando IPTV!</h1>
                     <img src="/img/Android-TV-Logo.png" alt='Android TV'/>
-                    <div>
-                        <h2>Instrucciones: </h2>
-                        <h3>Bajen la App OTT Navigator de PlayStore</h3>
-                        <h3>Una vez instalada hacen click en Cargar Proveedor</h3>
-                        <h3>Seleccionan la primera opcion que dice Lista de reproduccion</h3>
-                        <h3>Le Agregan el Titulo que quieran por ejemplo <strong>Magic Kids</strong></h3>
-                        <h3>En URL deben ingresar la direccion de abajo: </h3>
-                        <h3><a href='https://pastebin.com/raw/RvjVtGmT' target="_blank" rel="noreferrer noopener">pastebin.com/raw/RvjVtGmT</a></h3>
-                        <h3>Le dan a aplicar y listo ya tendran el canal agregado, luego le dan click en <strong>ver television</strong> en vivo seleccionan Magic Kids y podran ver el stream desde su TV</h3>
-                        <h3>Funciona en otros reproductores de IPTV tambien pero la app de arriba es la que mas recomiendo.</h3>
-                        <h3>Si usan otro Reproductor puede que necesiten usar un Archivo M3U en ese caso se pueden bajar el archivo de abajo</h3>
-                        <h3>Descargar M3U: <a href='/downloads/Magic_Kids.m3u' download>Magic_Kids.m3u</a></h3>
-                        <h3>Si usan la App TDT Channels van a necesitar copial la URL de Abajo</h3>
-                        <h3>Descargar JSON: <a href='/downloads/Magic_Kids_TDT.json'>Magic_Kids_TDT.JSON</a></h3>
-                    </div>
+                    <section>
+                        <h1>IPTV Android TV</h1>
+                        <p>1- Bajen la App OTT Navigator de PlayStore</p>
+                        <p>2- Una vez instalada hacen click en Cargar Proveedor</p>
+                        <p>3- Seleccionan la primera opcion que dice Lista de reproduccion</p>
+                        <p>4- Le Agregan el Titulo que quieran por ejemplo <strong>Magic Kids</strong></p>
+                        <p>5- En URL deben ingresar la direccion de abajo: </p>
+                        <p><a href='https://pastebin.com/raw/RvjVtGmT' target="_blank" rel="noreferrer noopener">pastebin.com/raw/RvjVtGmT</a></p>
+                        <p>6- Le dan a aplicar y listo ya tendran el canal agregado, luego le dan click en <strong>ver television en vivo</strong> seleccionan Magic Kids y podran ver el stream desde su TV</p>
+                    </section>
                     
-                    <div>
-                        <h2>Nota: </h2>
-                        <h3>Por el momento el servicio sera libre y con eso me refiero a que el tutorial de arriba lo podran usar</h3>
-                        <h3>pero apenas tenga la app de tv funcionando vere de restringir el acceso para ver el stream solo por la web o App</h3>
-                        <h3>Motivo: hay gente que cobra en sus servicios de IPTV y no creo que deban cobrar por este contenido, menos si ellos no son los que armaron el stream.</h3>
-                    </div>
+                    <section>
+                        <h1>Para otras apps de IPTV</h1>
+                        <p>pueden bajar el archivo de abajo</p>
+                        <p>Descargar M3U: <a href='/downloads/Magic_Kids.m3u' download>Magic_Kids.m3u</a></p>
+                    </section>
+
+                    <section>
+                        <h1>TDT Channels</h1>
+                        <p>Si usan la App TDT Channels van a necesitar copiar la URL de Abajo</p>
+                        <p>URL JSON: <a href='/downloads/Magic_Kids_TDT.json'>Magic_Kids_TDT.JSON</a></p>
+                    </section>
+
+                    <section>
+                        Proximamente desarrollare una app para no depender de otros programas de IPTV.
+                    </section>
                 </div>
             </div>
         </>

@@ -368,5 +368,5 @@ export const getCurrentNextShow = (hourString, weekend, nextShow) =>{
         next = list.filter(show => show.emision_1_week === nextHour || show.emision_2_week === nextHour || show.emision_3_week === nextHour).map((show) => {return show})
     }
 
-    return nextShow? next[0].nombre : current[0].nombre
+    return nextShow? next[0] : current[0]
 }

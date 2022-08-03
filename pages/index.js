@@ -46,10 +46,10 @@ export default function Home() {
       <div className='singleCol'>
         <Player />
         <div className='streamControls'>
-          <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Errores <i className="gg-info"></i></button>
+          <button onClick={() => problemsMsg(!showMsg)} className='noBtn button1 problemsBtn'>Ayuda <i className="gg-info"></i></button>
           <div>
-            <p>Estas Viendo: {currentShow}</p>
-            <p>Luego Sigue: {nextShow}</p>
+            <p>Ahora: {currentShow.nombre}</p>
+            <p>Despues: {nextShow.nombre}</p>
           </div>
         </div>
       </div>
