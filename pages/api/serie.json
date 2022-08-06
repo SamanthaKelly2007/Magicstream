@@ -81,7 +81,7 @@
         "emision_3_week" : null,
         "emision_1_weekend" : 11,
         "emision_2_weekend" : 30,
-        "emision_3_weekend" : null
+        "emision_3_weekend" : 48
     },
     {
         "id" : 7,
@@ -109,7 +109,7 @@
         "emision_3_week" : null,
         "emision_1_weekend" : 12,
         "emision_2_weekend" : 31,
-        "emision_3_weekend" : null
+        "emision_3_weekend" : 47
     },
     {
         "id" : 9,
@@ -164,7 +164,7 @@
         "emision_2_week" : 19,
         "emision_3_week" : 36,
         "emision_1_weekend" : 28,
-        "emision_2_weekend" : null,
+        "emision_2_weekend" : 46,
         "emision_3_weekend" : null
     },
     {
@@ -275,8 +275,8 @@
         "emision_1_week" : null,
         "emision_2_week" : null,
         "emision_3_week" : null,
-        "emision_1_weekend" : 46,
-        "emision_2_weekend" : 47,
-        "emision_3_weekend" : 48
+        "emision_1_weekend" : null,
+        "emision_2_weekend" : null,
+        "emision_3_weekend" : null
     }
 ]
