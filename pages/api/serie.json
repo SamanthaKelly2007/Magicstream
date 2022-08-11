@@ -71,7 +71,7 @@
     },
     {
         "id" : 6,
-        "nombre" : "Estan Arrestados!",
+        "nombre" : "¡Están Arrestados!",
         "episodios" : 51,
         "temporadas" : 1,
         "descripcion" : "texto",
@@ -113,7 +113,7 @@
     },
     {
         "id" : 9,
-        "nombre" : "Mikami la Cazafantasmas",
+        "nombre" : "Cazafantasmas Mikami",
         "episodios" : 45,
         "temporadas" : 1,
         "descripcion" : "texto",

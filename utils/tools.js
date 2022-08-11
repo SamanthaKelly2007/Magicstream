@@ -313,9 +313,8 @@ export const setDBTime = (number) =>{
 }
 
 export const getActualTime = () =>{
-    let hours = new Date().getHours()
-    let minutes = new Date().getMinutes()
-    hours = hours >= 0 && hours <= 9? "0"+hours : hours
+    let hours = new Date().toLocaleString('es-MX', { hour:'2-digit', timeZone: 'America/Buenos_Aires'})
+    let minutes = new Date().toLocaleString('es-MX', { minute:'2-digit', timeZone: 'America/Buenos_Aires'})
     minutes = minutes >= 0 && minutes < 30? "00" : "30"
 
     return hours+":"+minutes
