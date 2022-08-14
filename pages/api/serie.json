@@ -141,11 +141,11 @@
     },
     {
         "id" : 11,
-        "nombre" : "Pelswick",
+        "nombre" : "Doug",
         "episodios" : 26,
         "temporadas" : 1,
         "descripcion" : "texto",
-        "link" : "pelswick",
+        "link" : "doug",
         "emision_1_week" : 38,
         "emision_2_week" : null,
         "emision_3_week" : null,
