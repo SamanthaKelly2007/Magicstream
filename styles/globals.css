@@ -251,8 +251,7 @@ a{
 }
 
 .mk_video{
-    width: 300px !important;
-    height: 200px !important;
+    font-weight: bold;
 }
 
 .vjs-poster{
@@ -260,10 +259,6 @@ a{
     transition: background-size .5s;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0.5rem;
-}
-
-.vjs-tech{
-    object-fit: fill;
 }
 
 .video-js .vjs-big-play-button{
@@ -364,20 +359,20 @@ a{
 @media (min-width: 375px) {
     .mk_video{
         width: 350px !important;
-        height: 250px !important;
     }
 }
 
 /* Mobile Long - iPhone X 5.8' */
 @media (min-width: 425px) {
-    .mk_video{
-        width: 400px !important;
-        height: 300px !important;
-    }
+
 }
 
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
+
+    .mk_video{
+        width: 720px !important;
+    }
 
     .iptvMsg{
         width: 700px;
@@ -399,29 +394,24 @@ a{
         margin: 1rem 0;
     }
 
-    .mk_video{
-        width: 600px !important;
-        height: 400px !important;
-    }
 }
 
 /* Notebook/Desktop */
 @media (min-width: 1024px) {
-    .mk_video{
-        width: 800px !important;
-        height: 450px !important;
-    }
+
 }
 
 /* Notebook/Desktop Long */
 @media (min-width: 1440px) {
+    .mk_video{
+        width: 768px !important;
+    }
 }
 
 /* 4K Display */
 @media (min-width: 2560px) {
     .mk_video{
-        width: 1100px !important;
-        height: 800px !important;
+        width: 1440px !important;
     }
 }
 

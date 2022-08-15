@@ -21,7 +21,8 @@ export default function Player() {
             src: streamUrl,
             type: streamType
           }
-        ]
+        ],
+        fluid: true
       });
       document.querySelector(".vjs-live-display").innerHTML = 'En Vivo'
 
