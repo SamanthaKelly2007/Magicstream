@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect } from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import spanish from '../pages/api/spanish.json'
+
 export default function Player() {
 
     const [videoEl, setVideoEl] = useState(null);
@@ -34,5 +35,7 @@ export default function Player() {
       };
     }, [videoEl])
 
-    return <video controls playsInline ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
+    return (
+      <video controls playsInline ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
+    )
 }

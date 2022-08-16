@@ -246,12 +246,13 @@ a{
 .mk_video{
     text-align: center;
     margin: 2rem auto 0 auto;
-    border-radius: 0.5rem;
     overflow: hidden !important;
+    border-radius: 0.5rem !important;
 }
 
-.mk_video{
-    font-weight: bold;
+.mk_video video{
+    object-fit: fill;
+    border-radius: 0.5rem;
 }
 
 .vjs-poster{
@@ -301,6 +302,7 @@ a{
 }
 
 .vjs-control-bar{
+    background-color: rgba(43, 51, 63, 0.4) !important;
     backdrop-filter: blur(5px);
 }
 
