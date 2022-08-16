@@ -300,6 +300,10 @@ a{
     margin-bottom: 6rem;
 }
 
+.vjs-control-bar{
+    backdrop-filter: blur(5px);
+}
+
 /*****************************************/
 /* Animations */
 /*****************************************/

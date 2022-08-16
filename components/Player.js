@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect } from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
-
+import spanish from '../pages/api/spanish.json'
 export default function Player() {
 
     const [videoEl, setVideoEl] = useState(null);
@@ -16,6 +16,9 @@ export default function Player() {
       if (videoEl == null) return;
 
       const player = videojs(videoEl, {
+        languages: {
+          es: spanish
+        },
         sources: [
           {
             src: streamUrl,
@@ -24,7 +27,6 @@ export default function Player() {
         ],
         fluid: true
       });
-      document.querySelector(".vjs-live-display").innerHTML = 'En Vivo'
 
       return () => {
         player.dispose();
