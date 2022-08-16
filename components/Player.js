@@ -19,6 +19,7 @@ export default function Player() {
         languages: {
           es: spanish
         },
+        language: 'es',
         sources: [
           {
             src: streamUrl,
