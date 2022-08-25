@@ -1,0 +1,82 @@
+.iptvMsg{
+    display: grid;
+    place-content: center;
+    margin: 1.5rem auto;
+    background-color: var(--bg_white_opacity_1);
+    width: 95%;
+    color: rgb(26, 26, 26);
+    border-radius: 1rem;
+    grid-gap: 1rem;
+    padding: 1.2rem 1rem;
+    animation: openTableBox .5s;
+}
+
+@keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
+
+@-webkit-keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
+
+
+.iptvMsg h1 span{
+    color: var(--text_dark);
+}
+
+.iptvMsg img{
+    margin: 0 auto;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+    background-color: black;
+}
+
+.iptvMsg a{
+    border: 1px solid var(--bg_dark_opacity_1);
+    color: rgb(26, 26, 26);
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    background-color: #000000d1;
+    color: #fff;
+}
+
+.iptvMsg section{
+    border: 1px solid var(--bg_dark_opacity_1);
+    padding: 1rem;
+    line-height: 1.9rem;
+    border-radius: 1rem;
+}
+
+.iptvMsg section h1{
+    margin-bottom: 0.5rem;
+}
+
+/* Tablet 7' or Higher */
+@media (min-width: 768px) {
+
+    .iptvMsg{
+        width: 700px;
+        padding: 2rem;
+    }
+
+    .iptvMsg img{
+        padding: 3.5rem;
+    }
+}

@@ -5,8 +5,34 @@
     width: 95%;
     margin: 1rem auto;
     background-color: var(--bg_schedule_light);
-    border-radius: 0.5rem;
+    border-radius: 1.2rem;
+    animation: openTableBox .5s;
 }
+
+@keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
+
+@-webkit-keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
+
 
 .tableData{
     margin: 0 auto;
@@ -58,7 +84,7 @@
 .schedule_Buttons button{
     border-style: none;
     padding: 0.8rem 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     background-color: #7b5df4;
     color: var(--text_light);
     font-size: 1rem;
@@ -73,6 +99,11 @@
 
 .schedule_Buttons button:hover{
     background-color: #6043d6;
+}
+
+.liveNow{
+    background-color: var(--button_violet) !important;
+    color: var(--text_light);
 }
 
 .notToday{
