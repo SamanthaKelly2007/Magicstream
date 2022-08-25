@@ -119,7 +119,7 @@ header a img{
 
 /* Tablet 7' or Higher */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav{
     display: none;
     flex-direction: column;
