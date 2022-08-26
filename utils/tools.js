@@ -62,9 +62,9 @@ export const getActualTime = () =>{
 //if its weekend returns true if not false
 
 export const isWeekend = () =>{
-    let weekend = new Date().getDay()
+    const weekend = new Date().getDay()
 
-    return weekend = weekend === 0 || weekend === 6? true : false
+    return weekend === 0 || weekend === 6? true : false
 }
 
 //this function returns a list of 24 sections

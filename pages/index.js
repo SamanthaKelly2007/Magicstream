@@ -35,12 +35,12 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    const timer = setTimeout(()=> {
+    const timer = window.setInterval(() => {
       getShowSchedule()
     }, ms)
 
     return () => {
-      clearTimeout(timer)
+      window.clearInterval(timer)
     }
 
   }, [minutes])
