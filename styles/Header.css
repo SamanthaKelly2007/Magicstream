@@ -48,7 +48,7 @@ header a img{
 
 .navOpen{
   display: flex !important;
-  animation: mobileFade .5s ease-in;
+  animation: mobileFade .5s;
 }
 
 .header_bg{
@@ -56,7 +56,7 @@ header a img{
 }
 
 .navClose{
-  animation: mobileFadeOut .5s ease-in !important;
+  animation: mobileFadeOut .5s !important;
 }
 
 

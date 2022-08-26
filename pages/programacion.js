@@ -4,8 +4,8 @@ import { getActualTime, isWeekend, getSchedule } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
 export default function Home() {
-    const [ListAM, setListAM] = useState([])
-    const [ListPM, setListPM] = useState([])
+    const [listAM, setListAM] = useState([])
+    const [listPM, setListPM] = useState([])
     const [tableAMPM, setTableAMPM] = useState(false)
 
     const time = new Date().getHours()
@@ -45,7 +45,7 @@ export default function Home() {
                 tableAMPM === false?
                 <>
                 {
-                    ListAM.map(serie => (
+                    listAM.map(serie => (
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? Prog_Styles.liveNow : ""}`}>
                         {
                             weekend === true?
@@ -69,7 +69,7 @@ export default function Home() {
                 :
                 <>
                 {
-                    ListPM.map(serie => (
+                    listPM.map(serie => (
                         <tr key={serie.id} className={`${serie.tiempo === rightNow? Prog_Styles.liveNow : ""}`}>
                         {
                             weekend === true?

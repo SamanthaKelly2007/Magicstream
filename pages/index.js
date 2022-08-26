@@ -1,38 +1,46 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import Player from '../components/Player'
-import { isWeekend, getActualTime, getCurrentNextShow } from '../utils/tools'
+import { getCurrentNextShow } from '../utils/tools'
 import {
   CSSTransition
 } from 'react-transition-group';
 
+
 export default function Home() {
-  const [minutes, setMinutes] = useState(0)
-  const [currentShow, setCurrentShow] = useState({nombre: "Cargando.."})
-  const [nextShow, setNextShow] = useState({nombre: "Cargando.."})
+
   const [showMsg, setShowMsg] = useState(false)
+  const [showsNav, setShowsNav] = useState([
+    {
+      id: 1,
+      show: "Cargando..."
+    },
+    {
+      id: 2,
+      show: "Cargando..."
+    }
+  ])
+  const [minutes, setMinutes] = useState(0)
+
   let difference = minutes <= 30? 30 - minutes : 60 - minutes
   let ms = (difference-1) * 60000
 
   const getShowSchedule = () => {
-    setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
-    setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+    setShowsNav(getCurrentNextShow())
     setMinutes(new Date().getMinutes())
   }
 
   useEffect(() => {
-    setMinutes(new Date().getMinutes())
-    setCurrentShow(getCurrentNextShow(getActualTime(), isWeekend(), 0))
-    setNextShow(getCurrentNextShow(getActualTime(), isWeekend(), 1))
+    getShowSchedule()
   }, [])
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
+    const timer = setTimeout(()=> {
       getShowSchedule()
     }, ms)
 
     return () => {
-      window.clearInterval(timer)
+      clearTimeout(timer)
     }
 
   }, [minutes])
@@ -43,18 +51,18 @@ export default function Home() {
         <title>Magic Stream</title>
       </Head>
       <div className='singleCol'>
-        <Player />
+        <Player/>
         <div className='streamControls'>
           <button onClick={() => setShowMsg(!showMsg)} type="button" className='btndefault button1 problemsBtn'>{showMsg? 'Cerrar' : 'Ayuda'} <img src='/icons/info.svg'/></button>
           <div>
-            <p>Ahora: {currentShow.nombre}</p>
-            <p>Despues: {nextShow.nombre}</p>
+            <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
+            <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>
           </div>
         </div>
       </div>
       <CSSTransition
         in={showMsg}
-        timeout={300}
+        timeout={200}
         unmountOnExit
         classNames="msgBox"
       >
