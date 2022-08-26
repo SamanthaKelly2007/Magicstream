@@ -62,7 +62,7 @@ export const getActualTime = () =>{
 //if its weekend returns true if not false
 
 export const isWeekend = () =>{
-    const weekend = new Date().getDay()
+    let weekend = new Date().getDay()
 
     return weekend = weekend === 0 || weekend === 6? true : false
 }
