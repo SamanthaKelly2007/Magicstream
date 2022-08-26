@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState, useEffect} from 'react'
 import Player from '../components/Player'
-import { getCurrentNextShow } from '../utils/tools'
+import { getCurrentNextShow, getActualTime } from '../utils/tools'
 import {
   CSSTransition
 } from 'react-transition-group';
@@ -26,7 +26,7 @@ export default function Home() {
   let ms = (difference-1) * 60000
 
   const getShowSchedule = () => {
-    setShowsNav(getCurrentNextShow())
+    setShowsNav(getCurrentNextShow(getActualTime()))
     setMinutes(new Date().getMinutes())
   }
 

@@ -107,9 +107,9 @@ export const getSchedule = (option) =>{
 //check if its weekend or not and filter the data based on the data we saved before
 //then return the object with the data found in the previous filters
 
-export const getCurrentNextShow = () =>{
+export const getCurrentNextShow = (hourString) =>{
 
-    const hour = hoursTable.indexOf(getActualTime())+1
+    const hour = hoursTable.indexOf(hourString)+1
     const weekend = isWeekend()
     const nextHour = hour === 48? 1 : hour+1
     let current, next
