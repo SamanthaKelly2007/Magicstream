@@ -37,7 +37,6 @@
 .tableData{
     margin: 0 auto;
     border-collapse: separate;
-    border-spacing: 0.3rem 0.5rem;
     width: 100%;
 }
 
@@ -59,7 +58,6 @@
     border: none !important;
     padding: 0.1rem !important;
     font-weight: bold;
-    font-size: large;
 }
 
 .titlesRow td:nth-child(2) img{
@@ -116,6 +114,10 @@
     .tableBox{
         width: 90%;
     }
+
+    .tableData{
+        border-spacing: 0.3rem 0.5rem;
+    }
 }
 
 /* Mobile Long - iPhone X 5.8' */
@@ -127,10 +129,16 @@
 @media (min-width: 768px) {
     .tableData{
         padding: 0 0.8rem;
+        border-spacing: 0.4rem 0.5rem;
+    }
+
+    .tableData td{
+        padding: 0 0.5rem;
     }
 
     .tableBox{
         width: fit-content;
+        min-width: 600px
     }
 
     .tableData td{

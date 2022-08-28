@@ -117,8 +117,6 @@ header a img{
 /* Mobile Long - iPhone X 5.8' */
 @media (min-width: 425px) {}
 
-/* Tablet 7' or Higher */
-
 @media (max-width: 767px) {
   .nav{
     display: none;
@@ -148,6 +146,8 @@ header a img{
     font-size: 2rem;
   }
 }
+
+/* Tablet 7' or Higher */
 
 @media (min-width: 768px) {
 
