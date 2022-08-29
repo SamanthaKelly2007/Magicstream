@@ -32,9 +32,6 @@ export default function Home() {
       <Head>
         <title>Programación</title>
       </Head>
-      <div className='lowerScreen'>
-        <p>Lo sentimos para ver la grilla gira la pantalla de tu celular o ingresa desde otro dispositivo.</p>
-      </div>
       <div className={Prog_Styles.tableBox}>
         <table className={Prog_Styles.tableData}>
             <tbody>

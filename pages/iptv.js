@@ -8,9 +8,6 @@ export default function Iptv() {
                 <title>IPTV</title>
             </Head>
             <div className='centerPage'>
-                <div className='lowerScreen'>
-                    <p>Lo sentimos para ver esta pagina gira la pantalla de tu celular o ingresa desde otro dispositivo.</p>
-                </div>
                 <div className={Iptv_Styles.iptvMsg}>
                     <img src="/img/Android_tv_logo.svg" alt='Android TV'/>
                     <section>

@@ -70,7 +70,13 @@
 
 @media (max-width: 300px) {
     .iptvMsg{
-        display: none;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .iptvMsg section{
+        padding: 0;
+        border: none;
     }
 }
 
