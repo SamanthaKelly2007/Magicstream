@@ -68,6 +68,12 @@
     margin-bottom: 0.5rem;
 }
 
+@media (max-width: 300px) {
+    .iptvMsg{
+        display: none;
+    }
+}
+
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
 

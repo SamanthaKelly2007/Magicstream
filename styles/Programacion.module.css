@@ -109,6 +109,12 @@
     color: var(--text_dark) !important;
 }
 
+@media (max-width: 300px) {
+    .tableBox{
+        display: none;
+    }
+}
+
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
     .tableBox{

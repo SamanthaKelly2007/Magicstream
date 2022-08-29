@@ -300,7 +300,7 @@ a {
     margin: 2rem auto 0 auto;
     overflow: hidden !important;
     border-radius: 0.5rem !important;
-    width: 280px !important;
+    width: 200px !important;
 }
 
 .mk_video video {
@@ -322,8 +322,18 @@ a {
     place-content: center;
     margin: auto;
     height: 100%;
-    font-size: 2.5rem;
     color: var(--text_light);
+}
+
+.lowerScreen{
+    display: none;
+    font-size: 1.2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: white;
+    width: 90%;
+    color: #000 !important;
+    margin: 2rem auto;
 }
 
 /*****************************************/
@@ -382,8 +392,22 @@ a {
 /* Media Queries */
 /*****************************************/
 
+@media (max-width: 300px) {
+    .lowerScreen{
+        display: block;
+    }
+}
+
 /* Mobile Short - iPhone 4 3.5' */
-@media (min-width: 320px) {}
+@media (min-width: 300px) {
+    .mk_video {
+        width: 280px !important;
+    }
+    
+    .coming_Soon {
+        font-size: 2.5rem;
+    }
+}
 
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {

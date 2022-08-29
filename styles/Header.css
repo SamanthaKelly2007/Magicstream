@@ -15,7 +15,7 @@ header{
 
 .logo_mk{
   cursor: pointer;
-  width: 7.5rem;
+  width: 4.5rem;
   object-fit: contain;
 }
 
@@ -23,7 +23,7 @@ header a{
   display: flex;
   align-items: center;
   color: var(--text_light);
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem 0.7rem;
 }
 
@@ -35,6 +35,7 @@ header a:hover{
 header a img{
   margin-right: 0.5rem;
   width: 40px;
+  min-width: 40px
 }
 
 .burger_button div{
@@ -58,7 +59,6 @@ header a img{
 .navClose{
   animation: mobileFadeOut .5s !important;
 }
-
 
 @keyframes mobileFade {
   from {
@@ -109,7 +109,15 @@ header a img{
 /*****************************************/
 
 /* Mobile Short - iPhone 4 3.5' */
-@media (min-width: 320px) {}
+@media (min-width: 300px) {
+  .logo_mk{
+    width: 7.5rem;
+  }
+
+  header a{
+    font-size: 2rem;
+  }
+}
 
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {}
@@ -141,10 +149,6 @@ header a img{
   .nav span{
     font-size: 2.4rem;
   }
-
-  .nav a{
-    font-size: 2rem;
-  }
 }
 
 /* Tablet 7' or Higher */
@@ -158,12 +162,17 @@ header a img{
   header a img{
     margin-right: 0.3rem;
     width: 25px;
+    min-width: 25px
   }
 
   .nav{
     display: flex;
     gap: 0.2rem;
     align-items: center;
+  }
+
+  header a{
+    font-size: 1.2rem;
   }
 }
 
