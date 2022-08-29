@@ -50,7 +50,7 @@ export default function Home() {
       <Head>
         <title>Magic Stream</title>
       </Head>
-      <div className='singleCol'>
+      <div className='centerPage'>
         <Player/>
         <div className='streamControls'>
           <button onClick={() => setShowMsg(!showMsg)} type="button" className='btndefault button1 problemsBtn'>{showMsg? 'Cerrar' : 'Ayuda'} <img src='/icons/info.svg'/></button>
