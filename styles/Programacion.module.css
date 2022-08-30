@@ -109,6 +109,13 @@
     color: var(--text_dark) !important;
 }
 
+@media (max-width: 280px) {
+    .tableData td,
+    .schedule_Buttons button{
+        font-size: 11px;
+    }
+}
+
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
     .tableBox{
@@ -118,11 +125,6 @@
     .tableData{
         border-spacing: 0.3rem 0.5rem;
     }
-}
-
-/* Mobile Long - iPhone X 5.8' */
-@media (min-width: 425px) {
-
 }
 
 /* Tablet 7' or Higher */
@@ -139,7 +141,7 @@
 
     .tableBox{
         width: fit-content;
-        min-width: 550px
+        max-width: 550px;
     }
 
     .tableData td{
