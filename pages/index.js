@@ -53,7 +53,7 @@ export default function Home() {
       <div className='centerPage'>
         <Player/>
         <div className='streamControls'>
-          <button onClick={() => setShowMsg(!showMsg)} type="button" className='btndefault button1 problemsBtn'>{showMsg? 'Cerrar' : 'Ayuda'} <img src='/icons/info.svg'/></button>
+          <button onClick={() => setShowMsg(!showMsg)} type="button" className='btndefault button1 problemsBtn'>{showMsg? 'Cerrar' : 'Ayuda'} <img src='/icons/info.svg' alt='icon'/></button>
           <div>
             <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
             <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>

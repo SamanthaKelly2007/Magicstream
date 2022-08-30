@@ -37,7 +37,7 @@ export default function Home() {
             <tbody>
                 <tr className={Prog_Styles.titlesRow}>
                     <td>Lunes a Viernes</td>
-                    <td><img src='/img/mk_logo_blue.png'/></td>
+                    <td><img src='/img/mk_logo_blue.png' alt='icon'/></td>
                     <td>Sábados y Domingos</td>
                 </tr>
                 

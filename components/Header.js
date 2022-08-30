@@ -19,10 +19,10 @@ export default function Header() {
                 </div>
             }
             <div className="nav">
-                <Link href="programacion"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" /> Programación</a></Link>
-                <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" /> Series</a></Link>
-                <Link href="peliculas"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/movie.svg" /> Películas</a></Link> 
-                <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" /> IPTV</a></Link>
+                <Link href="programacion"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Programación</a></Link>
+                <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</a></Link>
+                <Link href="peliculas"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/movie.svg" alt='icon'/> Películas</a></Link> 
+                <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</a></Link>
             </div>
         </header>
     )
