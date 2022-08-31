@@ -270,6 +270,7 @@ a {
     overflow: hidden !important;
     border-radius: 0.5rem !important;
     width: 200px !important;
+    animation: magicEffect .5s;
 }
 
 .mk_video video {
@@ -292,6 +293,7 @@ a {
     margin: auto;
     height: 100%;
     color: var(--text_light);
+    animation: magicEffect .5s;
 }
 
 /* Page not Found */
