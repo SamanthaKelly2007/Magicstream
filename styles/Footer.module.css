@@ -20,7 +20,7 @@
 .icons{
     display: grid;
     place-items: center;
-    min-height: 30px;
+    min-height: 35px;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1rem;
 }
