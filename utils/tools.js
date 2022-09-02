@@ -1,5 +1,6 @@
 import seriesSchedule from '../pages/api/serie.json'
 import hoursTable from '../pages/api/hours.json'
+import pathData from '../pages/api/pathData.json'
 
 //Nav Menu Button
 //Check if the menu is opened
@@ -74,7 +75,6 @@ export const isWeekend = () =>{
 //in the second for check for the weekend data
 //and returns the list sliced for AM or PM schedule based on the option param
 
-
 export const getSchedule = (option) =>{
     let list = [];
 
@@ -99,6 +99,57 @@ export const getSchedule = (option) =>{
     }
 
     return option === "AM" ? list.slice(0,25) : option === "PM" ? list.slice(25,49) : list
+}
+
+//returns the path of one show from the Series DB
+
+function getShow(showid){
+    let found = pathData.filter(data => data.id === showid)
+    delete found.id
+    return found
+}
+
+//returns a list of 48 objects with custom properties for VLC Playlist Generator
+
+export const getScheduleJSON = (option) =>{
+    let list = []
+
+    if (option === 1) {
+        for (let i = 0; i <= 48; i++) {
+            seriesSchedule.filter(serie => serie.emision_1_week === i || serie.emision_2_week === i  || serie.emision_3_week === i ).map(dato => (
+            list[i] = {
+                    id : i,
+                    list_id : dato.id,
+                    name : dato.nombre,
+                    episodes : dato.episodios,
+                    duration : dato.duracion
+                }
+            ))
+        }   
+    }
+    else
+    {
+        for (let i = 0; i <= 48; i++) {
+            seriesSchedule.filter(serie => serie.emision_1_weekend === i || serie.emision_2_weekend === i || serie.emision_3_weekend === i).map(dato => (
+            list[i] = {
+                    id: i,
+                    list_id : dato.id,
+                    name : dato.nombre,
+                    episodes : dato.episodios,
+                    duration : dato.duracion
+                }
+            ))
+        }
+    }
+
+    for (let i = 0; i <= 48; i++) {
+        if (list[i]) {
+            let newData = getShow(list[i].list_id)
+            list[i] = { ...newData[0], ...list[i] }
+        }
+    }
+
+    return list
 }
 
 //this function returns an object with the current and next show

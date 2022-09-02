@@ -1,0 +1,116 @@
+[
+    {
+        "id" : 1,
+        "name" : "Digimon 02",
+        "path" : "file:///D:/Series/Digimon_02/DIGIMON02_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 2,
+        "name" : "El Mundo de Beakman",
+        "path" : "file:///D:/Series/Beakman_World/Beakman_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 3,
+        "name" : "Transformers Beast Machines",
+        "path" : "file:///D:/Series/Beast_Wars_2/BM2_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 4,
+        "name" : "Detective Conan",
+        "path" : "file:///D:/Series/Detective_Conan/DC_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 5,
+        "name" : "Dragon Ball Z",
+        "path" : "file:///D:/Series/Dragon_Ball_Z/DBZ_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 6,
+        "name" : "Estan Arrestados",
+        "path" : "file:///D:/Series/Estan_Arrestados/EA_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 7,
+        "name" : "Kito Pizzas",
+        "path" : "file:///D:/Series/Kito_Pizzas/KITO_EP_",
+        "index" : 1
+    },
+    {
+        "id" : 8,
+        "name" : "Koni Chan",
+        "path" : "file:///D:/Series/KoniChan/KONI_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 9,
+        "name" : "Cazafantasmas Mikami",
+        "path" : "file:///D:/Series/Mikami_CazaFantasmas/MIKAMI_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 10,
+        "name" : "Dr Slump",
+        "path" : "file:///D:/Series/Dr_Slump/DRSLUMP_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 11,
+        "name" : "Doug",
+        "path" : "file:///D:/Series/Doug/DOUG_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 12,
+        "name" : "Ranma 1/2",
+        "path" : "file:///D:/Series/Ranma_1-2/RANMA_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 13,
+        "name" : "Robotech",
+        "path" : "file:///D:/Series/Robotech/ROBOTECH_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 14,
+        "name" : "Sailor Moon",
+        "path" : "file:///D:/Series/Sailor_Moon/SM_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 15,
+        "name" : "Los Caballeros del Zodiaco",
+        "path" : "file:///D:/Series/Saint_Seiya/LCDZ_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 16,
+        "name" : "Sakura Card Captor",
+        "path" : "file:///D:/Series/Sakura_Card_Captor/SCC_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 17,
+        "name" : "Slam Dunk",
+        "path" : "file:///D:/Series/Slam_Dunk/SD_EP_",
+        "index" : 61
+    },
+    {
+        "id" : 18,
+        "name" : "Zenki",
+        "path" : "file:///D:/Series/Zenki/ZENKI_EP_",
+        "index" : 8
+    },
+    {
+        "id" : 19,
+        "name" : "Supercampeones",
+        "path" : "file:///D:/Series/Supercampeones/SC_EP_",
+        "index" : 8
+    }
+]

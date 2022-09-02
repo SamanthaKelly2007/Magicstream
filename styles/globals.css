@@ -1,7 +1,15 @@
 @font-face {
-    font-family: 'Kanit';
-    src: url('/fonts/kanit-regular.otf');
+    font-family: "Maven Pro";
+    src: url("/fonts/MavenPro-Medium.woff2") format("woff2");
+    font-weight: normal;
 }
+
+@font-face {
+    font-family: "Maven Pro";
+    src: url("/fonts/MavenPro-SemiBold.woff2") format("woff2");
+    font-weight: bold;
+}
+
 
 :root {
     --white: #fff;
@@ -15,7 +23,7 @@
     --text_dark: #000000;
     --bg_violet_mk: #3A1DB3;
     --button_violet: #623bff;
-    --font-custom: 'Kanit', sans-serif;
+    --font-custom: 'Maven Pro', sans-serif;
     --font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -25,6 +33,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-custom);
+    animation: magicEffect .5s;
 }
 
 html {
@@ -118,6 +127,7 @@ a {
 
 .problemsBtn {
     display: flex;
+    align-items: center;
     column-gap: 0.3rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -294,6 +304,10 @@ a {
     height: 100%;
     color: var(--text_light);
     animation: magicEffect .5s;
+}
+
+.normal{
+    font-size: 1rem;
 }
 
 /* Page not Found */

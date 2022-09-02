@@ -7,7 +7,6 @@ export default function Home() {
     const [listAM, setListAM] = useState([])
     const [listPM, setListPM] = useState([])
     const [tableAMPM, setTableAMPM] = useState(false)
-
     const time = new Date().getHours()
     const rightNow = getActualTime()
     const weekend = isWeekend()

@@ -6,9 +6,16 @@ export default function Document() {
       <Head>
         <meta name="keywords" content="magic kids streaming, magic kids en vivo, magic kids transmision" />
         <meta name="description" content="Revivi la experiencia Magic Kids, Magic Stream es una pagina dedicada al canal magic kids y para recrear su transmision, disfruta de la programacion de magic kids las 24hs del dia todos los dias." />
-        <link rel='shortcut icon' href='favicon.ico'></link>
         <meta property="og:title" content="Magic Stream" />
         <meta property="og:type" content="video.series" />
+        <link rel="preload" href="/fonts/MavenPro-Medium.woff2" as="font" type="font/woff2" crossorigin=""></link>
+        <link rel="preload" href="/fonts/MavenPro-SemiBold.woff2" as="font" type="font/woff2" crossorigin=""></link>
+        <link rel='shortcut icon' href='favicon.ico'></link>
+        <link rel='preload' as='image' href='/img/magickidsbg.png'></link>
+        <link rel="preload" as="image" href="/icons/facebook.svg"></link>
+        <link rel="preload" as="image" href="/icons/github.svg"></link>
+        <link rel="preload" as="image" href="/icons/instagram.svg"></link>
+        <link rel="preload" as="image" href="/icons/taringa.svg"></link>
       </Head>
       <body>
         <Main />
