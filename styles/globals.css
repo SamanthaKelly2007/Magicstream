@@ -284,6 +284,7 @@ a {
     border-radius: 0.5rem !important;
     width: 200px !important;
     animation: magicEffect .5s;
+    transition: width .5s;
 }
 
 .mk_video video {
