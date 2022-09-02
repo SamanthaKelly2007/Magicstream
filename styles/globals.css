@@ -33,7 +33,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-custom);
-    animation: magicEffect .5s;
 }
 
 html {
@@ -74,6 +73,10 @@ a {
     width: fit-content;
     margin: auto;
     color: var(--text_light);
+}
+
+.player{
+    animation: magicEffect .5s;
 }
 
 /* ===== Scrollbar CSS ===== */
