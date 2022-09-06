@@ -136,6 +136,7 @@ a {
     text-transform: uppercase;
     font-size: 1rem;
     order: 2;
+    transition: width .5s;
 }
 
 .problemsBtn img {

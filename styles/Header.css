@@ -25,11 +25,12 @@ header a{
   color: var(--text_light);
   font-size: 1rem;
   padding: 0.5rem 0.7rem;
+  border-radius: 0.8rem;
+  transition: background-color .3s;
 }
 
 header a:hover{
   background-color: var(--bg_dark_opacity_1);
-  border-radius: 0.8rem;
 }
 
 header a img{

@@ -32,6 +32,7 @@
 .icons a img{
     display: flex;
     width: 30px;
+    transition: filter .2s;
 }
 
 .icons a img:hover{
@@ -40,6 +41,6 @@
 
 @media (min-width: 768px) {
     .footer{
-        padding: 1.5rem;
+        padding: 1.5rem 1.5rem 2rem;
     }
 }
