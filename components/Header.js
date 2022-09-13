@@ -8,7 +8,8 @@ export default function Header() {
 
     return (
         <header>
-            <Link href="/"><img className='logo_mk' onClick={() => logoNav()} src="../img/magickidslogo.png" alt="Magic Kids Logo"/></Link>
+            
+            <Link href="/"><a className='logo_mk' href='/'><img onClick={() => logoNav()} src="../img/magickidslogo.png" alt="Magic Kids Logo"/></a></Link>
             
             {
                 window.width < 768 &&

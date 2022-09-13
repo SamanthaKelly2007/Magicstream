@@ -14,9 +14,17 @@ header{
 }
 
 .logo_mk{
+  padding: 0;
+}
+
+.logo_mk img{
   cursor: pointer;
   width: 4.5rem;
   object-fit: contain;
+}
+
+.logo_mk:hover{
+  background-color: transparent;
 }
 
 header a{
@@ -114,7 +122,7 @@ header a img{
 
 /* Mobile Short - iPhone 4 3.5' */
 @media (min-width: 300px) {
-  .logo_mk{
+  .logo_mk img{
     width: 7.5rem;
   }
 
