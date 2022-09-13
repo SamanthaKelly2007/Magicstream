@@ -12,7 +12,7 @@ export default function Footer() {
             </div>
             <p>En dedicación al Canal Magic Kids</p>
             <p>Magic Stream</p>
-            <Link href='donar'><a className={Footer_Styles.donateFooter}>Donar <img src='/icons/star.svg' alt='icon'/></a></Link>
+            <Link href='donar'><a className={Footer_Styles.donateFooter}>Donar <img src='/icons/starmk.svg' alt='icon'/></a></Link>
         </footer>
     )
 }

@@ -22,7 +22,7 @@ export default function Header() {
                 <Link href="programacion"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Programación</a></Link>
                 <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</a></Link>
                 <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</a></Link>
-                <Link href="donar"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/star.svg" alt='icon'/> Donar</a></Link>
+                <Link href="donar"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Donar</a></Link>
             </div>
         </header>
     )
