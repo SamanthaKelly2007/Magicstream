@@ -1,4 +1,5 @@
 import Footer_Styles from '../styles/Footer.module.css'
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -11,6 +12,7 @@ export default function Footer() {
             </div>
             <p>En dedicación al Canal Magic Kids</p>
             <p>Magic Stream</p>
+            <Link href='donar'><a className={Footer_Styles.donateFooter}>Donar <img src='/icons/star.svg' alt='icon'/></a></Link>
         </footer>
     )
 }
