@@ -39,12 +39,15 @@ header a img{
   min-width: 40px
 }
 
+.burger_button{
+  cursor: pointer;
+}
+
 .burger_button div{
   width: 35px;
   height: 3px;
   background-color: #fff;
   margin: 6px 0;
-  cursor: pointer;
   border-radius: 1rem;
 }
 

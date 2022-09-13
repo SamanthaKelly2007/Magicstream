@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <header>
-            <Link href="/"><img className='logo_mk' onClick={() => logoNav()} src="../img/logo_mk.png" alt="Magic Kids Logo"/></Link>
+            <Link href="/"><img className='logo_mk' onClick={() => logoNav()} src="../img/magickidslogo.png" alt="Magic Kids Logo"/></Link>
             
             {
                 window.width < 768 &&
@@ -21,8 +21,8 @@ export default function Header() {
             <div className="nav">
                 <Link href="programacion"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Programación</a></Link>
                 <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</a></Link>
-                <Link href="peliculas"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/movie.svg" alt='icon'/> Películas</a></Link> 
                 <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</a></Link>
+                <Link href="donar"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/star.svg" alt='icon'/> Donar</a></Link>
             </div>
         </header>
     )

@@ -4,7 +4,6 @@ import 'video.js/dist/video-js.css'
 import spanish from '../pages/api/spanish.json'
 
 export default function Player() {
-
     const [videoEl, setVideoEl] = useState(null);
     const videoRef = useCallback((el) => {
       setVideoEl(el);
@@ -17,6 +16,7 @@ export default function Player() {
       if (videoEl == null) return;
 
       const player = videojs(videoEl, {
+        aspectRatio: '16:9',
         languages: {
           es: spanish
         },
@@ -35,7 +35,8 @@ export default function Player() {
       };
     }, [videoEl])
 
+
     return (
-      <video controls playsInline ref={videoRef} className="video-js mk_video" poster="../img/magickidsbg.png"/>
+      <video preload='auto' controls playsInline ref={videoRef} className={"video-js mk_video"} poster="../img/magickidsbg.png"/>
     )
 }

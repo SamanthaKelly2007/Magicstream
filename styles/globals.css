@@ -17,7 +17,9 @@
     --bg_schedule_light: #fff;
     --bg_schedule_dark: #000000;
     --bg_white_opacity_1: #ffffffed;
+    --bg_white_opacity_2: #ffffff7a;
     --bg_dark_opacity_1: rgba(0, 0, 0, 0.2);
+    --soft_shadow: 0 2px 4px rgb(0 0 0 / 3%), 0 8px 16px rgb(0 0 0 / 3%);
     --bg_footer: rgba(0, 0, 0, 0.75);
     --text_light: #fff;
     --text_dark: #000000;
@@ -40,6 +42,9 @@ html {
     background-color: var(--bg_violet_mk);
     transition: background-color .5s;
     overflow-x: hidden;
+    background-image: url("/img/starsbg.png");
+    background-size: 25rem;
+    background-position: center center;
 }
 
 html,
@@ -50,13 +55,15 @@ body {
 main {
     flex: 1;
     margin-top: 70px;
-    background: transparent url("/img/starsbg.png");
-    background-size: 25rem;
-    background-position: center center;
 }
 
 a {
     text-decoration: none;
+}
+
+hr{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
 #__next {
@@ -73,10 +80,6 @@ a {
     width: fit-content;
     margin: auto;
     color: var(--text_light);
-}
-
-.player{
-    animation: magicEffect .5s;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -133,12 +136,14 @@ a {
     align-items: center;
     column-gap: 0.3rem;
     font-weight: bold;
+    border-radius: 0.5rem 0 0 0.5rem;
     text-transform: uppercase;
     font-size: 1rem;
     order: 2;
     transition: width .5s;
 }
 
+.changeAspect img,
 .problemsBtn img {
     display: grid;
     place-self: center;
@@ -147,7 +152,7 @@ a {
     margin: auto 0 auto auto;
 }
 
-.problemsBtn:hover {
+.problemsBtn:hover{
     background-color: #4e20ff;
 }
 
@@ -162,6 +167,7 @@ a {
     justify-content: space-between;
     padding: 1rem 0;
     grid-gap: 1rem;
+    border-radius: 0 0rem 1rem 1rem;
 }
 
 .streamControls div {
@@ -170,6 +176,13 @@ a {
     border-radius: 0.5rem;
     overflow: hidden;
     width: 90%;
+    min-height: 2.5rem;
+}
+
+.streamControls div:nth-of-type(2){
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .streamControls div p {
@@ -226,7 +239,7 @@ a {
 .msgBox-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity 500ms, transform 400ms;
 }
 
 .msgBox-exit {
@@ -236,12 +249,16 @@ a {
 .msgBox-exit-active {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity 500ms, transform 400ms;
 }
 
 /* End Home User-Player Options */
 
 /* Video JS CSS */
+
+.video-js{
+    animation: magicEffect .5s;
+}
 
 .video-js .vjs-tech {
     outline: none;
@@ -250,7 +267,7 @@ a {
 .vjs-poster {
     background-size: cover !important;
     transition: background-size .5s;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 0.5rem;
 }
 
@@ -266,31 +283,36 @@ a {
     backdrop-filter: blur(5px);
 }
 
-.mk_project {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    color: var(--text_light);
-    background-color: var(--bg_dark_opacity_1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-
 .mk_video {
     text-align: center;
     margin: 2rem auto 0 auto;
     overflow: hidden !important;
     border-radius: 0.5rem !important;
-    width: 200px !important;
+    width: 180px !important;
     animation: magicEffect .5s;
     transition: width .5s;
 }
 
 .mk_video video {
-    object-fit: fill;
     border-radius: 0.5rem;
+}
+
+.fullScreen video{
+    object-fit: fill;
+}
+
+.changeAspect{
+    order: 2;
+    display: flex;
+    border-left: 0.1px solid rgba(255, 255, 255, 0.15);
+    background-color: var(--button_violet);
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    padding: 0.6rem;
+}
+
+.changeAspect:hover{
+    background-color: #4e20ff;
 }
 
 /* End Video JS CSS */
@@ -311,10 +333,6 @@ a {
     animation: magicEffect .5s;
 }
 
-.normal{
-    font-size: 1rem;
-}
-
 /* Page not Found */
 
 .pageNotFound {
@@ -323,10 +341,11 @@ a {
     place-items: center;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--bg_violet_mk);
     color: white;
     overflow: hidden;
     text-align: center;
+    animation: magicEffect .5s;
 }
 
 .pageNotFound p:nth-of-type(1){
@@ -346,6 +365,72 @@ a {
     background-color: white;
     color: black;
     border-radius: 1.5rem;
+}
+
+.donate{
+    display: grid;
+    place-content: center;
+    margin: 1.5rem auto;
+    background-color: var(--bg_white_opacity_1);
+    width: 95%;
+    max-width: 800px;
+    color: rgb(26, 26, 26);
+    border-radius: 1rem;
+    grid-gap: 1rem;
+    padding: 1.2rem 1rem;
+    animation: openTableBox .5s;
+}
+
+.donate table{
+    margin: 0 auto;
+    border-collapse: separate;
+}
+
+.donate td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.donate h4{
+    margin-top: 0.5rem;
+}
+
+.donate section{
+    border: 1px solid var(--bg_dark_opacity_1);
+    padding: 1rem;
+    line-height: 1.9rem;
+    border-radius: 1rem;
+    background-color: var(--bg_white_opacity_2);
+    box-shadow: var(--soft_shadow);
+}
+
+.donateOptions{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 1rem;
+}
+
+.donateOptions a{
+    text-align: center;
+    color: rgb(22, 22, 22);
+    border: 1px solid var(--bg_dark_opacity_1);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: background-color .4s, color .4s;
+}
+
+.donateOptions a:hover{
+    background-color: #623bff;
+    color: #fff;
+}
+
+.donateOptions img{
+    width: 50px;
+    height: 50px;
 }
 
 /*****************************************/
@@ -400,7 +485,29 @@ a {
     }
 }
 
+@keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
 
+@-webkit-keyframes openTableBox {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
 
 /*****************************************/
 /* Media Queries */
@@ -438,7 +545,15 @@ a {
 }
 
 /* Mobile Long - iPhone X 5.8' */
-@media (min-width: 425px) {}
+@media (min-width: 425px) {
+    .donateOptions a{
+        width: 140px;
+    }
+    
+    .donateOptions{
+        flex-direction: row;
+    }
+}
 
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
@@ -460,6 +575,7 @@ a {
     }
 
     .mk_video {
+        margin: 0.5rem auto 0 auto;
         width: 720px !important;
     }
 
@@ -479,6 +595,12 @@ a {
         margin-bottom: 0;
     }
 
+    .streamControls div p{
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+    }
+
     .problemsBtn {
         margin: 1rem 0;
     }
@@ -492,19 +614,27 @@ a {
         font-size: 5rem;
     }
 
+    .donateOptions a{
+        width: 150px;
+    }
+
 }
 
 /* Notebook/Desktop */
 @media (min-width: 1024px) {
     .msgBox {
-        max-width: 900px;
+        max-width: 850px;
     }
 }
 
 /* Notebook/Desktop Long */
 @media (min-width: 1440px) {
     .mk_video {
-        width: 768px !important;
+        width: 850px !important;
+    }
+
+    .streamControls div p{
+        max-width: 360px;
     }
 }
 

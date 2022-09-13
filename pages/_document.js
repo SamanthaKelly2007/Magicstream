@@ -12,9 +12,7 @@ export default function Document() {
         <link rel="preload" href="/fonts/MavenPro-SemiBold.woff2" as="font" type="font/woff2" crossOrigin=""></link>
         <link rel='shortcut icon' href='favicon.ico'></link>
         <link rel='preload' as='image' href='/img/starsbg.png'></link>
-        <link rel='preload' as='image' href='/img/logo_mk.png'></link>
-        <link rel='preload' as='image' href='/img/magickidsbg.png'></link>
-        <link rel='preload' as='image' href='/img/Android_tv_logo.svg'></link>
+        <link rel='preload' as='image' href='/img/magickidslogo.png'></link>
         <link rel="preload" as="image" href="/icons/facebook.svg"></link>
         <link rel="preload" as="image" href="/icons/github.svg"></link>
         <link rel="preload" as="image" href="/icons/instagram.svg"></link>

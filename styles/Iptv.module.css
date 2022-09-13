@@ -35,6 +35,16 @@
     }
 }
 
+.iptvMsg textarea{
+    border-style: none;
+    border: 1px solid var(--bg_dark_opacity_1);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    height: 5rem;
+    resize: none;
+    width: 100%;
+}
 
 .iptvMsg h1 span{
     color: var(--text_dark);
@@ -52,7 +62,7 @@
     border: 1px solid var(--bg_dark_opacity_1);
     color: rgb(26, 26, 26);
     border-radius: 0.5rem;
-    padding: 0 0.5rem;
+    padding: 0.1rem 0.5rem;
     background-color: #000000d1;
     color: #fff;
 }
@@ -62,6 +72,8 @@
     padding: 1rem;
     line-height: 1.9rem;
     border-radius: 1rem;
+    background-color: var(--bg_white_opacity_2);
+    box-shadow: var(--soft_shadow);
 }
 
 .iptvMsg section h1{
@@ -74,12 +86,22 @@
     }
 }
 
+@media (min-width: 375px) {
+    .iptvMsg textarea{
+        height: auto;
+    }
+}
+
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
 
     .iptvMsg{
         width: 700px;
         padding: 2rem;
+    }
+
+    .iptvMsg textarea{
+        width: 85%;
     }
 
     .iptvMsg img{

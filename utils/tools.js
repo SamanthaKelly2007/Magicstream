@@ -21,10 +21,10 @@ export const openNav = () => {
         document.getElementsByTagName('header')[0].classList.remove('header_bg')
         setTimeout(() => {
             nav.classList.remove('navClose')
-        }, 200);
+        }, 300);
         setTimeout(() => {
             nav.classList.remove('navOpen')
-        }, 100);
+        }, 200);
     }
     else
     {
@@ -55,6 +55,7 @@ export const logoNav = () => {
 export const getActualTime = () =>{
     let hours = new Date().toLocaleString('es-AR', { hour:'2-digit', timeZone: 'America/Buenos_Aires'})
     let minutes = new Date().toLocaleString('es-AR', { minute:'2-digit', timeZone: 'America/Buenos_Aires'})
+    minutes = Number(minutes);
     minutes = minutes < 30? "00" : "30"
 
     return hours+":"+minutes
@@ -73,7 +74,7 @@ export const isWeekend = () =>{
 //in the first for checks the series database and gets the week data
 //and replace the time index of the section with the specific hour (blocks of 30 minutes)
 //in the second for check for the weekend data
-//and returns the list sliced for AM or PM schedule based on the option param
+//and returns the list sliced for AM or PM schedule, different param returns the whole list
 
 export const getSchedule = (option) =>{
     let list = [];

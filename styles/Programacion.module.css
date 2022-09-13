@@ -5,7 +5,7 @@
     width: 95%;
     margin: 1rem auto;
     background-color: var(--bg_schedule_light);
-    border-radius: 1.2rem;
+    border-radius: 0.5rem;
     animation: openTableBox .5s;
 }
 
@@ -74,7 +74,7 @@
 .schedule_Buttons{
     display: flex;
     justify-content: center;
-    grid-gap: 1rem;
+    gap: 0.5rem;
     padding: 0.5rem 0 0;
     width: 100%;
 }
@@ -82,10 +82,11 @@
 .schedule_Buttons button{
     border-style: none;
     padding: 0.8rem 0.5rem;
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
     background-color: #7b5df4;
     color: var(--text_light);
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     border: 4px solid transparent;
 }
@@ -109,7 +110,7 @@
     color: var(--text_dark) !important;
 }
 
-@media (max-width: 280px) {
+@media (max-width: 305px) {
     .tableData td,
     .schedule_Buttons button{
         font-size: 11px;
@@ -119,6 +120,7 @@
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
     .tableBox{
+        padding: 0.5rem 1rem 1rem;
         width: 90%;
     }
 
