@@ -53,6 +53,7 @@ export default function Home() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       getShowSchedule()
+      getShowSchedule()
     }, ms)
 
     return () => {
