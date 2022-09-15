@@ -20,7 +20,7 @@ export default function Header() {
                 </div>
             }
             <div className="nav">
-                <Link href="programacion"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Programación</a></Link>
+                <Link href="grilla"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Grilla</a></Link>
                 <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</a></Link>
                 <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</a></Link>
                 <Link href="donar"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Donar</a></Link>

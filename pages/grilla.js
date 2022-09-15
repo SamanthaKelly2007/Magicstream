@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { getActualTime, isWeekend, getSchedule } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
-export default function Home() {
+export default function Grilla() {
     const [listAM, setListAM] = useState([])
     const [listPM, setListPM] = useState([])
     const [tableAMPM, setTableAMPM] = useState(false)
@@ -29,7 +29,7 @@ export default function Home() {
     return (
     <>
       <Head>
-        <title>Programación</title>
+        <title>Grilla</title>
       </Head>
       <div className={Prog_Styles.tableBox}>
         <table className={Prog_Styles.tableData}>

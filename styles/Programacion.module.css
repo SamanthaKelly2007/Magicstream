@@ -5,7 +5,7 @@
     width: 95%;
     margin: 1rem auto;
     background-color: var(--bg_schedule_light);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     animation: openTableBox .5s;
 }
 

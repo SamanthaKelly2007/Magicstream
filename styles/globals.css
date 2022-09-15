@@ -239,7 +239,7 @@ hr{
 .msgBox-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 500ms, transform 400ms;
+    transition: opacity 400ms, transform 400ms;
 }
 
 .msgBox-exit {
@@ -249,7 +249,7 @@ hr{
 .msgBox-exit-active {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 500ms, transform 400ms;
+    transition: opacity 400ms, transform 400ms;
 }
 
 /* End Home User-Player Options */
