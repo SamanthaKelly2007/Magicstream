@@ -88,6 +88,11 @@ export default function Home() {
       <ul className='msgBox'>
         <h1>Novedades</h1>
         <li>
+          <h2>Chromecast - AirPlay</h2>
+          <p>desde el boton dedicado al lado de volumen podran transmitir el stream desde su celular Android o iPhone a Chromecast o Apple TV</p>
+          <p>en iPhone solo esta limitado a Apple TV o dispositivos que tengan la función AirPlay.</p>
+        </li>
+        <li>
           <h2>Se Ajusto la transmisión al formato 4:3</h2>
           <p>4:3 o Cuadrado es el nuevo formato para preservar el ancho original de las series, podes volver al 16:9 o Ancho desde el nuevo boton al lado de Info.</p>
           <br/>

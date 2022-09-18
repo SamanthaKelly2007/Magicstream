@@ -85,5 +85,6 @@
   "End of dialog window.": "Final de la ventana de diálogo.",
   "{1} is loading.": "{1} se está cargando.",
   "Exit Picture-in-Picture": "Cerrar Ventana Flotante",
-  "Picture-in-Picture": "Modo Ventana Flotante"
+  "Picture-in-Picture": "Modo Ventana Flotante",
+  "Open Chromecast menu" : "Transmitir a Chromecast"
 }

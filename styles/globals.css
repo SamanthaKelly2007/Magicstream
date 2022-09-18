@@ -314,6 +314,44 @@ hr{
     background-color: #4e20ff;
 }
 
+/** Chromecast **/
+.vjs-chromecast-button {
+    cursor: pointer;
+  }
+  .vjs-chromecast-button .vjs-icon-placeholder {
+    background: url("/icons/chromecast_idle.png") center center no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+  }
+  .vjs-chromecast-button.vjs-chromecast-casting-state .vjs-icon-placeholder {
+    background-image: url("/icons/chromecast_connected.png");
+  }
+  /** AirPlay **/
+  .vjs-airplay-button {
+    cursor: pointer;
+  }
+  .vjs-airplay-button .vjs-icon-placeholder {
+    background: url("/icons/airplay.png") center center no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+  }
+
+  .vjs-tech-chromecast-title-container{
+    display: none;
+  }
+  
+  .vjs-tech-chromecast-poster{
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
 /* End Video JS CSS */
 
 .noScroll {

@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang='es'>
+    <Html lang='es' data-cast-api-enabled="true">
       <Head>
         <meta name="keywords" content="magic kids streaming, magic kids en vivo, magic kids transmision" />
         <meta name="description" content="Revivi la experiencia Magic Kids, Magic Stream es una pagina dedicada al canal magic kids y para recrear su transmision, disfruta de la programacion de magic kids las 24hs del dia todos los dias." />
@@ -17,6 +17,7 @@ export default function Document() {
         <link rel="preload" as="image" href="/icons/github.svg"></link>
         <link rel="preload" as="image" href="/icons/instagram.svg"></link>
         <link rel="preload" as="image" href="/icons/taringa.svg"></link>
+        <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1" defer></script>
       </Head>
       <body>
         <Main />
