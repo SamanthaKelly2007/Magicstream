@@ -1,6 +1,5 @@
 import seriesSchedule from '../pages/api/serie.json'
 import hoursTable from '../pages/api/hours.json'
-import pathData from '../pages/api/pathData.json'
 
 //Nav Menu Button
 //Check if the menu is opened
@@ -101,14 +100,6 @@ export const getSchedule = (option) =>{
     }
 
     return option === "AM" ? list.slice(0,25) : option === "PM" ? list.slice(25,49) : list
-}
-
-//returns the path of one show from the Series DB
-
-function getShow(showid){
-    let found = pathData.filter(data => data.id === showid)
-    delete found.id
-    return found
 }
 
 //this function returns an object with the current and next show

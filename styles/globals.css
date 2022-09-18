@@ -92,19 +92,16 @@ hr{
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 16px;
+    width: 9px;
 }
 
 *::-webkit-scrollbar-track {
-    position: absolute;
-    right: -3rem;
-    background-color: var(--bg_violet_mk);
+    background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #ffffffb3;
+    background-color: #ffffff7e;
     border-radius: 10px;
-    border: 4px solid var(--bg_violet_mk);
 }
 
 *::-webkit-scrollbar-thumb:hover {
@@ -278,6 +275,7 @@ hr{
 .vjs-control-bar {
     background-color: rgba(43, 51, 63, 0.4) !important;
     backdrop-filter: blur(5px);
+    border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .mk_video {
@@ -302,7 +300,7 @@ hr{
     order: 2;
     display: flex;
     border-left: 0.1px solid rgba(255, 255, 255, 0.15);
-    background-color: var(--button_violet);
+    background-color: #7554f9;
     border-radius: 0 0.5rem 0.5rem 0;
     cursor: pointer;
     padding: 0.6rem;
@@ -441,30 +439,6 @@ hr{
 /*****************************************/
 /* Animations Keyframes */
 /*****************************************/
-
-@keyframes mobileFadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
-
-@-webkit-keyframes mobileFadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
 
 @keyframes magicEffect {
     from {

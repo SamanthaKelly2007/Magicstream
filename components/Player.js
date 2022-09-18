@@ -9,9 +9,6 @@ export default function Player() {
       setVideoEl(el);
     }, []);
 
-    let streamUrl = "https://magicstream.ddns.net:443/magicstream/stream.m3u8"
-    const streamType = "application/x-mpegURL"
-
     useEffect(() => {
       if (videoEl == null) return;
 
@@ -23,8 +20,8 @@ export default function Player() {
         language: 'es',
         sources: [
           {
-            src: streamUrl,
-            type: streamType
+            src: "https://magicstream.ddns.net:443/magicstream/stream.m3u8",
+            type: "application/x-mpegURL"
           }
         ],
         fluid: true

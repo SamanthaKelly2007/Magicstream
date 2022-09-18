@@ -81,7 +81,7 @@ export default function Home() {
       </div>
       <CSSTransition
         in={showMsg}
-        timeout={200}
+        timeout={300}
         unmountOnExit
         classNames="msgBox"
       >
