@@ -13,45 +13,54 @@ export default function Player() {
 
     useEffect(() => {
       
+      if ("mediaSession" in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: 'Magic Kids',
+          artwork: [
+            { src: '/img/videoplayer.png', sizes: '512x512', type: 'image/png' },
+          ]
+        });
+      }
+
       if (videoRef.current) {
         const video = videoRef.current;
 
-      playerRef.current  = videojs(video, {
-        controls: true,
-        controlBar: {
-          subsCapsButton: false
-        },
-        aspectRatio: '16:9',
-        languages: {
-          es: spanish
-        },
-        language: 'es',
-        fluid: true,
-        sources: [{ src, type: "application/x-mpegURL" }],
-        techOrder: ["chromecast", "html5"],
-        chromecast: {
-          requestTitleFn: function() { // Not required
-            return "Magic Stream";
+        playerRef.current  = videojs(video, {
+          controls: true,
+          controlBar: {
+            subsCapsButton: false
           },
-          requestSubtitleFn: function() { // Not required
-            return "En Vivo";
+          aspectRatio: '16:9',
+          languages: {
+            es: spanish
           },
-          requestCustomDataFn: function() {
-            playerRef.current.volume(0.2)
-          },
-        },
-        plugins: {
+          language: 'es',
+          fluid: true,
+          sources: [{ src, type: "application/x-mpegURL" }],
+          techOrder: ["chromecast", "html5"],
           chromecast: {
-            buttonPositionIndex: 2,
-            addButtonToControlBar: true
+            requestTitleFn: function() {
+              return "Magic Stream";
+            },
+            requestSubtitleFn: function() {
+              return "En Vivo";
+            },
+            requestCustomDataFn: function() {
+              playerRef.current.volume(0.2)
+            },
           },
-          airPlay: {
-            buttonPositionIndex: 2,
-            addButtonToControlBar: true
+          plugins: {
+            chromecast: {
+              buttonPositionIndex: 2,
+              addButtonToControlBar: true
+            },
+            airPlay: {
+              buttonPositionIndex: 2,
+              addButtonToControlBar: true
+            }
           }
-        }
-      })
-    }
+        })
+      }
 
     return () => {
       if (playerRef.current) {

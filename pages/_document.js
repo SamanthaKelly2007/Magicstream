@@ -6,9 +6,9 @@ export default function Document() {
       <Head>
         <meta name="keywords" content="magic kids streaming, magic kids en vivo, magic kids transmision" />
         <meta name="description" content="Revivi la experiencia Magic Kids, Magic Stream es una pagina dedicada al canal magic kids y para recrear su transmision, disfruta de la programacion de magic kids las 24hs del dia todos los dias." />
-        <meta property="og:image" content="/img/magickidsbg.png" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image" content="/img/videoplayer.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
         <meta property="og:image:alt" content="Magic Kids" />
         <meta property="og:title" content="Magic Stream" />
         <meta property="og:type" content="website" />
