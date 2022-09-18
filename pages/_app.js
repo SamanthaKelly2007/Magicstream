@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import '../styles/Header.css'
+import '../styles/Footer.css'
 import Layout from '../components/Layout'
 import { useRouter } from "next/router";
 
