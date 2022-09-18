@@ -20,7 +20,7 @@ export default function Home() {
   ])
   const [minutes, setMinutes] = useState(0)
 
-  let difference = minutes <= 30? 30 - minutes : 60 - minutes
+  let difference = Number(minutes) <= 30? 30 - Number(minutes) : 60 - Number(minutes)
   let ms = (difference-1) * 60000
 
   const getShowSchedule = () => {
@@ -53,7 +53,6 @@ export default function Home() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       getShowSchedule()
-      getShowSchedule()
     }, ms)
 
     return () => {
@@ -70,13 +69,13 @@ export default function Home() {
       <div className={'centerPage' + (wide? ' fullScreen' : '')}>
         <Player/>
         <div className='streamControls'>
-          <div className='shows'>
+          <div className='shows' onClick={() => getShowSchedule()}>
             <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
             <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>
           </div>
           <div>
-            <p onClick={() => setShowMsg(!showMsg)} className='btndefault button1 problemsBtn'>{showMsg? 'Cerrar' : 'Info'} <img src='/icons/info.svg' alt='icon boton problemas frecuentes'/></p>
-            <p className='changeAspect' onClick={() => changeVideoFormat(!wide)} ><img src='/icons/ratio.svg' alt='icon cambiar aspecto'/></p>
+            <p onClick={() => setShowMsg(!showMsg)} className={'btndefault button1 problemsBtn'+(showMsg? ' active' : "")}>{showMsg? 'Cerrar' : 'Info'} <img src='/icons/info.svg' alt='icon boton problemas frecuentes'/></p>
+            <p className={"changeAspect"+(wide? " active" : "")} onClick={() => changeVideoFormat(!wide)} ><img src='/icons/ratio.svg' alt='icon cambiar aspecto'/></p>
           </div>
         </div>
       </div>

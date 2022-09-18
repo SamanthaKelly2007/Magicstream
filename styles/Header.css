@@ -74,45 +74,37 @@ header a img{
 
 @keyframes mobileFade {
   from {
-      opacity: 0;
-      transform: translateX(100%);
+      left: 100%;
   }
   to{
-      opacity: 1;
-      transform: translateX(0);
+      left: 0%;
   }
 }
 
 @-webkit-keyframes mobileFade {
   from {
-      opacity: 0;
-      transform: translateX(100%);
+      left: 100%;
   }
   to{
-      opacity: 1;
-      transform: translateX(0);
+      left: 0%;
   }
 }
 
 @keyframes mobileFadeOut {
   from {
-      opacity: 1;
-      transform: translateX(0);
+      left: 0%;
   }
   to{
-      opacity: 0;
-      transform: translateX(100%);
+      left: 100%;
   }
 }
 
 @-webkit-keyframes mobileFadeOut {
   from {
-      opacity: 1;
-      transform: translateX(0);
+      left: 0%;
   }
   to{
-      opacity: 0;
-      transform: translateX(100%);
+      left: 100%;
   }
 }
 

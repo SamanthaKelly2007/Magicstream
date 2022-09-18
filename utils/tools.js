@@ -59,6 +59,7 @@ export const getActualTime = () =>{
     minutes = minutes < 30? "00" : "30"
 
     return hours+":"+minutes
+    //return '19'+":"+'00'
 }
 
 //if its weekend returns true if not false
@@ -110,49 +111,6 @@ function getShow(showid){
     return found
 }
 
-//returns a list of 48 objects with custom properties for VLC Playlist Generator
-
-export const getScheduleJSON = (option) =>{
-    let list = []
-
-    if (option === 1) {
-        for (let i = 0; i <= 48; i++) {
-            seriesSchedule.filter(serie => serie.emision_1_week === i || serie.emision_2_week === i  || serie.emision_3_week === i ).map(dato => (
-            list[i] = {
-                    id : i,
-                    list_id : dato.id,
-                    name : dato.nombre,
-                    episodes : dato.episodios,
-                    duration : dato.duracion
-                }
-            ))
-        }   
-    }
-    else
-    {
-        for (let i = 0; i <= 48; i++) {
-            seriesSchedule.filter(serie => serie.emision_1_weekend === i || serie.emision_2_weekend === i || serie.emision_3_weekend === i).map(dato => (
-            list[i] = {
-                    id: i,
-                    list_id : dato.id,
-                    name : dato.nombre,
-                    episodes : dato.episodios,
-                    duration : dato.duracion
-                }
-            ))
-        }
-    }
-
-    for (let i = 0; i <= 48; i++) {
-        if (list[i]) {
-            let newData = getShow(list[i].list_id)
-            list[i] = { ...newData[0], ...list[i] }
-        }
-    }
-
-    return list
-}
-
 //this function returns an object with the current and next show
 //we get the actual time value based in the hours table and weekend status
 //then validate the next show time based on the hour if its 48 the it returns 1 to repeat the day
@@ -161,9 +119,9 @@ export const getScheduleJSON = (option) =>{
 
 export const getCurrentNextShow = (hourString) =>{
 
-    const hour = hoursTable.indexOf(hourString)+1
+    const hour = (hoursTable.indexOf(hourString))+1
     const weekend = isWeekend()
-    const nextHour = hour === 48? 1 : hour+1
+    const nextHour = hour+1 > 48? 1 : hour+1
     let current, next
 
     let currentNext = [
