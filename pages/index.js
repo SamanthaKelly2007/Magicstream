@@ -20,7 +20,7 @@ export default function Home() {
   ])
   const [minutes, setMinutes] = useState(0)
 
-  let difference = Number(minutes) <= 30? 30 - Number(minutes) : 60 - Number(minutes)
+  let difference = minutes <= 30? 30 - minutes : 60 - minutes
   let ms = (difference-1) * 60000
 
   const getShowSchedule = () => {
