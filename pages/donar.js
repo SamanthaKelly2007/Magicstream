@@ -34,7 +34,7 @@ const donar = () => {
                         </tr>
                         <tr>
                             <td>Coco Miel</td>
-                            <td>5</td>
+                            <td>7</td>
                             <td>5min</td>
                         </tr>
                         <tr>

@@ -89,8 +89,8 @@ export default function Home() {
         <h1>Novedades</h1>
         <li>
           <h2>Chromecast - AirPlay</h2>
-          <p>desde el boton dedicado al lado de volumen podran transmitir el stream desde su celular Android o iPhone a Chromecast o Apple TV</p>
-          <p>en iPhone solo esta limitado a Apple TV o dispositivos que tengan la función AirPlay.</p>
+          <p>Desde el nuevo Boton al lado de Volumen podran transmitir el Stream a su Chromecast o Apple TV</p>
+          <p>en iPhone solo esta limitado a Apple TV o dispositivos que tengan la función de AirPlay.</p>
         </li>
         <li>
           <h2>Se Ajusto la transmisión al formato 4:3</h2>
@@ -100,32 +100,28 @@ export default function Home() {
           <p>IMPORTANTE: en Celulares esto se puede cambiar tambien, pero al pasar a pantalla completa solo se podra ver en formato Cuadrado.</p>
         </li>
         <li>
-          <h2>Nuevo Boton al lado de Info</h2>
-          <p>Con ese boton podes expandir el video para que se ajuste a una pantalla ancha o cuadrada</p>
-        </li>
-        <li>
           <h2>Nueva Sección de Donaciones</h2>
           <p>Desde el pie de pagina tenes una opcion donde podras apoyar el proyecto, recorda que no busco cobrar por el streaming pero cualquier ayuda es bienvenida.</p>
         </li>
         <br/>
         <hr />
         <br/>
-        <h1>Problemas Frecuentes</h1>
+        <h1>Problemas en la Transmisión</h1>
         <li>
           <h2>Veo manchas grises en la transmisión</h2>
-          <p>- Es un problema del servidor, por lo general es cuando me encuentro usando el disco donde almaceno las series, no dura mas de unos minutos el error.</p>
+          <p>- Es un problema del servidor, por lo general es cuando me encuentro usando el disco donde almaceno las series, esto puede durar 2 minutos como mucho.</p>
         </li>
         <li>
           <h2>La transmisión se entre corta mucho</h2>
           <p>- En este caso puede ser por tu internet se recomienda tener almenos 3mb de internet estables para ver el stream, el bitrate de transmisión es de 600kb.</p>
         </li>
         <li>
-          <h2>Escucho interferencias o zumbidos en el audio</h2>
-          <p>- Si te sucede en los programas: Nivel X, A Jugar con Hugo, Kito Pizzas, Zona Virtual o programas en donde la calidad es muy baja, es problema del video.</p>
+          <h2>La transmisión se puso en Negro pero la estrella sigue girando</h2>
+          <p>- En este caso te pido que me mandes un mensaje por instagram, esto puede deberse a un problema de OBS (Programa con el que hago el Stream).</p>
         </li>
         <li>
-          <h2>Si tenes algun problema para ver el stream, te sugiero reportar el error en las redes sociales del pie de pagina.</h2>
-          <h2>Aveces hago mantenimiento para organizar un poco por lo que puede que algunos dias el stream se encuentre inactivo.</h2>
+          <h2>Escucho interferencias o zumbidos en el audio</h2>
+          <p>- Si te sucede en los programas: Nivel X, A Jugar con Hugo, Kito Pizzas, Zona Virtual o programas en donde la calidad es muy baja, es un problema del video.</p>
         </li>
       </ul>
       </CSSTransition>

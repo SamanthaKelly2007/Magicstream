@@ -43,6 +43,11 @@ export default function Iptv() {
                     </section>
 
                     <section>
+                        <h1>Chromecast</h1>
+                        <p>Podes ver el stream en tu Chromecast desde esta pagina web, el boton se encuentra al lado de Volumen.</p>
+                    </section>
+
+                    <section>
                         <h1>Android TV</h1>
                         <p>En Desarrollo</p>
                     </section>
