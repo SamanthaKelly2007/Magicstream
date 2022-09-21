@@ -61,7 +61,7 @@ footer p:nth-of-type(2){
 }
 
 .donateFooter *:hover{
-    transform: rotate(360deg);
+    transform: rotate(-20deg);
 }
 
 @media (min-width: 768px) {

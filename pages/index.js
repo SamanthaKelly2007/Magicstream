@@ -25,6 +25,7 @@ export default function Home() {
 
   const getShowSchedule = () => {
     setShowsNav(getCurrentNextShow(getActualTime()))
+    setShowsNav(getCurrentNextShow('20:00'))
     setMinutes(new Date().getMinutes())
   }
 
@@ -69,9 +70,10 @@ export default function Home() {
       <div className={'centerPage' + (wide? ' fullScreen' : '')}>
         <Player/>
         <div className='streamControls'>
-          <div className='showsTab' onClick={() => getShowSchedule()}>
+          <div className='showsTab'>
             <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
             <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>
+            <img onClick={() => getShowSchedule()} src='/icons/reload.svg' alt='Recargar Tabla'/>
           </div>
           <div className='buttonsTab'>
             <p onClick={() => setShowMsg(!showMsg)} className={'btndefault button1 problemsBtn'+(showMsg? ' active' : "")}>{showMsg? 'Cerrar' : 'Info'} <img src='/icons/info.svg' alt='icon boton problemas frecuentes'/></p>
@@ -87,6 +89,10 @@ export default function Home() {
       >
       <ul className='msgBox'>
         <h1>Novedades</h1>
+        <li>
+          <h2>Boton de Recarga</h2>
+          <p>Debido a que me reportaron que la grilla debajo del reproductor aveces no funcionaba bien y mostraba algo distinto, ahora con este boton podran actualizarla sin necesidad de recargar la pagina.</p>
+        </li>
         <li>
           <h2>Chromecast - AirPlay</h2>
           <p>Desde el nuevo Boton al lado de Volumen podran transmitir el Stream a su Chromecast o Apple TV</p>
