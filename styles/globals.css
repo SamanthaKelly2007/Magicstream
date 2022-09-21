@@ -77,7 +77,7 @@ hr{
 .centerPage {
     display: grid;
     align-content: center;
-    width: fit-content;
+    width: min-content;
     margin: auto;
     color: var(--text_light);
 }
@@ -158,43 +158,46 @@ hr{
 /* Home User-Player Options */
 
 .streamControls {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 'shows'
+    'controls';
+    grid-template-columns: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    grid-gap: 1rem;
     border-radius: 0 0rem 1rem 1rem;
-}
-
-.streamControls div {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    width: 90%;
-    min-height: 2.5rem;
-}
-
-.streamControls div:nth-of-type(2){
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.streamControls div p {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 0.6rem;
+    width: 100%;
+    row-gap: 1rem;
 }
 
-.shows p:nth-of-type(1) {
+.showsTab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    grid-column: shows;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.showsTab p{
+    padding: 0.7rem;
     background-color: #623bff;
 }
 
-.shows p:nth-of-type(2) {
+.showsTab p:nth-of-type(even){
     background-color: #4e20ff;
+}
+
+.buttonsTab{
+    display: flex;
+    justify-content: center;
+    grid-column: controls;
+    width: 100%;
 }
 
 .msgBox {
@@ -593,25 +596,20 @@ hr{
         padding: 1rem 2rem 2rem;
     }
 
-    .streamControls {
-        flex-direction: row;
-        padding: 0;
+    .streamControls{
+        grid-template-areas: 'shows controls';
+        grid-template-columns: 75% 25%;
     }
 
-    .streamControls div {
+    .showsTab{
         flex-direction: row;
+        justify-content: flex-start;
+        margin-inline: unset;
         width: fit-content;
-        margin-bottom: 0;
     }
 
-    .streamControls div p{
-        max-width: 280px;
-        display: flex;
-        align-items: center;
-    }
-
-    .problemsBtn {
-        margin: 1rem 0;
+    .buttonsTab{
+        justify-content: flex-end;
     }
 
     .msgBox {
@@ -640,10 +638,6 @@ hr{
 @media (min-width: 1440px) {
     .mk_video {
         width: 850px !important;
-    }
-
-    .streamControls div p{
-        max-width: 360px;
     }
 }
 

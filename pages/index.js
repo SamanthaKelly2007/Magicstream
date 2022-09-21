@@ -69,11 +69,11 @@ export default function Home() {
       <div className={'centerPage' + (wide? ' fullScreen' : '')}>
         <Player/>
         <div className='streamControls'>
-          <div className='shows' onClick={() => getShowSchedule()}>
+          <div className='showsTab' onClick={() => getShowSchedule()}>
             <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
             <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>
           </div>
-          <div>
+          <div className='buttonsTab'>
             <p onClick={() => setShowMsg(!showMsg)} className={'btndefault button1 problemsBtn'+(showMsg? ' active' : "")}>{showMsg? 'Cerrar' : 'Info'} <img src='/icons/info.svg' alt='icon boton problemas frecuentes'/></p>
             <p className={"changeAspect"+(wide? " active" : "")} onClick={() => changeVideoFormat(!wide)} ><img src='/icons/ratio.svg' alt='icon cambiar aspecto'/></p>
           </div>

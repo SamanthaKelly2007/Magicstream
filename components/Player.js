@@ -27,6 +27,7 @@ export default function Player() {
 
         playerRef.current  = videojs(video, {
           controls: true,
+          preload: 'auto',
           controlBar: {
             subsCapsButton: false
           },
