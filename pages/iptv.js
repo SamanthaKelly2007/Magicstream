@@ -7,7 +7,7 @@ export default function Iptv() {
             <Head>
                 <title>IPTV</title>
             </Head>
-            <div className='centerPage'>
+            <div className='centerPage fullWidth'>
                 <div className={Iptv_Styles.iptvMsg}>
                     <img src="/img/Android_tv_logo.svg" alt='Android TV'/>
                     <section>

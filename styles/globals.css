@@ -339,6 +339,10 @@ hr{
     background-color: #4e20ff;
 }
 
+.fullWidth{
+    width: fit-content;
+}
+
 /** Chromecast **/
 .vjs-chromecast-button {
     cursor: pointer;
