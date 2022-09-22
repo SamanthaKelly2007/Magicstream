@@ -596,6 +596,10 @@ hr{
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
     
+    .centerPage{
+        width: max-content;
+    }
+
     html{
         overflow-y: overlay;
     }
