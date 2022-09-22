@@ -668,7 +668,7 @@ hr{
 /* Notebook/Desktop */
 @media (min-width: 1024px) {
     .mk_video {
-        width: 70vw !important;
+        width: 60vw !important;
     }
 
     .msgBox {
