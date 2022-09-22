@@ -185,9 +185,11 @@ hr{
     grid-column: shows;
     border-radius: 0.5rem;
     overflow: hidden;
+    background-color: #623bff;
 }
 
 .showsTab p{
+    height: 100%;
     grid-column: 1;
     padding: 0.7rem;
     background-color: #623bff;
@@ -308,7 +310,7 @@ hr{
     margin: 2rem auto 0 auto;
     overflow: hidden !important;
     border-radius: 0.5rem !important;
-    width: 180px !important;
+    width: 95vw !important;
     animation: magicEffect .5s;
     transition: width .5s;
 }
@@ -554,7 +556,7 @@ hr{
 /* Mobile Short - iPhone 4 3.5' */
 @media (min-width: 300px) {
     .mk_video {
-        width: 280px !important;
+        width: 85vw !important;
     }
     
     .coming_Soon {
@@ -577,9 +579,7 @@ hr{
 
 /* Mobile Medium - iPhone 6 4' */
 @media (min-width: 375px) {
-    .mk_video {
-        width: 350px !important;
-    }
+
 }
 
 /* Mobile Long - iPhone X 5.8' */
@@ -613,8 +613,7 @@ hr{
     }
 
     .mk_video {
-        margin: 0.5rem auto 0 auto;
-        width: 720px !important;
+        width: 90vw !important;
     }
 
     .iptvMsg {
@@ -653,7 +652,7 @@ hr{
 
     .msgBox {
         padding: 1.5rem;
-        width: 70%;
+        width: 85%;
     }
 
     .coming_Soon {
@@ -668,6 +667,10 @@ hr{
 
 /* Notebook/Desktop */
 @media (min-width: 1024px) {
+    .mk_video {
+        width: 70vw !important;
+    }
+
     .msgBox {
         max-width: 850px;
     }
@@ -675,16 +678,12 @@ hr{
 
 /* Notebook/Desktop Long */
 @media (min-width: 1440px) {
-    .mk_video {
-        width: 850px !important;
-    }
+
 }
 
 /* 4K Display */
 @media (min-width: 2560px) {
-    .mk_video {
-        width: 1440px !important;
-    }
+
 }
 
 /*****************************************/

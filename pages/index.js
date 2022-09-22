@@ -25,6 +25,7 @@ export default function Home() {
 
   const getShowSchedule = () => {
     setShowsNav(getCurrentNextShow(getActualTime()))
+    setShowsNav(getCurrentNextShow("16:00"))
     setMinutes(new Date().getMinutes())
   }
 
