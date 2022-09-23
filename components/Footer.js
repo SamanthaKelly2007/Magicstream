@@ -9,9 +9,14 @@ export default function Footer() {
                 <a href="https://www.taringa.net/magicstream" target="_blank" rel="noreferrer noopener" title="Seguime en Taringa!"><img src='/icons/taringa.svg' alt='icon'/></a>
                 <a href="https://www.github.com/alexqs96" target="_blank" rel="noreferrer noopener" title="Hola! Gracias por visitar Magic Stream!"><img src='/icons/github.svg' alt='icon'/></a>
             </div>
-            <p>En dedicación al Canal Magic Kids</p>
-            <p>Magic Stream</p>
-            <Link href='donar'><a className='donateFooter'>Donar <img src='/icons/starmk.svg' alt='icon'/></a></Link>
+            <div className='us'>
+                <p>Gracias por ver el Stream</p>
+                <p>En dedicación al Canal Magic Kids</p>
+            </div>
+            <div className='donate_icon'>
+                <img className='mkstar' src='/icons/starmk.svg' alt='Magic Star'></img>
+                <Link href='donar'><a>Donar</a></Link>
+            </div>
         </footer>
     )
 }
