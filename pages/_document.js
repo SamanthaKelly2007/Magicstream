@@ -12,6 +12,7 @@ export default function Document() {
         <meta property="og:image:alt" content="Magic Kids" />
         <meta property="og:title" content="Magic Stream" />
         <meta property="og:type" content="website" />
+        <link rel="image_src" href="/img/videoplayer.png" />
         <link rel="preload" href="/fonts/MavenPro-Medium.woff2" as="font" type="font/woff2" crossOrigin=""></link>
         <link rel="preload" href="/fonts/MavenPro-SemiBold.woff2" as="font" type="font/woff2" crossOrigin=""></link>
         <link rel='shortcut icon' href='favicon.ico'></link>
