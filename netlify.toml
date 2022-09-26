@@ -4,3 +4,10 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "https://magicstream.netlify.app"
+  to = "https://magickids.live"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
