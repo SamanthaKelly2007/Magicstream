@@ -25,7 +25,7 @@ export default function Document() {
         <link rel='shortcut icon' href='favicon.ico'></link>
         <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1" defer></script>
       </Head>
-      <body>
+      <body className='splash'>
         <Main />
         <NextScript />
       </body>

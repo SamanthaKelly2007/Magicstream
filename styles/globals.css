@@ -51,9 +51,19 @@ html {
     background-position: center center;
 }
 
+@keyframes splash {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 html,
 body {
     height: 100%;
+    animation: splash 1s;
 }
 
 main {
