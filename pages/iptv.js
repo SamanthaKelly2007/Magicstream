@@ -33,13 +33,13 @@ export default function Iptv() {
                         <p>3- Instala la App que encuentres y abrila</p>
                         <p>4- Seguramente te pida cargar una lista o un link</p>
                         <p>5- Ingresa el Link de abajo</p>
-                        <textarea readOnly value='https://magicstream.netlify.app/downloads/Magic_Kids.m3u'></textarea>
+                        <textarea readOnly value='https://magickids.live/downloads/Magic_Kids.m3u'></textarea>
                     </section>
 
                     <section>
                         <h1>TDT Channels</h1>
                         <p>Si usan la App TDT Channels van a necesitar copiar la URL de Abajo.</p>
-                        <textarea readOnly value='https://magicstream.netlify.app/downloads/Magic_Kids_TDT.json'></textarea>
+                        <textarea readOnly value='https://magickids.live/downloads/Magic_Kids_TDT.json'></textarea>
                     </section>
 
                     <section>

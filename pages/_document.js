@@ -5,15 +5,15 @@ export default function Document() {
     <Html lang='es' data-cast-api-enabled="true">
       <Head>
         <meta name="keywords" content="magic kids streaming, magic kids en vivo, magic kids transmision" />
-        <meta name="description" content="Revivi la experiencia Magic Kids, Magic Stream es una pagina dedicada al canal magic kids y para recrear su transmision, disfruta de la programacion de Magic Kids las 24hs del dia todos los dias." />
-        <meta name='image' content='https://magicstream.netlify.app/img/videoplayer.png'></meta>
-        <meta property="og:image" content="https://magicstream.netlify.app/img/videoplayer.png" />
+        <meta name="description" content="Revivi la experiencia Magic Kids, Magic Kids Live es una pagina dedicada al canal magic kids y para recrear su transmision, disfruta de la programacion de Magic Kids las 24hs del dia todos los dias." />
+        <meta name='image' content='https://magickids.live/img/videoplayer.png'></meta>
+        <meta property="og:image" content="https://magickids.live/img/videoplayer.png" />
         <meta property="og:image:width" content="256" />
         <meta property="og:image:height" content="256" />
         <meta property="og:image:alt" content="Magic Kids" />
-        <meta property="og:title" content="Magic Stream" />
+        <meta property="og:title" content="Magic Kids Live" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://magicstream.netlify.app/"/>
+        <meta property="og:url" content="https://magickids.live"/>
         <link rel="preload" href="/fonts/MavenPro-Medium.woff2" as="font" type="font/woff2" crossOrigin=""></link>
         <link rel="preload" href="/fonts/MavenPro-SemiBold.woff2" as="font" type="font/woff2" crossOrigin=""></link>
         <link rel='preload' as='image' href='/img/starsbg.png'></link>

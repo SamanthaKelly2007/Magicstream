@@ -60,9 +60,15 @@ footer p{
 .donate_icon{
     display: flex;
     grid-column: 3;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 0.2rem;
+}
+
+.donate_icon img{
+    order: 2;
+    width: 1.3rem;
+    margin-left: 0.3rem;
 }
 
 @media (min-width: 768px) {
@@ -74,7 +80,14 @@ footer p{
     }
 
     .donate_icon{
+        flex-direction: column;
         margin-left: auto;
         padding: 0 1rem;
+    }
+
+    .donate_icon img{
+        order: 0;
+        margin: 0;
+        width: 2rem;
     }
 }

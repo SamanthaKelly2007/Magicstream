@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Magic Stream</title>
+        <title>Magic Kids Live</title>
       </Head>
       <div className={'centerPage' + (wide? ' fullScreen' : '')}>
         <Player/>
