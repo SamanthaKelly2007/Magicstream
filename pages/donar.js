@@ -13,7 +13,7 @@ const donar = () => {
             <p>El proyecto seguira estando por tiempo indefinido, no se pretende cobrar por el stream pero cualquier ayuda es bienvenida.</p>
             <h4>Podes Realizar tu donación por PayPal o MercadoPago.</h4>
             <div className="donateOptions">
-                <a href="https://link.mercadopago.com.ar/magicstream" target="_blank" rel="noreferrer noopener"><img src="/img/mp.svg"></img><figure>MercadoPago</figure></a>
+                <a href="https://link.mercadopago.com.ar/alexdev" target="_blank" rel="noreferrer noopener"><img src="/img/mp.svg"></img><figure>MercadoPago</figure></a>
                 <a href="https://paypal.me/sausageworkz" target="_blank" rel="noreferrer noopener"><img src="/img/paypal.svg"></img><figure>PayPal</figure></a>
             </div>
         </section>
