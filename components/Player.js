@@ -17,7 +17,7 @@ export default function Player() {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: 'Magic Kids',
           artwork: [
-            { src: '/img/videoplayer.png', sizes: '512x512', type: 'image/png' },
+            { src: '/img/cover.png', sizes: '512x512', type: 'image/png' },
           ]
         });
       }
