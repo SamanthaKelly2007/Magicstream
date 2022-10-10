@@ -1,30 +1,21 @@
 import Head from 'next/head'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import Player from '../components/Player'
-import { getCurrentNextShow, getActualTime } from '../utils/tools'
+import { getActualTime, nextShow, isWeekend } from '../utils/tools'
 import { CSSTransition } from 'react-transition-group';
 
 export default function Home() {
 
   const [wide, setWide] = useState(false)
   const [showMsg, setShowMsg] = useState(false)
-  const [showsNav, setShowsNav] = useState([
-    {
-      id: 1,
-      show: "Cargando..."
-    },
-    {
-      id: 2,
-      show: "Cargando..."
-    }
-  ])
+  const [showsNav, setShowsNav] = useState({now: 'Cargando...', next: 'Cargando...'})
   const [minutes, setMinutes] = useState(0)
 
   let difference = minutes <= 30? 30 - minutes : 60 - minutes
   let ms = (difference-1) * 60000
 
   const getShowSchedule = () => {
-    setShowsNav(getCurrentNextShow(getActualTime()))
+    setShowsNav(nextShow(getActualTime(),isWeekend()))
     setMinutes(new Date().getMinutes())
   }
 
@@ -70,8 +61,8 @@ export default function Home() {
         <Player/>
         <div className='streamControls'>
           <div className='showsTab'>
-            <p key={showsNav[0].id}>Ahora: {showsNav[0].show}</p>
-            <p key={showsNav[1].id}>Despues: {showsNav[1].show}</p>
+            <p>Ahora: {showsNav.now}</p>
+            <p>Despues: {showsNav.next}</p>
             <img onClick={() => getShowSchedule()} src='/icons/reload.svg' alt='Recargar Tabla'/>
           </div>
           <div className='buttonsTab'>

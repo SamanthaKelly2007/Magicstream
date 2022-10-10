@@ -1,30 +1,39 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { getActualTime, isWeekend, getSchedule } from '../utils/tools'
+import { getActualTime, isWeekend, getData } from '../utils/tools'
 import Prog_Styles from '../styles/Programacion.module.css'
 
 export default function Grilla() {
-    const [listAM, setListAM] = useState([])
-    const [listPM, setListPM] = useState([])
-    const [tableAMPM, setTableAMPM] = useState(false)
-    const time = new Date().getHours()
-    const rightNow = getActualTime()
-    const weekend = isWeekend()
+    const [hourList, setHourList] = useState([]);
+    const [weekSerieList, setWeekSerieList] = useState([]);
+    const [weekendSerieList, setWeekendSerieList] = useState([]);
+    const [ampm, setAmpm] = useState(new Date().getHours() < 12? false : true);
 
     function changeSchedule(prop){
         setTimeout(() => {
             window.scrollTo(0,0)
         }, 100);
         
-        setTableAMPM(prop)
+        setAmpm(prop)
+    }
+
+    const changeScheduleList = (opt) => {
+        if (opt) {
+            setHourList(getData(1,'PM'))
+            setWeekSerieList(getData(2,'PM'))
+            setWeekendSerieList(getData(3,'PM'))
+        }
+        else
+        {
+            setHourList(getData(1,'AM'))
+            setWeekSerieList(getData(2,'AM'))
+            setWeekendSerieList(getData(3,'AM'))
+        }
     }
 
     useEffect(() => {
-        setListAM(getSchedule("AM"))
-        setListPM(getSchedule("PM"))
-
-        return time < 12 ? setTableAMPM(false) : setTableAMPM(true)
-    }, [])
+        changeScheduleList(ampm)
+    }, [ampm])
 
     return (
     <>
@@ -41,63 +50,22 @@ export default function Grilla() {
                 </tr>
                 
                 {
-                tableAMPM === false?
-                <>
-                {
-                    listAM.map(serie => (
-                        <tr key={serie.id} className={`${serie.tiempo === rightNow? Prog_Styles.liveNow : ""}`}>
-                        {
-                            weekend === true?
-                            <td className={Prog_Styles.notToday}>{serie.nombre}</td>
-                            :
-                            <td>{serie.nombre}</td>
-                        }
-                        
-                        <td>{serie.tiempo}</td>
-                        
-                        {
-                            weekend === false?
-                            <td className={Prog_Styles.notToday}>{serie.nombre_weekend}</td>
-                            :
-                            <td>{serie.nombre_weekend}</td>
-                        }
-                        </tr>
+                    hourList.map((hours,index) => (
+                    <tr key={index} className={hours === getActualTime()? Prog_Styles.liveNow : undefined}>
+                        <td className={isWeekend() === true? Prog_Styles.notToday : undefined}>{weekSerieList[index].show}</td>
+                        <td>{hours}</td>
+                        <td className={isWeekend() === false? Prog_Styles.notToday : undefined}>{weekendSerieList[index].show}</td>
+                    </tr>
                     ))
-                }
-                </>
-                :
-                <>
-                {
-                    listPM.map(serie => (
-                        <tr key={serie.id} className={`${serie.tiempo === rightNow? Prog_Styles.liveNow : ""}`}>
-                        {
-                            weekend === true?
-                            <td className={Prog_Styles.notToday}>{serie.nombre}</td>
-                            :
-                            <td>{serie.nombre}</td>
-                        }
-                        
-                        <td>{serie.tiempo}</td>
-                        
-                        {
-                            weekend === false?
-                            <td className={Prog_Styles.notToday}>{serie.nombre_weekend}</td>
-                            :
-                            <td>{serie.nombre_weekend}</td>
-                        }
-                        </tr>
-                    ))
-                }
-                </>
                 }
             </tbody>
         </table>
         <div className={Prog_Styles.schedule_Buttons}>
-            <button className={ !tableAMPM? Prog_Styles.selectedButton : ''} onClick={() => changeSchedule(false)}>
+            <button className={ !ampm? Prog_Styles.selectedButton : undefined} onClick={() => changeSchedule(false)}>
                 00:00-11:30Hs
             </button>
 
-            <button className={ tableAMPM? Prog_Styles.selectedButton : ''} onClick={() => changeSchedule(true)}>
+            <button className={ ampm? Prog_Styles.selectedButton : undefined} onClick={() => changeSchedule(true)}>
                 12:00-23:30Hs
             </button>
         </div>

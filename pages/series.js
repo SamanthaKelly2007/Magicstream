@@ -7,9 +7,21 @@ export default function Series() {
             <Head>
                 <title>Series</title>
             </Head>
+            
             <div className='coming_Soon'>
             <p>Proximamente</p>
             </div>
+            
+{/*             <section className='series'>
+                <a>
+                    <img src='/img/series/sailormoon_cover.jpg' alt='image'/>
+                    <figure>Sailor Moon</figure>
+                </a>
+                <a>
+                    <img src='/img/series/saintseiya_cover.jpg' alt='image'/>
+                    <figure>Los Caballeros del Zodiaco</figure>
+                </a>
+            </section> */}
         </>
     )
 }

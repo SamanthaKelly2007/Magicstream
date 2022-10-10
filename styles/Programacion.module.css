@@ -11,20 +11,20 @@
 
 @keyframes openTableBox {
     from {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
     to{
-        transform: translateX(0);
+        transform: scale(1);
         transition: transform 300ms;
     }
 }
 
 @-webkit-keyframes openTableBox {
     from {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
     to{
-        transform: translateX(0);
+        transform: scale(1);
         transition: transform 300ms;
     }
 }
@@ -88,23 +88,24 @@
     border: 4px solid transparent;
 }
 
-.selectedButton{
-    background-color: #4e29e4 !important;
-    border: 4px solid rgba(0, 0, 0, 0.08) !important;
+.schedule_Buttons .selectedButton,
+.schedule_Buttons .selectedButton:hover{
+    background-color: #4e29e4;
+    border: 4px solid rgba(0, 0, 0, 0.08);
 }
 
 .schedule_Buttons button:hover{
     background-color: #6043d6;
 }
 
-.liveNow{
-    background-color: var(--button_violet) !important;
+.tableData .liveNow{
+    background-color: var(--button_violet);
     color: var(--text_light);
 }
 
-.notToday{
-    background-color: var(--bg_schedule_light) !important;
-    color: var(--text_dark) !important;
+.tableData .notToday{
+    background-color: var(--bg_schedule_light);
+    color: var(--text_dark);
 }
 
 @media (max-width: 305px) {

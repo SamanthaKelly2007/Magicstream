@@ -1,4 +1,5 @@
-import seriesSchedule from '../pages/api/serie.json'
+import weekTable from '../pages/api/week.json'
+import weekendTable from '../pages/api/weekend.json'
 import hoursTable from '../pages/api/hours.json'
 
 //Nav Menu Button
@@ -45,7 +46,7 @@ export const logoNav = () => {
 
 //Schedule section
 
-//gets the actual time on the client but converted to Argentina Time
+//gets the actual time on the client but converted to Argentinean Time
 //this function only returns the time in blocks of 30 minutes
 //for example
 //10:11 will be returned as 10:00
@@ -58,7 +59,6 @@ export const getActualTime = () =>{
     minutes = minutes < 30? "00" : "30"
 
     return hours+":"+minutes
-    //return '19'+":"+'00'
 }
 
 //if its weekend returns true if not false
@@ -69,73 +69,35 @@ export const isWeekend = () =>{
     return weekend === 0 || weekend === 6? true : false
 }
 
-//this function returns a list of 24 sections
-//the option param is to specify which list do you want: AM or PM
-//in the first for checks the series database and gets the week data
-//and replace the time index of the section with the specific hour (blocks of 30 minutes)
-//in the second for check for the weekend data
-//and returns the list sliced for AM or PM schedule, different param returns the whole list
+// Returns Actual and Next show
+//validates week and weekend tables 
+//validates 48 shows from week and weekend tables
+//validates friday and saturday at 23:30 and applys the right table for the day
+//returns an object with the current show and next show
 
-export const getSchedule = (option) =>{
-    let list = [];
+export const nextShow = (rightNow,weekStatus) => {
+    const today = new Date().getDay()
+    const indexHour = hoursTable.indexOf(rightNow)
+    const indexHourNext = indexHour+1 > 47 ? 0 : indexHour+1
+    const isSaturday = indexHour+1 > 47 && today === 5 ? 1 : null
+    const weekdb = weekStatus? weekendTable : weekTable
 
-    for (let i = 0; i <= 48; i++) {
-        seriesSchedule.filter(serie => serie.emision_1_week === i || serie.emision_2_week === i  || serie.emision_3_week === i ).map(dato => (
-        list[i] = {
-                id : i,
-                nombre : dato.nombre,
-                tiempo : hoursTable[i-1],
-                nombre_weekend : "Fuera de Transmisión"
-            }
-        ))
+    return {
+        now : weekdb[indexHour].show,
+        next : isSaturday? weekendTable[0].show : weekdb[indexHourNext].show
     }
-
-    for (let i = 0; i <= 48; i++) {
-        seriesSchedule.filter(serie => serie.emision_1_weekend === i || serie.emision_2_weekend === i || serie.emision_3_weekend === i).map(dato => (
-        list[i] = {
-                ...list[i],
-                nombre_weekend : dato.nombre
-            }
-        ))
-    }
-
-    return option === "AM" ? list.slice(0,25) : option === "PM" ? list.slice(25,49) : list
 }
 
-//this function returns an object with the current and next show
-//we get the actual time value based in the hours table and weekend status
-//then validate the next show time based on the hour if its 48 the it returns 1 to repeat the day
-//check if its weekend or not and filter the data based on the data we saved before
-//then return the object with the data found in the previous filters
+//returns an array validating morning ,afternoon and hours tables
+//dbopt: 1 returns hours, 2 returns week, 3 returns weekend
+//ampm: returns the half of each table depending the morning or afternoon parameter
 
-export const getCurrentNextShow = (hourString) =>{
-
-    const hour = (hoursTable.indexOf(hourString))+1
-    const weekend = isWeekend()
-    const nextHour = hour+1 > 48? 1 : hour+1
-    let current, next
-
-    let currentNext = [
-        {
-            id: 1,
-            show: ""
-        },
-        {
-            id: 2,
-            show: ""
-        }
-    ]
-
-    if(weekend){
-        current = seriesSchedule.find(show => show.emision_1_weekend === hour || show.emision_2_weekend === hour || show.emision_3_weekend === hour)
-        next = seriesSchedule.find(show => show.emision_1_weekend === nextHour || show.emision_2_weekend === nextHour || show.emision_3_weekend === nextHour)
-    }else{
-        current = seriesSchedule.find(show => show.emision_1_week === hour || show.emision_2_week === hour || show.emision_3_week === hour)
-        next = seriesSchedule.find(show => show.emision_1_week === nextHour || show.emision_2_week === nextHour || show.emision_3_week === nextHour)
+export const getData = (dbOpt, ampm) => {
+    if (ampm === 'AM') {
+        return dbOpt === 1? hoursTable.slice(0,24) : dbOpt === 2? weekTable.slice(0,24) : weekendTable.slice(0,24)
     }
-
-    currentNext[0].show = current.nombre? current.nombre : "Cargando..."
-    currentNext[1].show = next.nombre? next.nombre : "Cargando..."
-
-    return currentNext
+    else
+    {
+        return dbOpt === 1? hoursTable.slice(24,48) : dbOpt === 2? weekTable.slice(24, 48) : weekendTable.slice(24,48)
+    }
 }
