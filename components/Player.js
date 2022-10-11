@@ -1,7 +1,7 @@
 import { useEffect, useRef} from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
-import spanish from '../pages/api/spanish.json'
+import spanish from '../db/spanish.json'
 require("@silvermine/videojs-chromecast")(videojs);
 require("@silvermine/videojs-airplay")(videojs);
 
@@ -17,7 +17,7 @@ export default function Player() {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: 'Magic Kids',
           artwork: [
-            { src: '/img/cover.png', sizes: '512x512', type: 'image/png' },
+            { src: '/img/videoplayer.png', sizes: '512x512', type: 'image/png' },
           ]
         });
       }

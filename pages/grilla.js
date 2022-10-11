@@ -25,7 +25,7 @@ export default function Grilla() {
         }
         else
         {
-            setHourList(getData(1,'AM'))
+            setHourList(getData(1,'AM')) // 1,'AM'
             setWeekSerieList(getData(2,'AM'))
             setWeekendSerieList(getData(3,'AM'))
         }

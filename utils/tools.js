@@ -1,6 +1,6 @@
-import weekTable from '../pages/api/week.json'
-import weekendTable from '../pages/api/weekend.json'
-import hoursTable from '../pages/api/hours.json'
+import weekTable from '../db/week.json'
+import weekendTable from '../db/weekend.json'
+import hoursTable from '../db/hours.json'
 
 //Nav Menu Button
 //Check if the menu is opened
@@ -61,7 +61,7 @@ export const getActualTime = () =>{
     return hours+":"+minutes
 }
 
-//if its weekend returns true if not false
+//validates if its weekend
 
 export const isWeekend = () =>{
     const weekend = new Date().getDay()
@@ -69,28 +69,35 @@ export const isWeekend = () =>{
     return weekend === 0 || weekend === 6? true : false
 }
 
-// Returns Actual and Next show
+//Returns Actual and Next show
 //validates week and weekend tables 
-//validates 48 shows from week and weekend tables
-//validates friday and saturday at 23:30 and applys the right table for the day
-//returns an object with the current show and next show
+//validates 48 blocks of data for each week and weekend tables
+//validates friday and saturday at 23:30 and applys the right table data for the day
+//returns an object with the current show and next show properties
 
 export const nextShow = (rightNow,weekStatus) => {
-    const today = new Date().getDay()
-    const indexHour = hoursTable.indexOf(rightNow)
-    const indexHourNext = indexHour+1 > 47 ? 0 : indexHour+1
-    const isSaturday = indexHour+1 > 47 && today === 5 ? 1 : null
-    const weekdb = weekStatus? weekendTable : weekTable
+    try {
+        const today = new Date().getDay()
+        const indexHour = hoursTable.indexOf(rightNow)
+        const indexHourNext = indexHour+1 > 47 ? 0 : indexHour+1
+        const isSaturday = indexHour+1 > 47 && today === 5 ? 1 : null
+        const weekdb = weekStatus? weekendTable : weekTable
 
-    return {
-        now : weekdb[indexHour].show,
-        next : isSaturday? weekendTable[0].show : weekdb[indexHourNext].show
+        return {
+            now : weekdb[indexHour].show,
+            next : isSaturday? weekendTable[0].show : weekdb[indexHourNext].show
+        }
+    } catch (err) {
+        return {
+            now : 'error',
+            next : 'error'
+        }   
     }
 }
 
-//returns an array validating morning ,afternoon and hours tables
+//Returns the schedule list validating morning ,afternoon and hours tables
 //dbopt: 1 returns hours, 2 returns week, 3 returns weekend
-//ampm: returns the half of each table depending the morning or afternoon parameter
+//ampm: returns the morning or afternoon schedule
 
 export const getData = (dbOpt, ampm) => {
     if (ampm === 'AM') {

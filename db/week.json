@@ -1,0 +1,242 @@
+[
+	{
+	  "id": 10,
+	  "show": "Dr Slump",
+	  "hour": 0
+	},
+	{
+	  "id": 4,
+	  "show": "Detective Conan",
+	  "hour": 1
+	},
+	{
+	  "id": 19,
+	  "show": "Super campeones",
+	  "hour": 2
+	},
+	{
+	  "id": 9,
+	  "show": "Cazafantasmas Mikami",
+	  "hour": 3
+	},
+	{
+	  "id": 17,
+	  "show": "Slam Dunk",
+	  "hour": 4
+	},
+	{
+	  "id": 12,
+	  "show": "Ranma 1/2",
+	  "hour": 5
+	},
+	{
+	  "id": 14,
+	  "show": "Sailor Moon",
+	  "hour": 6
+	},
+	{
+	  "id": 18,
+	  "show": "Zenki",
+	  "hour": 7
+	},
+	{
+	  "id": 6,
+	  "show": "¡Están Arrestados!",
+	  "hour": 8
+	},
+	{
+	  "id": 16,
+	  "show": "Sakura Card Captor",
+	  "hour": 9
+	},
+	{
+	  "id": 3,
+	  "show": "Transformers: Beast Wars",
+	  "hour": 10
+	},
+	{
+	  "id": 1,
+	  "show": "Digimon 02",
+	  "hour": 11
+	},
+	{
+	  "id": 13,
+	  "show": "Doraemon",
+	  "hour": 12
+	},
+	{
+	  "id": 9,
+	  "show": "Cazafantasmas Mikami",
+	  "hour": 13
+	},
+	{
+	  "id": 7,
+	  "show": "Kito Pizzas",
+	  "hour": 14
+	},
+	{
+	  "id": 10,
+	  "show": "Dr Slump",
+	  "hour": 15
+	},
+	{
+	  "id": 5,
+	  "show": "Dragon Ball Z",
+	  "hour": 16
+	},
+	{
+	  "id": 15,
+	  "show": "Los Caballeros del Zodiaco",
+	  "hour": 17
+	},
+	{
+	  "id": 12,
+	  "show": "Ranma 1/2",
+	  "hour": 18
+	},
+	{
+	  "id": 16,
+	  "show": "Sakura Card Captor",
+	  "hour": 19
+	},
+	{
+	  "id": 8,
+	  "show": "Koni Chan",
+	  "hour": 20
+	},
+	{
+	  "id": 17,
+	  "show": "Slam Dunk",
+	  "hour": 21
+	},
+	{
+	  "id": 10,
+	  "show": "Dr Slump",
+	  "hour": 22
+	},
+	{
+	  "id": 1,
+	  "show": "Digimon 02",
+	  "hour": 23
+	},
+	{
+	  "id": 7,
+	  "show": "Kito Pizzas",
+	  "hour": 24
+	},
+	{
+	  "id": 18,
+	  "show": "Zenki",
+	  "hour": 25
+	},
+	{
+	  "id": 5,
+	  "show": "Dragon Ball Z",
+	  "hour": 26
+	},
+	{
+	  "id": 14,
+	  "show": "Sailor Moon",
+	  "hour": 27
+	},
+	{
+	  "id": 19,
+	  "show": "Super campeones",
+	  "hour": 28
+	},
+	{
+	  "id": 8,
+	  "show": "Koni Chan",
+	  "hour": 29
+	},
+	{
+	  "id": 13,
+	  "show": "Doraemon",
+	  "hour": 30
+	},
+	{
+	  "id": 3,
+	  "show": "Transformers: Beast Wars",
+	  "hour": 31
+	},
+	{
+	  "id": 4,
+	  "show": "Detective Conan",
+	  "hour": 32
+	},
+	{
+	  "id": 15,
+	  "show": "Los Caballeros del Zodiaco",
+	  "hour": 33
+	},
+	{
+	  "id": 6,
+	  "show": "¡Están Arrestados!",
+	  "hour": 34
+	},
+	{
+	  "id": 12,
+	  "show": "Ranma 1/2",
+	  "hour": 35
+	},
+	{
+	  "id": 17,
+	  "show": "Slam Dunk",
+	  "hour": 36
+	},
+	{
+	  "id": 11,
+	  "show": "Doug",
+	  "hour": 37
+	},
+	{
+	  "id": 22,
+	  "show": "Pelswick",
+	  "hour": 38
+	},
+	{
+	  "id": 16,
+	  "show": "Sakura Card Captor",
+	  "hour": 39
+	},
+	{
+	  "id": 3,
+	  "show": "Transformers: Beast Wars",
+	  "hour": 40
+	},
+	{
+	  "id": 19,
+	  "show": "Super campeones",
+	  "hour": 41
+	},
+	{
+	  "id": 5,
+	  "show": "Dragon Ball Z",
+	  "hour": 42
+	},
+	{
+	  "id": 4,
+	  "show": "Detective Conan",
+	  "hour": 43
+	},
+	{
+	  "id": 9,
+	  "show": "Cazafantasmas Mikami",
+	  "hour": 44
+	},
+	{
+	  "id": 14,
+	  "show": "Sailor Moon",
+	  "hour": 45
+	},
+	{
+	  "id": 15,
+	  "show": "Los Caballeros del Zodiaco",
+	  "hour": 46
+	},
+	{
+	  "id": 21,
+	  "show": "¿Le Temes a la Oscuridad?",
+	  "hour": 47
+	}
+  ]
