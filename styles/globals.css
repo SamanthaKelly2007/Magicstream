@@ -739,6 +739,14 @@ hr{
     }
 }
 
+/* Square Displays*/
+
+@media (min-width: 1023px) and (max-width: 1025px){
+    .mk_video {
+        width: 80vw !important;
+    }
+}
+
 /* Notebook/Desktop Long */
 @media (min-width: 1440px) {
 
