@@ -1,4 +1,4 @@
-import { useEffect, useRef} from 'react'
+import { useEffect, useState, useRef} from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import spanish from '../db/spanish.json'
@@ -12,7 +12,7 @@ export default function Player() {
     const src = "https://magicstream.ddns.net:443/magicstream/stream.m3u8"
 
     useEffect(() => {
-      
+
       if ("mediaSession" in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: 'Magic Kids',
@@ -24,6 +24,7 @@ export default function Player() {
 
       if (videoRef.current) {
         const video = videoRef.current;
+        const videoLS = localStorage.getItem('mkformat')
 
         playerRef.current  = videojs(video, {
           controls: true,
