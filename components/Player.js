@@ -17,7 +17,7 @@ export default function Player() {
         navigator.mediaSession.metadata = new MediaMetadata({
           title: 'Magic Kids',
           artwork: [
-            { src: '/img/videoplayer.png', sizes: '512x512', type: 'image/png' },
+            { src: '/img/magickidsbg.png', sizes: '512x512', type: 'image/png' },
           ]
         });
       }
@@ -73,6 +73,6 @@ export default function Player() {
 
 
     return (
-      <video playsInline ref={videoRef} className={"video-js mk_video"} poster="../img/magickidsbg.png"/>
+      <video playsInline ref={videoRef} className={"video-js mk_video"} poster="../img/magickidsbg_player.png"/>
     )
 }
