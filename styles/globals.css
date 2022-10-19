@@ -60,10 +60,10 @@ html {
     }
   }
 
+
 html,
 body {
     height: 100%;
-    animation: splash 1s;
 }
 
 main {
@@ -568,6 +568,18 @@ hr{
 /* Animations Keyframes */
 /*****************************************/
 
+@keyframes magicBG {
+    0% {
+        background-size: 25rem;
+    }
+    50% {
+        background-size: 26rem;
+    }
+    100% {
+        background-size: 25rem;
+    }
+}
+
 @keyframes magicEffect {
     from {
         opacity: 0;
@@ -654,13 +666,18 @@ hr{
 
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
-    
-    .centerPage{
-        width: max-content;
-    }
 
     html{
         overflow-y: overlay;
+    }
+
+    html,
+    body{
+        animation: splash 1s, magicBG 6s infinite;
+    }
+
+    .centerPage{
+        width: max-content;
     }
 
     .pageNotFound p:nth-of-type(1) {
