@@ -64,6 +64,7 @@ html {
 html,
 body {
     height: 100%;
+    animation: splash 1s;
 }
 
 main {
@@ -669,11 +670,6 @@ hr{
 
     html{
         overflow-y: overlay;
-    }
-
-    html,
-    body{
-        animation: splash 1s, magicBG 6s infinite;
     }
 
     .centerPage{
