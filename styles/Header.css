@@ -9,7 +9,7 @@ header{
   height: 70px;
   width: 100%;
   max-width: inherit;
-  background-color: #3b1db3ad;
+  background: linear-gradient(0deg, #3b1db300 0%, #3b1db3ad 50%, #3b1db3ad 100%);
   backdrop-filter: blur(5px);
 }
 
