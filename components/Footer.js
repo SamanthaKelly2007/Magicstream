@@ -15,7 +15,7 @@ export default function Footer() {
             </div>
             <div className='donate_icon'>
                 <img className='mkstar' src='/icons/starmk.svg' alt='Magic Star'></img>
-                <Link href='donar'><a>Donar</a></Link>
+                <Link href='donar'>Donar</Link>
             </div>
         </footer>
     )

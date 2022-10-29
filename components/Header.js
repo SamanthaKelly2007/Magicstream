@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <header>
             
-            <Link href="/"><a className='logo_mk'><img onClick={() => logoNav()} src="../img/magickidslogo.png" alt="Magic Kids Logo"/></a></Link>
+            <Link href="/" className='logo_mk'><img onClick={() => logoNav()} src="../img/magickidslogo.png" alt="Magic Kids Logo"/></Link>
             
             {
                 window.width < 768 &&
@@ -20,10 +20,10 @@ export default function Header() {
                 </div>
             }
             <div className="nav">
-                <Link href="grilla"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Grilla</a></Link>
-                <Link href="series"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</a></Link>
-                <Link href="iptv"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</a></Link>
-                <Link href="donar"><a onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Donar</a></Link>
+                <Link href="grilla" onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Grilla</Link>
+                <Link href="series" onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</Link>
+                <Link href="iptv" onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</Link>
+                <Link href="donar" onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Donar</Link>
             </div>
         </header>
     )
