@@ -44,13 +44,13 @@ export const logoNav = () => {
     }   
 }
 
-//Schedule section
-
-//gets the actual time on the client but converted to Argentinean Time
-//this function only returns the time in blocks of 30 minutes
-//for example
-//10:11 will be returned as 10:00
-//10:37 will be returned as 10:30
+/**
+ * Gets the actual time on the client but converted to Argentinean Time in blocks of 30 minutes
+ * for example
+ * 10:11 will be returned as "10:00"
+ * 10:37 will be returned as "10:30"
+ * @return {string} the time in string
+*/
 
 export const getActualTime = () =>{
     let hours = new Date().toLocaleString('es-AR', { hour:'2-digit', timeZone: 'America/Buenos_Aires'})
@@ -61,20 +61,24 @@ export const getActualTime = () =>{
     return hours+":"+minutes
 }
 
-//validates if its weekend
-
+/**
+ * validates if its weekend
+ * @return {boolean} returns if its weekend or not
+*/
 export const isWeekend = () =>{
     const weekend = new Date().getDay()
 
     return weekend === 0 || weekend === 6? true : false
 }
 
-//Returns Actual and Next show
-//validates week and weekend tables 
-//validates 48 blocks of data for each week and weekend tables
-//validates friday and saturday at 23:30 and applys the right table data for the day
-//returns an object with the current show and next show properties
-
+/**Returns Actual and Next show
+ * validates week and weekend tables 
+ * validates 48 blocks of data for each week and weekend tables
+ * validates friday and saturday at 23:30 and applys the right table data for the day
+ * @param {string} rightNow the actual time but parsed with the function getActualTime
+ * @param {boolean} weekStatus if its weekend or not
+ * @return {array} returns an object with the current and next show
+*/
 export const nextShow = (rightNow,weekStatus) => {
     try {
         const today = new Date().getDay()
@@ -95,10 +99,12 @@ export const nextShow = (rightNow,weekStatus) => {
     }
 }
 
-//Returns the schedule list validating morning ,afternoon and hours tables
-//dbopt: 1 returns hours, 2 returns week, 3 returns weekend
-//ampm: returns the morning or afternoon schedule
-
+/**
+ * Returns the schedule list validating morning ,afternoon and hours tables
+ @param {string} dbOpt requires the value between 1 and 3 about the table wanted: 1 returns hours, 2 returns week, 3 returns weekend
+ @param {string} ampm requires the values "AM" or "PM" that means morning or afternoon
+ @return {array} returns a table with the values filtered by the params
+*/
 export const getData = (dbOpt, ampm) => {
     if (ampm === 'AM') {
         return dbOpt === 1? hoursTable.slice(0,24) : dbOpt === 2? weekTable.slice(0,24) : weekendTable.slice(0,24)

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef} from 'react'
+import { useEffect, useRef} from 'react'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import spanish from '../db/spanish.json'
@@ -24,7 +24,6 @@ export default function Player() {
 
       if (videoRef.current) {
         const video = videoRef.current;
-        const videoLS = localStorage.getItem('mkformat')
 
         playerRef.current  = videojs(video, {
           controls: true,

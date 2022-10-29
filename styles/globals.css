@@ -152,7 +152,7 @@ hr{
     text-transform: uppercase;
     font-size: 1rem;
     order: 2;
-    transition: width .5s;
+    transition: width .5s, background-color .5s;
 }
 
 .problemsBtn::selection{
@@ -346,6 +346,7 @@ hr{
     border-radius: 0 0.5rem 0.5rem 0;
     cursor: pointer;
     padding: 0.6rem;
+    transition: background-color .5s;
 }
 
 .changeAspect:hover{

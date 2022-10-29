@@ -80,17 +80,18 @@
     border-style: none;
     padding: 0.8rem 0.5rem;
     border-radius: 0.5rem;
-    background-color: #7b5df4;
+    background-color: #876afb;
     color: var(--text_light);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     border: 4px solid transparent;
+    transition: background-color .5s;
 }
 
 .schedule_Buttons .selectedButton,
 .schedule_Buttons .selectedButton:hover{
-    background-color: #4e29e4;
+    background-color: #562fef;
     border: 4px solid rgba(0, 0, 0, 0.08);
 }
 
