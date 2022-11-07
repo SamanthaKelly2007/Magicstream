@@ -1,12 +1,12 @@
 [
 	{
-	  "id": 10,
-	  "show": "Dr Slump",
+	  "id": 30,
+	  "show": "Cuentos de la Cripta",
 	  "hour": 0
 	},
 	{
-	  "id": 4,
-	  "show": "Detective Conan",
+	  "id": 29,
+	  "show": "Slayers",
 	  "hour": 1
 	},
 	{
@@ -50,7 +50,7 @@
 	  "hour": 9
 	},
 	{
-	  "id": 3,
+	  "id": 26,
 	  "show": "Transformers: Beast Wars",
 	  "hour": 10
 	},
@@ -70,13 +70,13 @@
 	  "hour": 13
 	},
 	{
-	  "id": 7,
-	  "show": "Kito Pizzas",
+	  "id": 4,
+	  "show": "Detective Conan",
 	  "hour": 14
 	},
 	{
-	  "id": 10,
-	  "show": "Dr Slump",
+	  "id": 7,
+	  "show": "Kito Pizzas",
 	  "hour": 15
 	},
 	{
@@ -200,7 +200,7 @@
 	  "hour": 39
 	},
 	{
-	  "id": 3,
+	  "id": 26,
 	  "show": "Transformers: Beast Wars",
 	  "hour": 40
 	},

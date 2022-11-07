@@ -1,17 +1,17 @@
 [
 	{
-	  "id": 19,
-	  "show": "Super campeones",
+	  "id": 30,
+	  "show": "Cuentos de la Cripta",
 	  "hour": 0
 	},
 	{
-	  "id": 10,
-	  "show": "Dr Slump",
+	  "id": 27,
+	  "show": "Urusei Yatsura",
 	  "hour": 1
 	},
 	{
-	  "id": 25,
-	  "show": "A Jugar Con Hugo",
+	  "id": 19,
+	  "show": "Super campeones",
 	  "hour": 2
 	},
 	{
@@ -45,7 +45,7 @@
 	  "hour": 8
 	},
 	{
-	  "id": 3,
+	  "id": 26,
 	  "show": "Transformers: Beast Wars",
 	  "hour": 9
 	},
@@ -60,8 +60,8 @@
 	  "hour": 11
 	},
 	{
-	  "id": 10,
-	  "show": "Dr Slump",
+	  "id": 25,
+	  "show": "A Jugar Con Hugo",
 	  "hour": 12
 	},
 	{
@@ -110,7 +110,7 @@
 	  "hour": 21
 	},
 	{
-	  "id": 3,
+	  "id": 26,
 	  "show": "Transformers: Beast Wars",
 	  "hour": 22
 	},
@@ -175,8 +175,8 @@
 	  "hour": 34
 	},
 	{
-	  "id": 10,
-	  "show": "Dr Slump",
+	  "id": 25,
+	  "show": "A Jugar Con Hugo",
 	  "hour": 35
 	},
 	{
@@ -190,8 +190,8 @@
 	  "hour": 37
 	},
 	{
-	  "id": 15,
-	  "show": "Los Caballeros del Zodiaco",
+	  "id": 2,
+	  "show": "El Mundo de Beakman",
 	  "hour": 38
 	},
 	{
