@@ -1,0 +1,218 @@
+.tableBox{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-inline: auto;
+    background-color: rgb(249, 249, 249);
+    border-radius: .3rem;
+    margin-block: 2rem;
+    animation: openTableBox .5s;
+    overflow: visible hidden hidden hidden;
+    border: 5px solid #542eee;
+}
+
+@keyframes openTableBox {
+    from {
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+        transition: transform 300ms;
+    }
+}
+
+@-webkit-keyframes openTableBox {
+    from {
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+        transition: transform 300ms;
+    }
+}
+
+.titlesRow{
+    display: grid;
+    grid-template-columns: 42% 16% 42%;
+    text-align: center;
+    width: 102%;
+    margin-top: -1rem;
+    margin-bottom: 1.1rem;
+    position: relative;
+    z-index: 500;
+}
+
+.titlesRow div{
+    padding: .25rem;
+    background-color: #542eee;
+}
+
+.titlesRow p{
+    color: #fff;
+    border: ridge;
+    padding: .4rem .3rem;
+}
+
+.titlesRow div:nth-of-type(2){
+    height: 1.5rem;
+    margin-block: auto;
+    border: none;
+}
+
+.titlesRow div:nth-of-type(2) p{
+    margin-top: -.54rem;
+    font-size: 1.1rem;
+    border: none;
+}
+
+.bottom_arrow {
+    position: relative;
+}
+
+.bottom_arrow::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #623bff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+.tableData{
+    margin: 0 auto;
+    padding-inline: .5rem;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.tableData td{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+    height: 3rem;
+    width: 40%;
+    font-size: 10pt;
+    background-color: #fff;
+}
+
+.tableData .liveNow td{
+    background-color: #532bf4;
+    color: var(--text_light);
+}
+
+.tableData .liveNow .notToday{
+    background-color: #fff;
+    color: var(--text_dark);
+}
+
+.tableData td:nth-child(2){
+    width: 20%!important;
+}
+
+.schedule_Buttons{
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    text-align: center;
+    width: 100%;
+    margin-top: .5rem;
+    padding: 1rem 1.2rem .5rem;
+    position: relative;
+    z-index: 4000;
+    background-color: #542eee;
+}
+
+.schedule_Buttons div:nth-of-type(2){
+    height: 0.5rem;
+    margin-block: auto;
+    border: none;
+}
+
+.schedule_Buttons div:nth-of-type(2) p{
+    margin-top: -.54rem;
+    font-size: 1.1rem;
+    color: #fff;
+    border: none;
+}
+
+.schedule_Buttons td{
+    border: none;
+}
+
+.schedule_Buttons button{
+    border-style: none;
+    background-color: #4d2cd5;
+    padding: 0.5rem 0rem;
+    border-radius: 0.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9pt;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color .5s, color .5s;
+    width: 100%;
+}
+
+.schedule_Buttons .selectedButton,
+.schedule_Buttons .selectedButton:hover{
+    background-color: #4621da;
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.schedule_Buttons button:hover{
+    color: #fff;
+    background-color: #4621da;
+}
+
+@media (max-width: 305px) {
+    .tableData td,
+    .schedule_Buttons button{
+        font-size: 10pt;
+    }
+}
+
+/* Mobile Medium - iPhone 6 4' */
+@media (min-width: 375px) {
+    .tableBox{
+        width: 95%;
+    }
+
+    .tableData{
+        border-spacing: 0.3rem 0.5rem;
+    }
+}
+
+/* Tablet 7' or Higher */
+@media (min-width: 768px) {
+
+    .tableData{
+        padding: 0 0.8rem;
+        border-spacing: 0.4rem 0.5rem;
+    }
+
+    .tableData td{
+        font-size: 12pt;
+        padding: 0 0.5rem;
+    }
+
+    .schedule_Buttons td{
+        padding: 0;
+    }
+    
+    .schedule_Buttons button{
+        font-size: 12pt;
+    }
+
+    .tableBox{
+        width: fit-content;
+        max-width: 550px;
+    }
+
+    .tableData td{
+        height: 2.3rem;
+    }
+}
