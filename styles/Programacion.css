@@ -36,7 +36,8 @@
     grid-template-columns: 42% 16% 42%;
     align-items: center;
     text-align: center;
-    width: 102%;
+    width: 100%;
+    transform: scale(1.025);
     margin-top: -1.5rem;
     margin-bottom: 1.1rem;
     position: relative;
@@ -50,8 +51,10 @@
 
 .titlesRow p{
     color: #fff;
-    border: ridge;
-    padding: .4rem .3rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: .4rem .25rem;
+    font-size: 10pt;
+    text-align: center;
 }
 
 .titlesRow div:nth-of-type(2){
@@ -61,12 +64,11 @@
 }
 
 .titlesRow div:nth-of-type(2) p{
-    margin-top: -.54rem;
-    font-size: 1.1rem;
-    border: none;
-    text-align: center;
-    overflow: hidden;
+    margin-top: -0.6rem;
+    font-size: 1rem;
     padding-inline: 0 !important;
+    border: none;
+    overflow: hidden;
 }
 
 .bottom_arrow {
@@ -177,7 +179,7 @@
 @media (max-width: 305px) {
     .tableData td,
     .schedule_Buttons button{
-        font-size: 10pt;
+        font-size: 8pt;
     }
 }
 
@@ -188,7 +190,7 @@
     }
 
     .tableData{
-        border-spacing: 0.3rem 0.5rem;
+        border-spacing: 0.1rem 0.3rem;
     }
 }
 
@@ -197,6 +199,10 @@
 
     .titlesRow{
         margin-top: -1rem;
+    }
+
+    .titlesRow p{
+        font-size: 12pt;
     }
 
     .tableData{
