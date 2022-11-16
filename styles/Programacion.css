@@ -34,9 +34,10 @@
 .titlesRow{
     display: grid;
     grid-template-columns: 42% 16% 42%;
+    align-items: center;
     text-align: center;
     width: 102%;
-    margin-top: -1rem;
+    margin-top: -1.5rem;
     margin-bottom: 1.1rem;
     position: relative;
     z-index: 500;
@@ -63,6 +64,9 @@
     margin-top: -.54rem;
     font-size: 1.1rem;
     border: none;
+    text-align: center;
+    overflow: hidden;
+    padding-inline: 0 !important;
 }
 
 .bottom_arrow {
@@ -120,6 +124,7 @@
     width: 100%;
     margin-top: .5rem;
     padding: 1rem 1.2rem .5rem;
+    align-items: center;
     position: relative;
     z-index: 4000;
     background-color: #542eee;
@@ -133,7 +138,8 @@
 
 .schedule_Buttons div:nth-of-type(2) p{
     margin-top: -.54rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding-inline: 0.2rem;
     color: #fff;
     border: none;
 }
@@ -189,6 +195,10 @@
 /* Tablet 7' or Higher */
 @media (min-width: 768px) {
 
+    .titlesRow{
+        margin-top: -1rem;
+    }
+
     .tableData{
         padding: 0 0.8rem;
         border-spacing: 0.4rem 0.5rem;
@@ -209,7 +219,7 @@
 
     .tableBox{
         width: fit-content;
-        max-width: 550px;
+        max-width: 525px;
     }
 
     .tableData td{
