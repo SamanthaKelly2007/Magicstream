@@ -63,12 +63,12 @@ export default function Magicapp() {
               <p>para ver desde LG o Samsung pueden ingresar a la App o directamente hacer Casting o Chromecast desde una pc o celular a su televisor.</p>
               <br/>
               <h3>Instalación</h3>
-              <p>1- Primero se bajan la app "Downloader" <strong>Logo Naranja</strong> de Play Store</p>
+              <p>1- Primero se bajan la app Downloader <strong>Logo Naranja</strong> de Play Store</p>
               <p>2- Abren la Aplicacion y en el buscador ponen este link que les bajara la app</p>
               <textarea readOnly value='magickids.live/downloads/magictv.apk'></textarea>
               <p>3- luego de descargarlo le dan a Abrir y Instalar</p>
               <p>4- seguramente les aparezca una advertencia de fuentes confiables</p>
-              <p>5- les va a pedir habilitar la app "Downloader" para instalar de fuentes desconocidas</p>
+              <p>5- les va a pedir habilitar la app Downloader para instalar de fuentes desconocidas</p>
               <p>6- le dan a Si y luego apretan atras y les dejara instalar la Aplicacion</p>
               <p>7- Listo si se les instalo la app solo deben ir a su menu donde se encuentran</p>
               <p>las apps y les deberia aparecer el icono de Magic Kids lo abren y podran ver el stream sin hacer nada mas.</p>
