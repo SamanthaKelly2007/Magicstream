@@ -34,7 +34,7 @@ export default function Magicapp() {
               <br/>
               <h3>Instalación</h3>
               <p>1- Se bajan la aplicacion entrando al link de abajo</p>
-              <a href='www.magickids.live/downloads/magictv.apk' target="_blank" rel="noreferrer noopener">Bajar Aplicación</a>
+              <a href='/downloads/magictv.apk' target="_blank" rel="noreferrer noopener">Bajar Aplicación</a>
               <p>2- lo abren y le dan a instalar</p>
               <p>3- posiblemente les pida habilitar fuentes desconocidas o Play Protect le dan a permitir y continuan con la instalación</p>
               <p>4- listo ahora la app les debe aparecer en su menu de aplicaciones</p>
