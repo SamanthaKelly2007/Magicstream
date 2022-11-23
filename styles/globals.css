@@ -97,6 +97,14 @@ hr{
     color: var(--text_light);
 }
 
+.centerPage video{
+    object-fit: fill;
+}
+
+.fullWidth{
+    width: 95%;
+}
+
 /* ===== Scrollbar CSS ===== */
 
 /* Firefox */
@@ -148,7 +156,7 @@ hr{
     align-items: center;
     column-gap: 0.3rem;
     font-weight: bold;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0.5rem;
     text-transform: uppercase;
     font-size: 1rem;
     order: 2;
@@ -338,27 +346,8 @@ hr{
     object-fit: fill;
 }
 
-.changeAspect{
-    order: 2;
-    display: flex;
-    border-left: 0.1px solid rgba(255, 255, 255, 0.15);
-    background-color: #7554f9;
-    border-radius: 0 0.5rem 0.5rem 0;
-    cursor: pointer;
-    padding: 0.6rem;
-    transition: background-color .5s;
-}
-
-.changeAspect:hover{
-    background-color: #4e20ff;
-}
-
 .active{
     background-color: #4e20ff;
-}
-
-.fullWidth{
-    width: fit-content;
 }
 
 /** Chromecast **/

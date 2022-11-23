@@ -76,6 +76,17 @@
     margin-bottom: 0.5rem;
 }
 
+[data-iptv]{
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
 @media (max-width: 300px) {
     .iptvMsg{
         font-size: 11px;

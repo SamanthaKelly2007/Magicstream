@@ -14,7 +14,7 @@ export default function Footer() {
                 <p>En dedicación al Canal Magic Kids</p>
             </div>
             <div className='donate_icon'>
-                <img className='mkstar' src='/icons/starmk.svg' alt='Magic Star'></img>
+                <img className='mkstar' src='/icons/donate.svg' alt='Magic Star'></img>
                 <Link href='donar'>Donar</Link>
             </div>
         </footer>

@@ -21,9 +21,9 @@ export default function Header() {
             }
             <div className="nav">
                 <Link href="grilla" onClick={() => window.width < 768 && openNav()}><img src="/icons/list.svg" alt='icon'/> Grilla</Link>
-                <Link href="series" onClick={() => window.width < 768 && openNav()}><img src="/icons/tv.svg" alt='icon'/> Series</Link>
+                <Link href="magicapp" onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> App</Link>
                 <Link href="iptv" onClick={() => window.width < 768 && openNav()}><img src="/icons/play.svg" alt='icon'/> IPTV</Link>
-                <Link href="donar" onClick={() => window.width < 768 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Donar</Link>
+                <Link href="donar" onClick={() => window.width < 768 && openNav()}><img src="/icons/donate.svg" alt='icon'/> Donar</Link>
             </div>
         </header>
     )

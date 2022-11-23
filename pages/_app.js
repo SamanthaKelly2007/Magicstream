@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import '../styles/Header.css'
 import '../styles/Footer.css'
 import '../styles/Programacion.css'
+import '../styles/Iptv.css'
 import Layout from '../components/Layout'
 import { useRouter } from "next/router";
 
