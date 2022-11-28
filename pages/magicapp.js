@@ -21,9 +21,20 @@ export default function Magicapp() {
               <p>No posee ninguna función solo se puede ver el stream por el momento.</p>
               <br/>
               <h3>A tener en cuenta</h3>
-              <p>Por el momento se debe instalar manualmente pero pronto estara disponible en Google Play Store</p>
+              <p>Noticia : 28 de Noviembre</p>
+              <p>Android Play Store : Disponible Para Descargar </p>
+              <p>Android TV Play Store : No Disponible por Ahora 28 de Noviembre</p>
             </section>
+
             <section>
+              <h1>Descagalo desde Google Play Store</h1>
+              <a target="_blank" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'>Descargar la App</a>
+            </section>
+
+            <section>
+              <h1>INSTALACIÓN MANUAL</h1>
+              <h2>Este tutorial requiere saber de Instalación de APK's</h2>
+              <br/>
               <h1>Android</h1>
               <p>La App funciona en los siguientes dipositivos</p>
               <p>- Celulares / Tablets Android</p>
@@ -41,6 +52,9 @@ export default function Magicapp() {
               <p>5- lo abren y podran ver el stream.</p>
             </section>
             <section>
+              <h1>INSTALACIÓN MANUAL</h1>
+              <h2>Este tutorial requiere saber de Instalación de APK's</h2>
+              <br/>
               <h1>Android TV</h1>
               <p>La App funciona en los siguientes dispositivos</p>
               <p>Dispositivos con Android TV</p>
