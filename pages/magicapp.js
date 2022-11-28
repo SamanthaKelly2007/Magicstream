@@ -28,12 +28,12 @@ export default function Magicapp() {
 
             <section>
               <h1>Descagalo desde Google Play Store</h1>
-              <a target="_blank" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'>Descargar la App</a>
+              <a target="_blank" rel="noreferrer noopener" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'>Descargar la App</a>
             </section>
 
             <section>
               <h1>INSTALACIÓN MANUAL</h1>
-              <h2>Este tutorial requiere saber de Instalación de APK's</h2>
+              <h2>Este tutorial requiere saber de Instalación de APKs</h2>
               <br/>
               <h1>Android</h1>
               <p>La App funciona en los siguientes dipositivos</p>
@@ -53,7 +53,7 @@ export default function Magicapp() {
             </section>
             <section>
               <h1>INSTALACIÓN MANUAL</h1>
-              <h2>Este tutorial requiere saber de Instalación de APK's</h2>
+              <h2>Este tutorial requiere saber de Instalación de APKs</h2>
               <br/>
               <h1>Android TV</h1>
               <p>La App funciona en los siguientes dispositivos</p>
