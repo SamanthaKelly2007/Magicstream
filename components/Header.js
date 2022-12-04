@@ -20,7 +20,7 @@ export default function Header() {
                 </div>
             }
             <div className="nav">
-                <a onClick={() => window.width < 990 && openNav()} target="_blank" rel="noreferrer noopener" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'><img src='/icons/googleplay.svg' alt='Google Play Icon' /> Baja la App</a>
+                <a onClick={() => window.width < 990 && openNav()} target="_blank" rel="noreferrer noopener" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'><img src='/icons/googleplay.svg' alt='Google Play Icon' /> Bajate la App</a>
                 <Link href="grilla" onClick={() => window.width < 990 && openNav()}><img src="/icons/list.svg" alt='icon'/> Grilla</Link>
                 <Link href="magicapp" onClick={() => window.width < 990 && openNav()}><img src="/icons/starmk.svg" alt='icon'/> Sobre la App</Link>
                 <Link href="donar" onClick={() => window.width < 990 && openNav()}><img src="/img/mp.svg" alt='icon'/> Donar</Link>
