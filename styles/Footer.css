@@ -58,17 +58,15 @@ footer p{
 }
 
 .donate_icon{
-    display: flex;
     grid-column: 3;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.2rem;
+    width: fit-content;
+    margin-top: .5rem;
 }
 
 .donate_icon img{
-    order: 2;
-    width: 1.3rem;
-    margin-left: 0.3rem;
+    display: flex;
+    width: 40px;
+    margin-inline: auto;
 }
 
 @media (min-width: 768px) {
@@ -80,14 +78,7 @@ footer p{
     }
 
     .donate_icon{
-        flex-direction: column;
+        margin-top: 0;
         margin-left: auto;
-        padding: 0 1rem;
-    }
-
-    .donate_icon img{
-        order: 0;
-        margin: 0;
-        width: 2rem;
     }
 }

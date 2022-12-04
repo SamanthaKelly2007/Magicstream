@@ -261,6 +261,13 @@ hr{
     font-weight: bold;
 }
 
+.msgBox a{
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
 .msgBox h1 {
     padding-left: 1rem;
     text-transform: uppercase;

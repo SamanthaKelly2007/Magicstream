@@ -128,7 +128,7 @@ header a img{
 /* Mobile Long - iPhone X 5.8' */
 @media (min-width: 425px) {}
 
-@media (max-width: 767px) {
+@media (max-width: 989px) {
   .nav{
     display: none;
     flex-direction: column;
@@ -156,7 +156,7 @@ header a img{
 
 /* Tablet 7' or Higher */
 
-@media (min-width: 768px) {
+@media (min-width: 990px) {
 
   header{
     padding: 0 4rem;
@@ -168,19 +168,15 @@ header a img{
     min-width: 25px
   }
 
+  header a{
+    font-size: 1.2rem;
+  }
+  
   .nav{
     display: flex;
     gap: 0.2rem;
     align-items: center;
   }
-
-  header a{
-    font-size: 1.2rem;
-  }
-}
-
-/* Notebook/Desktop */
-@media (min-width: 1024px) {
 }
 
 /* Notebook/Desktop Long */

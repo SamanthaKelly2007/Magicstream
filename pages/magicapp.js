@@ -9,77 +9,68 @@ export default function Magicapp() {
         <div className='centerPage fullWidth'>
           <div className='iptvMsg'>
             <img src="/img/Android_tv_logo.svg" alt='Android TV'/>
-            <section>
-              <h1>Sobre la App</h1>
-              <p>La app es compatible con Dispositivos Android y Android TV / Google TV</p>
-              <br/>
-              <h3>Detalles</h3>
-              <p>Es la primera version que saco de la app ya que programar para Android es algo nuevo para mi.</p>
-              <p>La app solo reproduce el stream a su vez implemente la compatiblidad para ambas plataformas con el mismo instalador - APK -</p>
-              <br/>
-              <h3>Importante</h3>
-              <p>No posee ninguna función solo se puede ver el stream por el momento.</p>
-              <br/>
-              <h3>A tener en cuenta</h3>
-              <p>Noticia : 28 de Noviembre</p>
-              <p>Android Play Store : Disponible Para Descargar </p>
-              <p>Android TV Play Store : No Disponible por Ahora 28 de Noviembre</p>
-            </section>
 
             <section>
-              <h1>Descagalo desde Google Play Store</h1>
+              <h1>Android Google Play Store</h1>
+              <h3>Descaga la App desde Google Play haciendo click en el boton de abajo</h3>
               <a target="_blank" rel="noreferrer noopener" href='https://play.google.com/store/apps/details?id=com.alexrps180.magickids'>Descargar la App</a>
             </section>
 
             <section>
-              <h1>INSTALACIÓN MANUAL</h1>
-              <h2>Este tutorial requiere saber de Instalación de APKs</h2>
-              <br/>
-              <h1>Android</h1>
-              <p>La App funciona en los siguientes dipositivos</p>
-              <p>- Celulares / Tablets Android</p>
-              <p>TV Box Genericos</p>
-              <p>- tipo X96 o similares.</p>
-              <p>Requisito minimo</p>
-              <p>Deben tener Android 5.0 o Lollipop en adelante, si su equipo es de 2014 en adelante seguramente sea compatible.</p>
-              <br/>
-              <h3>Instalación</h3>
-              <p>1- Se bajan la aplicacion entrando al link de abajo</p>
-              <a href='/downloads/magictv.apk' target="_blank" rel="noreferrer noopener">Bajar Aplicación</a>
-              <p>2- lo abren y le dan a instalar</p>
-              <p>3- posiblemente les pida habilitar fuentes desconocidas o Play Protect le dan a permitir y continuan con la instalación</p>
-              <p>4- listo ahora la app les debe aparecer en su menu de aplicaciones</p>
-              <p>5- lo abren y podran ver el stream.</p>
+              <h1>Sobre el Stream</h1>
+              <h3>Esta pagina no es la pagina oficial de Magic Kids, la pagina oficial se cerro junto al cierre del canal Magic Kids en 2006 operado por Pramer - AMC Networks - , del cual no se sabe cuando volvera a estar en Emisión por Cable nuevamente.</h3>
+              <br></br>
+              <h3>Esta pagina es solo un tributo a lo que fue Magic Kids, mayormente enfocado al area de Anime.</h3>
+              <br></br>
+              <h3>Si gustas de ver el contenido Americano de Magic Kids te sugiero ver el Stream de <a target="_blank" rel="noreferrer noopener" href='https://retromagico.wixsite.com'>Retromagico</a> o si buscas ver contenido animado reciente visita la pagina de <a target="_blank" rel="noreferrer noopener" href='https://www.magicclub22.com.ar'>Magic Club</a>.</h3>
             </section>
+          
             <section>
-              <h1>INSTALACIÓN MANUAL</h1>
+              <h1>Sobre la Aplicación</h1>
+              <h3>Solo funciona para ver el Stream, la función de Grilla se agregara en actualizaciones futuras.</h3>
+              <br></br>
+              <h2>Preguntas Frecuentes</h2>
+              <br></br>
+              <h1>Hay version de Roku?</h1>
+              <h3>No, lamentablemente para hacer la app en Roku necesito un aparato de Roku, el cual no dispongo.</h3>
+              <br></br>
+              <h1>Puedo sumar el canal a otras apps?</h1>
+              <h3>Si, siempre que los canales no cobren por el servicio, de lo contrario si aumenta el trafico ajeno a esta Web o App propia, puede que termine acabando con este Stream.</h3>
+              <br></br>
+              <h1>Por que el stream se ve con baja calidad?</h1>
+              <h3>Esto se debe a que el stream se realiza de manera casera, no cuento con servidor dedicado y para mantener la estabilidad tuve que reducir la calidad.</h3>
+              <br></br>
+              <h1>Como puedo ayudar al Stream?</h1>
+              <h3>Podes hacerlo con donaciones via Mercadopago o Paypal, las cuales se usaran para comprar un servidor dedicado y transmitir con la mejor calidad posible y estable.</h3>
+            </section>
+
+            <section>
+              <h1>INSTALACIÓN MANUAL ANDROID TV</h1>
               <h2>Este tutorial requiere saber de Instalación de APKs</h2>
               <br/>
-              <h1>Android TV</h1>
               <p>La App funciona en los siguientes dispositivos</p>
-              <p>Dispositivos con Android TV</p>
               <p>- Xiaomi Mi Stick TV / 4k</p>
               <p>- Xiaomi Mi Box / S</p>
               <p>- Google Chromecast 4 con control remoto</p>
               <p>- Amazon Fire Stick o derivados de amazon</p>
               <p>- Realme 4K Stick</p>
-              <p>- o cualquier dispositivo con Android TV.</p>
-              <br/>
-              <p>Televisores LED con Android TV o Google TV o que cuenten con Android TV</p>
-              <p>Ejemplos</p>
               <p>- TVs TCL con Android TV</p>
               <p>- TVs Phillips con Android TV</p>
               <p>- TVs RCA con Android TV</p>
               <p>- TVs Sony con Android TV</p>
+              <p>- o cualquier dispositivo con Android TV.</p>
               <br/>
               <h3>Importante</h3>
               <p>las TVs de <strong>Samsung</strong> y <strong>LG</strong> tienen sus propios sistemas operativos por lo que no son compatibles con la app</p>
-              <p>para ver desde LG o Samsung pueden ingresar a la App o directamente hacer Casting o Chromecast desde una pc o celular a su televisor.</p>
+              <p>para ver desde LG o Samsung deben usar su celular y hacer Casting con Chromecast a su televisor.</p>
               <br/>
-              <h3>Instalación</h3>
-              <p>1- Primero se bajan la app Downloader <strong>Logo Naranja</strong> de Play Store</p>
+              <h3>Instalación en Android TV</h3>
+              <br></br>
+              <h3>Pronto hare un video haciendo la Instalación para que les sea mas facil instalarlo</h3>
+              <br></br>
+              <p>1- Primero se bajan la app Downloader de Google Play Store <strong>la que dice aftv en el titulo</strong></p>
               <p>2- Abren la Aplicacion y en el buscador ponen este link que les bajara la app</p>
-              <textarea readOnly value='magickids.live/downloads/magictv.apk'></textarea>
+              <textarea readOnly value='magickids.live/magictv.apk'></textarea>
               <p>3- luego de descargarlo le dan a Abrir y Instalar</p>
               <p>4- seguramente les aparezca una advertencia de fuentes confiables</p>
               <p>5- les va a pedir habilitar la app Downloader para instalar de fuentes desconocidas</p>
@@ -87,6 +78,32 @@ export default function Magicapp() {
               <p>7- Listo si se les instalo la app solo deben ir a su menu donde se encuentran</p>
               <p>las apps y les deberia aparecer el icono de Magic Kids lo abren y podran ver el stream sin hacer nada mas.</p>
             </section>
+
+            <section>
+                <h1>Para Reproductores IPTV</h1>
+                <p>Usa el <strong>Link</strong> de abajo: </p>
+                <textarea readOnly value='pastebin.com/raw/RvjVtGmT'></textarea>
+            </section>
+            
+            <section>
+                <h1>Para Dispositivos Smart TV o Roku</h1>
+                <p><strong>Nota:</strong> No les puedo asegurar que funcionen bien, pero sepan que el stream funciona en varios dipositivos (Android - iOS - PC).</p>
+                <p>en caso de que se les trabe o tarde en cargar puede ser problema de las apps que encuentren.</p>
+                <br/>
+                <p>Para esto sepan que no tengo idea como son otras apps pero masomenos funcionan asi: </p>
+                <p>1- Entra a la Tienda de Apps de tu TV o Roku</p>
+                <p>2- En el buscador pone: M3U o IPTV o Player</p>
+                <p>3- Instala la App que encuentres y abrila</p>
+                <p>4- Seguramente te pida cargar una lista o un link</p>
+                <p>5- Ingresa el Link de abajo</p>
+                <textarea readOnly value='magickids.live/downloads/Magic_Kids.m3u'></textarea>
+            </section>
+
+            <section>
+                <h1>Chromecast</h1>
+                <p>Podes ver el stream en tu Chromecast reproduci el video de la pagina principal y hace click en el boton de Chromecast al lado del boton de volumen.</p>
+            </section>
+
           </div>
         </div>
     </>

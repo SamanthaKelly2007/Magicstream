@@ -55,8 +55,8 @@
 	  "hour": 10
 	},
 	{
-	  "id": 20,
-	  "show": "Digimon Tamers",
+	  "id": 31,
+	  "show": "Digimon Frontier",
 	  "hour": 11
 	},
 	{
@@ -135,8 +135,8 @@
 	  "hour": 26
 	},
 	{
-	  "id": 12,
-	  "show": "Ranma 1/2",
+	  "id": 17,
+	  "show": "Slam Dunk",
 	  "hour": 27
 	},
 	{
@@ -165,28 +165,28 @@
 	  "hour": 32
 	},
 	{
-	  "id": 19,
-	  "show": "Super campeones",
+	  "id": 11,
+	  "show": "Doug",
 	  "hour": 33
-	},
-	{
-	  "id": 23,
-	  "show": "Zona Virtual",
-	  "hour": 34
 	},
 	{
 	  "id": 25,
 	  "show": "A Jugar Con Hugo",
+	  "hour": 34
+	},
+	{
+	  "id": 19,
+	  "show": "Super campeones",
 	  "hour": 35
 	},
 	{
-	  "id": 11,
-	  "show": "Doug",
+	  "id": 12,
+	  "show": "Ranma 1/2",
 	  "hour": 36
 	},
 	{
-	  "id": 20,
-	  "show": "Digimon Tamers",
+	  "id": 31,
+	  "show": "Digimon Frontier",
 	  "hour": 37
 	},
 	{

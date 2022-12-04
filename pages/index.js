@@ -60,45 +60,35 @@ export default function Home() {
       <ul className='msgBox'>
         <h1>Novedades</h1>
         <li>
-          <h2>Descarga la App de Magic Kids</h2>
-          <p>Ya se encuentra disponible la App donde podras ver el Stream, ingresa en el Menu de arriba la derecha y selecciona App, ahi encontraras las instrucciones para instalar la Aplicación</p>
+          <h2>Descarga la App para Android.</h2>
+          <p>hace click en el Menu de 3 rayitas de arriba y hace click en Baja la App, si tenes Android TV hace click donde dice Sobre la App, ahi encontraras una guia de como instalarlo en Android TV.</p>
         </li>
         <li>
-          <h2>Se cambio el Formato del Stream a Formato Ancho / 16:9</h2>
-          <p>El cambio se realizo a peticion de varios usuarios, si tenes un monitor o tv cuadrado o formato 4:3 podes seguir viendo el stream desde la web a pantalla completa.</p>
+          <h2>¿Queres montar un Streaming como esta pagina?</h2>
+          <h3>Si queres realizar tu propio Stream y manejarlo lo mas comodo posible ponete en contacto con Alexander el link a su web se encuentra aca abajo y contrata sus servicios, deci que venis de esta pagina y obtene un precio especial.</h3>
+        </li>
+        <li>
+          <a href='https://alexqs96.vercel.app/' target="_blank" rel="noreferrer noopener" title="Link de Alexqs96">Ponerme en Contacto</a>
+        </li>
+        <li>
+          <h2>Se viene un Nuevo Diseño de Pagina</h2>
+          <h3>Muy Pronto la pagina se renovara, con un diseño mas agradable al usuario y mas enfocado al estilo de la pagina original de Magic Kids.</h3>
         </li>
         <li>
           <h2>Boton de Recarga</h2>
-          <p>Debido a que me reportaron que la grilla debajo del reproductor aveces no funcionaba bien y mostraba algo distinto, ahora con este boton podran actualizarla sin necesidad de recargar la pagina.</p>
-        </li>
-        <li>
-          <h2>Chromecast - AirPlay</h2>
-          <p>Desde el nuevo Boton al lado de Volumen podran transmitir el Stream a su Chromecast o Apple TV</p>
-          <p>en iPhone solo esta limitado a Apple TV o dispositivos que tengan la función de AirPlay.</p>
-        </li>
-        <li>
-          <h2>Nueva Sección de Donaciones</h2>
-          <p>Desde el pie de pagina tenes una opcion donde podras apoyar el proyecto, recorda que no busco cobrar por el streaming pero cualquier ayuda es bienvenida.</p>
+          <p>En caso de que se muestre mal la grilla debajo del reproductor, apreta el Boton que tiene flechas en circulo y recarga la grilla eso deberia arreglar el problema.</p>
         </li>
         <br/>
         <hr />
         <br/>
-        <h1>Problemas en la Transmisión</h1>
-        <li>
-          <h2>Veo manchas grises en la transmisión</h2>
-          <p>- Es un problema del servidor, por lo general es cuando me encuentro usando el disco donde almaceno las series, esto puede durar 2 minutos como mucho.</p>
-        </li>
+        <h1>Soluciones a Problemas del Stream</h1>
         <li>
           <h2>La transmisión se entre corta mucho</h2>
-          <p>- En este caso puede ser por tu internet se recomienda tener almenos 3mb de internet estables para ver el stream, el bitrate de transmisión es de 600kb.</p>
+          <p>- En este caso puede ser por tu internet se recomienda tener almenos 3mb de internet estables para ver el stream, el bitrate de transmisión es de 600kb, si no es el caso, puede que el servidor se encuentre saturado.</p>
         </li>
         <li>
           <h2>La transmisión se puso en Negro pero la estrella sigue girando</h2>
           <p>- En este caso te pido que me mandes un mensaje por instagram, esto puede deberse a un problema de OBS (Programa con el que hago el Stream).</p>
-        </li>
-        <li>
-          <h2>Escucho interferencias o zumbidos en el audio</h2>
-          <p>- Si te sucede en los programas: Nivel X, A Jugar con Hugo, Kito Pizzas, Zona Virtual o programas en donde la calidad es muy baja, es un problema del video.</p>
         </li>
       </ul>
       </CSSTransition>
