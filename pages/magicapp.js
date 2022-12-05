@@ -22,7 +22,7 @@ export default function Magicapp() {
               <br></br>
               <h3>Esta pagina es solo un tributo a lo que fue Magic Kids, mayormente enfocado al area de Anime.</h3>
               <br></br>
-              <h3>Si gustas de ver el contenido Americano de Magic Kids te sugiero ver el Stream de <a target="_blank" rel="noreferrer noopener" href='https://retromagico.wixsite.com'>Retromagico</a> o si buscas ver contenido animado reciente visita la pagina de <a target="_blank" rel="noreferrer noopener" href='https://www.magicclub22.com.ar'>Magic Club</a>.</h3>
+              <h3>Si gustas de ver el contenido Americano de Magic Kids te sugiero ver el Stream de <a target="_blank" rel="noreferrer noopener" href='https://retromagico.wixsite.com/inicio'>Retromagico</a> o si buscas ver contenido animado reciente visita la pagina de <a target="_blank" rel="noreferrer noopener" href='https://www.magicclub22.com.ar'>Magic Club</a>.</h3>
             </section>
           
             <section>
